@@ -1,0 +1,281 @@
+@import url("nature.css");
+
+
+/* ===== Dark & Mint ==== */
+:root {
+  --main-dk1: #0B0C10; /* black-ish */
+  --main-dk2: #1F2833; /* dark blue */
+  --main-mid: #C5C6C7; /* light grey */
+  --main-middark: #7d7d7d; /* mid grey */
+  --main-light1: #66FCF1; /* light blue #66FCF1 #5da8fc*/
+  --main-light2: #45A29E;
+  --text-light: #66FCF1;
+  --text-dark: #0B0C10;
+  --text-white: #ffffff;
+  --test-pink: #ff00d9;
+}
+
+div.clearer {
+    clear: both;
+}
+
+/* ========= Nav bar settings =========== */
+div.related {
+    background-color: var(--main-light2);
+    color: var(--main-dk2);
+    width: 100%;
+    font-size: 80%;
+    text-shadow: none;
+    background: '_images/Banner/banner.png' no-repeat;
+}
+div.related a {
+    color: var(--text-dark);
+}
+
+/* ========= Side bar settings =========== */
+div.sphinxsidebar {
+    width: 250px;
+    background: var(--main-dk2);
+    color: var(--text-white);
+    margin-left: -100%;
+    float: left;
+    font-size: 80%;
+    text-shadow: none;
+}
+/* ==== Sidebar TOC heading bar */
+div.sphinxsidebar h3 {
+    background: var(--main-light2);
+    color: var(--text-dark);
+    font-size: 100%;
+    font-weight: normal;
+    margin: 0;
+    padding: 10;
+    text-shadow: none;
+}
+/* ==== Sidebar TOC heading text */
+div.sphinxsidebar h3 a {
+    color: var(--text-dark); 
+    background: var(--main-light2);
+    font-size: 100%;
+    text-shadow: none;
+}
+div.sphinxsidebar p {
+    color: var(--text-white);
+}
+/* ====== Sidebar search box */
+div.sphinxsidebar input {
+    border: 1px solid #ccc;
+    margin: 0px 0px 10px 0px;
+    background: var(--main-middark);
+    color: var(--text-white);
+    font-size: 1em;
+}
+div.sphinxsidebar p.topless {
+    margin: 5px 10px 10px 10px;
+}
+/* ====== Sidebar text background */
+div.sphinxsidebar ul {
+    margin: 10px;
+    padding: 0;
+    color: var(--text-white);
+}
+/* ====== Sidebar page links */
+div.sphinxsidebar a {
+    color: var(--text-white);
+}
+
+div.sphinxsidebarwrapper {
+    padding: 0px 0px;
+}
+div.sphinxsidebarwrapper p.logo {
+    padding: 0 0 0 0;
+    margin: 0;
+    text-align: center;
+}
+/* ====== Sidebar search box  */
+.wy-side-nav-search {
+    background: var(--main-dk1);
+    color: var(--main-mid)
+}
+/* ====== Sidebar nav buttons  */
+.wy-nav-side {
+    background: var(--main-dk2);
+    color: var(--main-mid);
+}
+.wy-side-nav-search, .wy-nav-top {
+    background: var(--main-dk1);
+}
+.rst-versions .rst-current-version {
+    background: var(--main-dk2);
+}
+.rst-versions{
+    border-top:solid 10px var(--main-dk2);
+}
+
+
+/* ====== Special formatting for tables  */
+/*table.special tr:nth-child(1) {
+    background-color: var(--main-bg-color);
+    color: red;
+}*/
+
+/* ========= Whole document ==== */
+div.document {
+    background-color: var(--main-dk1);
+    color: var(--main-dk1);
+}
+/* ========= Right page margin ==== */
+div.bodywrapper {
+    margin: 0px 0px 0px 300px;
+    background-color: var(--main-dk1);
+}
+/* ========= Left page margin ==== */
+div.documentwrapper {
+    float: left;
+    width: 100%;
+}
+
+/* ============== Main text body ================ */
+div.body {
+    color: var(--text-white);
+    background-color: var(--main-dk2);
+}
+
+/* ============== Contents panel ================ */
+div.contents {
+    background-color: var(--main-middark);
+    color: var(--text-dark);
+}
+div.contents a {
+    background-color: var(--main-middark);
+    color: var(--maigh-light1);
+}
+
+/* ========= Tables ==== */
+table.docutils {
+    border: 0;
+    border-collapse: collapse;
+    }
+
+table.contentstable {
+    background-color: var(--main-mid);
+    color: var(--text-dark);
+}
+table.contentstable {
+    background-color: var(--main-mid);
+    color: var(--text-dark);
+}
+table.contentstable p.biglink a {
+    font-size: 1.3em;
+    background-color: var(--main-mid);
+    color: var(--text-dark);
+}
+table.contentstable p.icon {
+    float: left;
+    margin-right: 8px;
+}
+table.contentstable p.icon img {
+    width: 48px;
+    height: 48px;
+}
+
+table.indextable {
+    background-color: var(--main-mid);
+    color: var(--text-dark);
+}
+
+/* ====== Hyperlink color */
+div.body a {
+    color: var(--main-light1); 
+}
+div.body a:hover {
+    text-decoration: underline;
+}
+
+/* ============= Heading block color ================ */
+div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h6 {
+    background-color: var(--main-light1);
+    color: var(--text-dark);
+    text-shadow: none;
+}
+/* ======== Heading text link color (e.g. if Contents on page)======== */
+div.body h1 a, div.body h2 a, div.body h3 a, div.body h4 a, div.body h5 a {
+    color: var(--text-dark);
+}
+/* ===== Bar above H1 heading ====== */
+div.body h1 {
+    border-top:solid 20px var(--main-dk2);
+    margin: 0;
+}
+
+
+/* ============== Footer ================ */
+div.footer {
+    background-color: var(--main-dk2);
+    color: var(--main-light1);
+}
+div.footer a {
+    color: var(--text-white);
+}
+
+/* ====== Directves  */
+div.important {
+    background-color: #ffffe0;  /* Light yellow */
+    border: 1px solid #ccc;     /* Light grey */
+}
+div.warning {
+    background-color: #ff8282; /* mid-red */
+    border: 1px solid #ff0000; /* Red */
+    color: var(--text-dark);
+}
+div.note {
+    color: var(--text-dark);
+    background-color: var(--main-mid);
+}
+div.note a {
+    color: var(--text-white);
+}
+div.sidebar {
+    margin: 0 0 0.5em 1em;
+    border: 1px solid var(--main-light1);
+    padding: 7px 7px 0 7px;
+    background-color: var(--main-mid);
+    color: var(--text-dark);
+    width: 40%;
+    float: right;
+}
+div.code-block {
+    background-color: var(--main-dk2);
+    color: var(--main-light1);
+}
+div.figure {
+    /* background-color: var(--main-mid); */
+    font-size: 0.8em;
+}
+
+
+.samp em, .file em {
+    background-color: #ffe0e0; /* Pink */
+}
+table.citation {
+    border-left: none;
+    width: 100%;
+    background-color: var(--test-pink);
+}
+.citation .label {
+    width: 20%;
+}
+
+/* Alternative switcher */
+.multi {
+    border: 1px dashed #ccc; /* Light grey */
+    padding: 10px;
+}
+.multi .switcher {
+    font-size: small;
+    font-style: italic;
+}
+img.switchicon {
+    vertical-align: middle;
+    padding-right: 10px;
+}

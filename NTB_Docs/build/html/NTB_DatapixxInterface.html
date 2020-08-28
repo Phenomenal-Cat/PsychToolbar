@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataPixx Interface Box &#8212; NIF Toolbar</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/nif.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="System Installation" href="NTB_SystemInstall.html" />
+    <link rel="prev" title="NTB Datapixx Settings" href="NTB_DatapixxSettings.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="NTB_SystemInstall.html" title="System Installation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="NTB_DatapixxSettings.html" title="NTB Datapixx Settings"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="NIF-Toolbar.html">NIF Toolbar</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">DataPixx Interface Box</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="datapixx-interface-box">
+<span id="interfacebox"></span><h1>DataPixx Interface Box<a class="headerlink" href="#datapixx-interface-box" title="Permalink to this headline">¶</a></h1>
+<p>In order to more efficiently and effectively route analog and digital
+signals within the neurophysiology recording rigs, we designed an
+interface box that minimizes signal paths, wire crossings, and reduces
+the need for BNC cables. The box allows for the connection of four key
+systems, allowing them to communicate analog and digital data with one
+another:</p>
+<div class="figure align-right" id="id1" style="width: 50%">
+<a class="reference internal image-reference" href="_images/SCNI_InterfaceBox_1.jpg"><img alt="_images/SCNI_InterfaceBox_1.jpg" src="_images/SCNI_InterfaceBox_1.jpg" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">Figure 1. Datapixx Interface Box in 3U rack mounted format.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://vpixx.com/products/datapixx2/">VPixx DataPixx2 box</a> (3 x DB25 connectors)</p></li>
+<li><p><a class="reference external" href="https://www.sr-research.com/eyelink-ii/">SR Research EyeLink II</a> (1 x 68-pin D-sub)</p></li>
+<li><p><a class="reference external" href="https://www.tdt.com/component/rz2-bioamp-processor/">TDT RZ2 bioamp</a> (2 x DB25 connectors)</p></li>
+<li><p><a class="reference external" href="https://open-ephys.org/acq-board">Open Ephys board</a> (4 x HDMI connectors)</p></li>
+</ul>
+<p>The NIF currently uses Arrington and iView video eye tracking systems as opposed to the SR Research EyeLink, but the DataPixx interface allows for the analog X, Y and pupil diameter / area signals from these trackers to be sent to the DataPixx box via BNC inputs.</p>
+<p>Additionally, the NIF’s TDT system is recommended for simultaneous fMRI-electrophysiology, since the Open EPhys board does not provide sufficient headroom for gradient-induced voltage spikes in the electrophysiology signal.</p>
+<div class="section" id="circuit">
+<h2>Circuit<a class="headerlink" href="#circuit" title="Permalink to this headline">¶</a></h2>
+<p>The circuit, which is completely passive, was designed by Aidan Murphy
+and Bruce Pritchard and constructed by Danny Trang in the NIMH <a class="reference external" href="https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/research-support-services/section-on-instrumentation/index.shtml">Section on
+Instrumentation</a>. The LEDs on the left of the front panel draw current from the connected systems in order to indicate which systems are currently connected to the box. The full schematic diagram can be found
+<a class="reference download internal" download="" href="_downloads/713f1d82222bc86b28bd6c1beb1296ac/SCNI_NeurophysInterfaceBox_20171119a_17615.pdf"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>,
+and a basic overview of the signal path is given below.</p>
+<div class="section" id="analog-signals">
+<h3>Analog signals<a class="headerlink" href="#analog-signals" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id2" style="width: 50%">
+<a class="reference internal image-reference" href="_images/SCNI_InterfaceBox_2.png"><img alt="_images/SCNI_InterfaceBox_2.png" src="_images/SCNI_InterfaceBox_2.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">Figure 2. Schematic of the Datapixx Interface Box’s connections to other hardware devices.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>The interface box houses a series of breakout boards, with the main one
+being a <a class="reference external" href="https://www.mccdaq.com/PDFs/Manuals/UM330.pdf">Data Translation
+DT330</a>, which accepts
+the 68-pin D-sub cable that comes from the analog-out cards in the
+EyeLink PCs. The six channels of eye signal (X, Y and pupil for both
+left and right eyes) are routed via filtering stages (consisting of a 50
+Ohm resistor and a 1uF capacitor) to the first 6 analog input channels
+of the DataPixx2, the TDT RZ2, and the Open Ephys board. An additional
+four channels of analog input are taken from the BNC connectors on the
+top right corner of the interface box front panel (all 4 are routed to
+DataPixx and TDT, while only the first 2 are routed to Open Ephys).</p>
+<p>The four analog output channels from the DataPixx are routed to the four
+BNC connectors on the bottom right corner of the interface box front
+panel.</p>
+</div>
+<div class="section" id="digital-signals">
+<h3>Digital signals<a class="headerlink" href="#digital-signals" title="Permalink to this headline">¶</a></h3>
+<p>The first four digital output channels of the DataPixx2 are routed to
+both the four BNC connectors on the top left of the interface box
+front panel, as well as the first four digital input channels of the
+TDT RZ2 and the Open Ephys board. The remaining digital outputs from
+the DataPixx2 are routed to the remaining TDT digital inputs.
+The DataPixx2 receives four digital inputs from the BNC connectors on
+the front panel of the interface box, and four directly from the Open
+Ephys board’s digital outputs.</p>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="NIF-Toolbar.html">
+              <img class="logo" src="_static/NTB Logo w.png" alt="Logo"/>
+            </a></p>
+<h3><a href="NIF-Toolbar.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="NTB_SessionPanel.html">NTB Session Panel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NTB_DisplaySettings.html">NTB Display Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NTB_DatapixxSettings.html">NTB Datapixx Settings</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hardware - Interface Box</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#circuit">Circuit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NTB_SystemInstall.html">Hardware - System Installation</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="NTB_DatapixxSettings.html"
+                        title="previous chapter"> NTB Datapixx Settings</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="NTB_SystemInstall.html"
+                        title="next chapter">System Installation</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="NTB_SystemInstall.html" title="System Installation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="NTB_DatapixxSettings.html" title="NTB Datapixx Settings"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="NIF-Toolbar.html">NIF Toolbar</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">DataPixx Interface Box</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Aidan P. Murphy, Ph.D.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

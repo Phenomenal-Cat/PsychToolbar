@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTB Session Panel &#8212; NIF Toolbar</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/nif.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="NTB Actions Tab" href="NTB_ActionsTab.html" />
+    <link rel="prev" title="NIF Toolbar" href="NIF-Toolbar.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="NTB_ActionsTab.html" title="NTB Actions Tab"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="NIF-Toolbar.html" title="NIF Toolbar"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="NIF-Toolbar.html">NIF Toolbar</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""> NTB Session Panel</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="session-ntb-session-panel">
+<h1><a class="reference internal" href="_images/Calendar.png"><img alt="Session" src="_images/Calendar.png" style="width: 30px;" /></a> NTB Session Panel<a class="headerlink" href="#session-ntb-session-panel" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="ntb-sessionpanel" style="width: 30%">
+<a class="reference internal image-reference" href="_images/NTB_Main_SessionPanel.png"><img alt="NIF Toolbar Session panel." src="_images/NTB_Main_SessionPanel.png" style="width: 100%;" /></a>
+</div>
+<p>The Session panel of the NIF Toolbar GUI allows the user to quickly load variables associated with a specific computer, researcher, subject, experiment and session date. All variables controlled by the Session panel are saved to the <a class="reference internal" href="#params-session"><span class="std std-ref">Session field</span></a> of the <strong>Params</strong> structure.</p>
+<div class="section" id="settings-parameters">
+<h2><a class="reference internal" href="_images/Settings.png"><img alt="Load" src="_images/Settings.png" style="width: 30px;" /></a> Parameters<a class="headerlink" href="#settings-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The parameters file is a .mat file containing a ‘Params’ super-structure, which contains all of the experimental variables. By default, when the NIF Toolbar is launched is checks in the <code class="docutils literal notranslate"><span class="pre">NTB_Params</span></code> folder for a .mat file containing the name of the computer on which it is running. If a single match is found then the file is automatically loaded. If no match is found or multiple matches are found, the user will immediately be asked to select a params file to load.</p>
+<p>The parameters dropdown menu shows all of the available parameters files located in the same folder as the currently selected parameters file. Selecting another filename from this menu will immediately load that file. Clicking on the ‘parameters’ gear icon will allow you to select a new parameters file from any directory.</p>
+</div>
+<div class="section" id="user-user">
+<h2><a class="reference internal" href="_images/Users.png"><img alt="Load" src="_images/Users.png" style="width: 30px;" /></a> User<a class="headerlink" href="#user-user" title="Permalink to this headline">¶</a></h2>
+<p>The user name drop down menu is populated with the names of researchers associated with the currently loaded parameter file. If this is the first time running</p>
+</div>
+<div class="section" id="subject-subject">
+<h2><a class="reference internal" href="_images/Subject.png"><img alt="Load" src="_images/Subject.png" style="width: 30px;" /></a> Subject<a class="headerlink" href="#subject-subject" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="experiment-experiment">
+<h2><a class="reference internal" href="_images/Experiment.png"><img alt="Load" src="_images/Experiment.png" style="width: 30px;" /></a> Experiment<a class="headerlink" href="#experiment-experiment" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="calendar-session">
+<h2><a class="reference internal" href="_images/Calendar.png"><img alt="Load" src="_images/Calendar.png" style="width: 30px;" /></a> Session<a class="headerlink" href="#calendar-session" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="params-session-fields">
+<span id="params-session"></span><h2>Params.Session fields<a class="headerlink" href="#params-session-fields" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="NIF-Toolbar.html">
+              <img class="logo" src="_static/NTB Logo w.png" alt="Logo"/>
+            </a></p>
+<h3><a href="NIF-Toolbar.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">NTB Session Panel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#settings-parameters"> Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-user"> User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#subject-subject"> Subject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#experiment-experiment"> Experiment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calendar-session"> Session</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#params-session-fields">Params.Session fields</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NTB_ActionsTab.html">NTB Actions Tab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NTB_SettingsTab.html">NTB Settings Tab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NTB_DisplaySettings.html">NTB Display Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NTB_DatapixxSettings.html">NTB Datapixx Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NTB_RewardSettings.html">NTB Reward Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NTB_DatapixxInterface.html">Hardware - Interface Box</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NTB_SystemInstall.html">Hardware - System Installation</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="NIF-Toolbar.html"
+                        title="previous chapter">NIF Toolbar</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="NTB_ActionsTab.html"
+                        title="next chapter"> NTB Actions Tab</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="NTB_ActionsTab.html" title="NTB Actions Tab"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="NIF-Toolbar.html" title="NIF Toolbar"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="NIF-Toolbar.html">NIF Toolbar</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""> NTB Session Panel</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Aidan P. Murphy, Ph.D.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>
