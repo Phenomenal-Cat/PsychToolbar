@@ -8,6 +8,22 @@
 
 .. NTB_SettingsTab:
 
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+   NTB Display Settings <NTB_DisplaySettings>
+   NTB Datapixx Settings <NTB_DatapixxSettings>
+   NTB Reward Settings <NTB_RewardSettings>
+   NTB Eye Calibration Settings <NTB_EyeCalSettings>
+   NTB Keyboard Settings <NTB_KeyboardSettings>
+   NTB Images Settings <NTB_ImagesSettings>
+   NTB Movies Settings <NTB_MoviesSettings>
+   NTB TDT Settings <NTB_TDTSettings>
+   NTB NI Settings <NTB_NISettings>
+
+
 The Settings tab of the NIF Toolbar GUI allows the user to launch various settings apps to quickly load, edit and save variables related to specific aspects of behavioral experiments and associated hardware. The variables controlled by each app in the Settings tab are saved to a unique field of the **Params** structure, as listed in the table below. Click on the icon or name of each setting GUI to view it's documentation, or click on the output structure to see the list of fields within each settings output structure.
 
 
@@ -74,7 +90,12 @@ The Settings tab of the NIF Toolbar GUI allows the user to launch various settin
 
 .. |OEDesc| replace:: Set parameters for communication with Open EPhys (OE) neurophysiology recording systems.
 
+.. |NI_Logo| image:: _images/NTB_Icons/W_NationalInstruments.png
+  :height: 40
+  :alt: National Instruments
+  :target: NTB_NISettings.html
 
+.. |NIDesc| replace:: Set parameters for communication with National Instruments (NI) data acquisition systems.
 
 
 
@@ -83,25 +104,26 @@ The Settings tab of the NIF Toolbar GUI allows the user to launch various settin
   :align: left
   :class: special
   
-  +--------------+-----------------------------------------+----------------------------------------+----------------------+
-  | Icon         | Setting GUI                             | Output Structure                       | Brief Description    |
-  +==============+=========================================+========================================+======================+
-  ||Display|     | :ref:`Display <NTB_DisplaySettings>`    | :ref:`Params.Display <Params-Display>` | |DisplayDesc|        |
-  +--------------+-----------------------------------------+----------------------------------------+----------------------+
-  ||Datapixx|    | :ref:`Datapixx <NTB_DatapixxSettings>`  | :ref:`Params.DPx <Params-DPx>`         | |DPxDesc|            |
-  +--------------+-----------------------------------------+----------------------------------------+----------------------+
-  ||EyeTracking| | :ref:`Eye tracking <NTB_EyeCalSettings>`| :ref:`Params.Eye <Params-Eye>`         | |EyeCalDesc|         |
-  +--------------+-----------------------------------------+----------------------------------------+----------------------+
-  ||Reward|      | :ref:`Reward <NTB_RewardSettings>`      | :ref:`Params.Reward <Params-Reward>`   | |RewardDesc|         |
-  +--------------+-----------------------------------------+----------------------------------------+----------------------+
-  ||Keyboard|    | :ref:`Keyboard <NTB_KeyboardSettings>`  | :ref:`Params.Keys <Params-Keys>`       | |KeyboardDesc|       |
-  +--------------+-----------------------------------------+----------------------------------------+----------------------+
-  ||Image|       | :ref:`Image pres. <NTB_ImagesSettings>` | :ref:`Params.Images <Params-Images>`   | |ImagesDesc|         |
-  +--------------+-----------------------------------------+----------------------------------------+----------------------+
-  ||Movie|       | :ref:`Movie pres. <NTB_MoviesSettings>` | :ref:`Params.Movies <Params-Movies>`   | |MoviesDesc|         |
-  +--------------+-----------------------------------------+----------------------------------------+----------------------+
-  ||TDT|         | :ref:`TDT ephys. <NTB_TDTSettings>`     | :ref:`Params.TDT <Params-TDT>`         | |TDTDesc|            |
-  +--------------+-----------------------------------------+----------------------------------------+----------------------+
-  ||OpenEphys|   | :ref:`Open Ephys <NTB_OESettings>`      | :ref:`Params.OE <Params-OE>`           | |OEDesc|             |
-  +--------------+-----------------------------------------+----------------------------------------+----------------------+
-
+  +--------------+----------------------------------------------+----------------------------------------+----------------------+
+  | Icon         | Setting GUI                                  | Output Structure                       | Brief Description    |
+  +==============+==============================================+========================================+======================+
+  ||Display|     | :ref:`Display <NTB_DisplaySettings>`         | :ref:`Params.Display <Params-Display>` | |DisplayDesc|        |
+  +--------------+----------------------------------------------+----------------------------------------+----------------------+
+  ||Datapixx|    | :ref:`Datapixx <NTB_DatapixxSettings>`       | :ref:`Params.DPx <Params-DPx>`         | |DPxDesc|            |
+  +--------------+----------------------------------------------+----------------------------------------+----------------------+
+  ||EyeTracking| | :ref:`Eye tracking <NTB_EyeCalSettings>`     | :ref:`Params.Eye <Params-Eye>`         | |EyeCalDesc|         |
+  +--------------+----------------------------------------------+----------------------------------------+----------------------+
+  ||Reward|      | :ref:`Reward <NTB_RewardSettings>`           | :ref:`Params.Reward <Params-Reward>`   | |RewardDesc|         |
+  +--------------+----------------------------------------------+----------------------------------------+----------------------+
+  ||Keyboard|    | :ref:`Keyboard <NTB_KeyboardSettings>`       | :ref:`Params.Keys <Params-Keys>`       | |KeyboardDesc|       |
+  +--------------+----------------------------------------------+----------------------------------------+----------------------+
+  ||Image|       | :ref:`Image pres. <NTB_ImagesSettings>`      | :ref:`Params.Images <Params-Images>`   | |ImagesDesc|         |
+  +--------------+----------------------------------------------+----------------------------------------+----------------------+
+  ||Movie|       | :ref:`Movie pres. <NTB_MoviesSettings>`      | :ref:`Params.Movies <Params-Movies>`   | |MoviesDesc|         |
+  +--------------+----------------------------------------------+----------------------------------------+----------------------+
+  ||TDT|         | :ref:`TDT ephys. <NTB_TDTSettings>`          | :ref:`Params.TDT <Params-TDT>`         | |TDTDesc|            |
+  +--------------+----------------------------------------------+----------------------------------------+----------------------+
+  ||OpenEphys|   | :ref:`Open Ephys <NTB_OESettings>`           | :ref:`Params.OE <Params-OE>`           | |OEDesc|             |
+  +--------------+----------------------------------------------+----------------------------------------+----------------------+
+  ||NI_Logo|     | :ref:`National Instruments <NTB_NISettings>` | :ref:`Params.NI <Params-NI>`           | |NIDesc|             |
+  +--------------+----------------------------------------------+----------------------------------------+----------------------+

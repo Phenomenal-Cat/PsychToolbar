@@ -17,7 +17,7 @@ As the name suggests, the NIF Toolbar has been developed specifically for use in
 Basic Overview
 ================
 
-The NIF Toolbar is flexibly designed, so as to be of use to both novice and experienced neurobehavioral researchers. For the novice with little programming experience, the NIF Toolbar's graphic environment offers an intuitive way of getting simple visual experiments up and running quickly. For this purpose, a series of commonly used experimental templates are provided, including:
+The NIF Toolbar is flexibly designed to be of benefit to both novice and experienced researchers. For the novice with little programming experience, the NIF Toolbar's graphic environment offers an intuitive way of getting simple visual experiments up and running quickly. For this purpose, a series of commonly used experimental templates are provided, including:
 
 * Eye-tracker calibration
 * Presentation of static images (e.g. fMRI 'face patch localizer')
@@ -53,7 +53,7 @@ All systems running the NIF Toolbar comprise of the following:
 Installation
 ===================
 
-The NIF Toolbar can be downloaded from the GitHub repository . The computer system should already be configured as outlined in :ref:`SystemInstall`.
+The NIF Toolbar can be downloaded from the `GitHub repository <https://github.com/Phenomenal-Cat/NIF-Toolbar>`_. The computer system should already be configured as outlined in :ref:`SystemInstall`.
 
 
 Contents
@@ -65,12 +65,10 @@ Contents
    NTB Session Panel <NTB_SessionPanel>
    NTB Actions Tab <NTB_ActionsTab>
    NTB Settings Tab <NTB_SettingsTab>
-   NTB Display Settings <NTB_DisplaySettings>
-   NTB Datapixx Settings <NTB_DatapixxSettings>
-   NTB Reward Settings <NTB_RewardSettings>
-   NTB Eye Calibration Settings <NTB_EyeCalSettings>
-   Hardware - Interface Box <NTB_DatapixxInterface>
-   Hardware - System Installation <NTB_SystemInstall>
+   NTB Calibrations Tab <NTB_CalibrationsTab>
+   NTB Review Panel <NTB_ReviewPanel>
+   NTB Hardware <NTB_Hardware>
+   
    
 
 

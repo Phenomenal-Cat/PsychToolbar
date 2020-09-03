@@ -35,37 +35,17 @@ The Actions tab of the NIF Toolbar GUI allows the user to execute various action
 
 .. |RewardDesc| replace:: Manually delivers liquid reward to the subject based on the settings selected in the :ref:`reward settings GUI <NTB_RewardSettings>`.
 
-
-.. |Keyboard| image:: _images/NTB_Icons/W_Keyboard.png
+.. |PlayMovie| image:: _images/NTB_Icons/W_Movie.png
   :height: 40
-  :alt: Keyboard
-  :target: NTB_KeyboardSettings.html
+  :alt: Play movie
 
-.. |KeyboardDesc| replace:: Set experimenter keyboard shortcuts that are active while the experiment is running.
+.. |MoviesDesc| replace:: Present a movie / movies based on the settings in the :ref:`movie settings GUI <NTB_MovieExpSettings>`.
 
-.. |Image| image:: _images/NTB_Icons/W_Slideshow.png
+.. |PlaySound| image:: _images/NTB_Icons/W_SpeakerOn.png
   :height: 40
-  :alt: Image
-  :target: NTB_ImageExpSettings.html
+  :alt: PlaySound
 
-.. |ImagesDesc| replace:: Set parameters for an image presentation experiment, including the paths of the images to be presented.
-
-.. |Movie| image:: _images/NTB_Icons/W_Movie.png
-  :height: 40
-  :alt: Movie
-  :target: NTB_MovieExpSettings.html
-
-.. |MoviesDesc| replace:: Set parameters for a movie presentation experiment, including the paths of the movies to be presented.
-
-.. |Keyboard| image:: _images/NTB_Icons/W_Keyboard.png
-  :height: 40
-  :alt: Keyboard
-  :target: NTB_KeyboardSettings.html
-
-.. |Keyboard| image:: _images/NTB_Icons/W_Keyboard.png
-  :height: 40
-  :alt: Keyboard
-  :target: NTB_KeyboardSettings.html
+.. |AudioDesc| replace:: Play the audio file(s) selected in the :ref:`audio settings GUI <NTB_AudioSettings>`.
 
 
 .. table:: 
@@ -83,6 +63,10 @@ The Actions tab of the NIF Toolbar GUI allows the user to execute various action
   ||EyeTracking| | **Run eye calibration**       | |EyeCalDesc|                            |
   +--------------+-------------------------------+-----------------------------------------+
   ||Reward|      | **Deliver manual reward**     | |RewardDesc|                            |
+  +--------------+-------------------------------+-----------------------------------------+
+  ||PlaySound|   | **Play audio**                | |AudioDesc|                             |
+  +--------------+-------------------------------+-----------------------------------------+
+  ||PlayMovie|   | **Play movie**                | |MovieDesc|                             |
   +--------------+-------------------------------+-----------------------------------------+
 
 

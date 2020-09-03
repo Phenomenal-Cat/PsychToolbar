@@ -4,8 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NTB Session Panel &#8212; NIF Toolbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NTB Hardware &#8212; NIF Toolbar</title>
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/css/nif.css" />
@@ -15,7 +15,9 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="System Installation" href="Hardware_SystemInstall.html" />
+    <link rel="prev" title="NTB Calibrations Tab" href="NTB_CalibrationsTab.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -23,8 +25,14 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Hardware_SystemInstall.html" title="System Installation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="NTB_CalibrationsTab.html" title="NTB Calibrations Tab"
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="NIF-Toolbar.html">NIF Toolbar</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">NTB Session Panel</a></li> 
+        <li class="nav-item nav-item-this"><a href="">NTB Hardware</a></li> 
       </ul>
     </div>  
 
@@ -33,36 +41,30 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="ntb-session-panel">
-<h1>NTB Session Panel<a class="headerlink" href="#ntb-session-panel" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-right" style="width: 30%">
-<a class="reference internal image-reference" href="_images/NTB_Main_SessionPanel.png"><img alt="NIF Toolbar Session panel." src="_images/NTB_Main_SessionPanel.png" style="width: 100%;" /></a>
-</div>
-<p>The Session panel of the NTB GUI allows the user to quickly load variables associated with a specific computer, researcher, subject, experiment and session date. All variables controlled by the Session panel are saved to the <span class="xref std std-ref">Session field</span> of the <strong>Params</strong> structure.</p>
-<div class="contents local topic" id="contents">
-<ul class="simple">
-<li><p><a class="reference internal" href="#settings-parameters" id="id1">Load Parameters</a></p></li>
-<li><p><a class="reference internal" href="#user-user" id="id2">Load User</a></p></li>
-<li><p><a class="reference internal" href="#subject-subject" id="id3">Load Subject</a></p></li>
-<li><p><a class="reference internal" href="#experiment-experiment" id="id4">Load Experiment</a></p></li>
-<li><p><a class="reference internal" href="#calendar-session" id="id5">Load Session</a></p></li>
+  <div class="section" id="ntb-hardware">
+<h1>NTB Hardware<a class="headerlink" href="#ntb-hardware" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Hardware_SystemInstall.html">Setup - System Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Hardware_SystemInstall.html#ubuntu-installation">Ubuntu Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hardware_SystemInstall.html#install-nvidia-drivers-for-gtx-1080">Install NVIDIA drivers for GTX 1080</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hardware_SystemInstall.html#install-gnu-octave-psychtoolbox">Install GNU Octave &amp; PsychToolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hardware_SystemInstall.html#setup-nvidia-x-screens">Setup NVIDIA X-Screens</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Hardware_Photometer.html">Setup - Luminance Measurement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Hardware_DatapixxInterface.html">Hardware - Interface Box</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Hardware_DatapixxInterface.html#circuit">Circuit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Hardware_Photodiode.html">Hardware - Photodiodes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Hardware_Photodiode.html#photodiode-settings-and-calibration">Photodiode Settings and Calibration</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<div class="section" id="settings-parameters">
-<h2><a class="toc-backref" href="#id1"><a class="reference internal" href="_images/Settings.png"><img alt="Load" src="_images/Settings.png" style="width: 30px;" /></a> Parameters</a><a class="headerlink" href="#settings-parameters" title="Permalink to this headline">¶</a></h2>
-<p>The Options panel is standardized across NTB Settings GUIs and contains buttons with icons indicating what function they perform. You can also hover over GUI buttons to read tooltips.</p>
-</div>
-<div class="section" id="user-user">
-<h2><a class="toc-backref" href="#id2"><a class="reference internal" href="_images/Users.png"><img alt="Load" src="_images/Users.png" style="width: 30px;" /></a> User</a><a class="headerlink" href="#user-user" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="subject-subject">
-<h2><a class="toc-backref" href="#id3"><a class="reference internal" href="_images/Subject.png"><img alt="Load" src="_images/Subject.png" style="width: 30px;" /></a> Subject</a><a class="headerlink" href="#subject-subject" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="experiment-experiment">
-<h2><a class="toc-backref" href="#id4"><a class="reference internal" href="_images/Experiment.png"><img alt="Load" src="_images/Experiment.png" style="width: 30px;" /></a> Experiment</a><a class="headerlink" href="#experiment-experiment" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="calendar-session">
-<h2><a class="toc-backref" href="#id5"><a class="reference internal" href="_images/Calendar.png"><img alt="Load" src="_images/Calendar.png" style="width: 30px;" /></a> Session</a><a class="headerlink" href="#calendar-session" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" style="width: 30%">
+<a class="reference internal image-reference" href="_images/NTB_Main_SessionPanel.png"><img alt="NIF Toolbar Session panel." src="_images/NTB_Main_SessionPanel.png" style="width: 100%;" /></a>
 </div>
 </div>
 
@@ -77,16 +79,26 @@
               <img class="logo" src="_static/NTB Logo w.png" alt="Logo"/>
             </a></p>
 <h3><a href="NIF-Toolbar.html">Table of Contents</a></h3>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="NTB_SessionPanel.html">NTB Session Panel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NTB_ActionsTab.html">NTB Actions Tab</a></li>
 <li class="toctree-l1"><a class="reference internal" href="NTB_SettingsTab.html">NTB Settings Tab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NTB_DisplaySettings.html">NTB Display Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NTB_DatapixxSettings.html">NTB Datapixx Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NTB_RewardSettings.html">NTB Reward Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NTB_DatapixxInterface.html">Hardware - Interface Box</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NTB_SystemInstall.html">Hardware - System Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NTB_CalibrationsTab.html">NTB Calibrations Tab</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">NTB Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Hardware_SystemInstall.html">Setup - System Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hardware_Photometer.html">Setup - Luminance Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hardware_DatapixxInterface.html">Hardware - Interface Box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hardware_Photodiode.html">Hardware - Photodiodes</a></li>
+</ul>
+</li>
 </ul>
 
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="NTB_CalibrationsTab.html"
+                        title="previous chapter"> NTB Calibrations Tab</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Hardware_SystemInstall.html"
+                        title="next chapter">System Installation</a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
@@ -107,13 +119,19 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="Hardware_SystemInstall.html" title="System Installation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="NTB_CalibrationsTab.html" title="NTB Calibrations Tab"
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="NIF-Toolbar.html">NIF Toolbar</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">NTB Session Panel</a></li> 
+        <li class="nav-item nav-item-this"><a href="">NTB Hardware</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Aidan P. Murphy, Ph.D.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

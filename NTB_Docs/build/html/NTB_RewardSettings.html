@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NTB Reward Settings &#8212; NIF Toolbar</title>
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="DataPixx Interface Box" href="NTB_DatapixxInterface.html" />
+    <link rel="next" title="NTB Eye Calibration Settings" href="NTB_EyeCalSettings.html" />
     <link rel="prev" title="NTB Datapixx Settings" href="NTB_DatapixxSettings.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -26,12 +26,13 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="NTB_DatapixxInterface.html" title="DataPixx Interface Box"
+          <a href="NTB_EyeCalSettings.html" title="NTB Eye Calibration Settings"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="NTB_DatapixxSettings.html" title="NTB Datapixx Settings"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="NIF-Toolbar.html">NIF Toolbar</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="NTB_SettingsTab.html" accesskey="U"> NTB Settings Tab</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href=""> NTB Reward Settings</a></li> 
       </ul>
     </div>  
@@ -49,7 +50,197 @@
 <p>The Reward Settings GUI allows the user to quickly set variables affecting the reward schedule for the subject based on timing and/or performance. All variables controlled by the Reward settings GUI are saved to the <a class="reference internal" href="#params-reward"><span class="std std-ref">Reward field</span></a> of the Params structure.</p>
 <div class="section" id="params-reward-fields">
 <h2>Params.Reward fields<a class="headerlink" href="#params-reward-fields" title="Permalink to this headline">¶</a></h2>
-<p id="params-reward">Some stuff here</p>
+<table class="colwidths-given docutils align-left" id="params-reward">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 50%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subfield</p></th>
+<th class="head"><p>Full field name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Exp</p></td>
+<td><p>Params.Display.Exp.GridOn</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.Exp.EyeOn</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Params.Display.Exp.GazeWinOn</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.Exp.GridColor</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Params.Display.Exp.EyeColor</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.Exp.GazeWinColor</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Params.Display.Exp.BackgroundColor</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.Exp.GridSpacing</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Params.Display.Exp.EyeSamples</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.Exp.GazeWinAlpha</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Params.Display.Exp.GridFormat</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.Exp.GridWidth</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Eye</p></td>
+<td><p>Params.Display.Eye.Alpha</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.Eye.Format</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Params.Display.Eye.Color</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.Eye.TraceDuration</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Params.Display.Eye.On</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.Eye.Diameter</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Fix</p></td>
+<td><p>Params.Display.Fix.On</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.Fix.Color</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Params.Display.Fix.Diameter</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.Fix.Width</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Params.Display.Fix.Format</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Grid</p></td>
+<td><p>Params.Display.Grid.BullsEyeWidth</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Params.Display.Grid.Bullseye</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.Grid.Meridians</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Params.Display.Grid.On</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.Grid.Color</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Params.Display.Grid.Spacing</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.Grid.Width</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Params.Display.Grid.Format</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.Grid.MeridiansOn</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>PD</p></td>
+<td><p>Params.Display.PD.Position</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.PD.Diameter</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Params.Display.PD.Color</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.PD.Rect</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Params.Display.PD.On</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.PD.ExpRect</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Params.Display.PD.SubRect</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.PD.Screen</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Screen</p></td>
+<td><p>Params.Display.Screen.ID</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Basic</p></td>
+<td><p>Params.Display.Basic.ViewingDist</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Params.Display.Basic.ScreenDims</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Params.Display.Basic.Rect</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -66,23 +257,25 @@
 <h3><a href="NIF-Toolbar.html">Table of Contents</a></h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="NTB_SessionPanel.html">NTB Session Panel</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NTB_SettingsTab.html">NTB Settings Tab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NTB_DisplaySettings.html">NTB Display Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NTB_DatapixxSettings.html">NTB Datapixx Settings</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">NTB Reward Settings</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#params-reward-fields">Params.Reward fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NTB_ActionsTab.html">NTB Actions Tab</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="NTB_SettingsTab.html">NTB Settings Tab</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="NTB_DisplaySettings.html">NTB Display Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NTB_DatapixxSettings.html">NTB Datapixx Settings</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">NTB Reward Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NTB_EyeCalSettings.html">NTB Eye Calibration Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NTB_KeyboardSettings.html">NTB Keyboard Settings</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="NTB_DatapixxInterface.html">Hardware - Interface Box</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NTB_SystemInstall.html">Hardware - System Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NTB_CalibrationsTab.html">NTB Calibrations Tab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NTB_Hardware.html">NTB Hardware</a></li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="NTB_DatapixxSettings.html"
                         title="previous chapter"> NTB Datapixx Settings</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="NTB_DatapixxInterface.html"
-                        title="next chapter">DataPixx Interface Box</a></p>
+  <p class="topless"><a href="NTB_EyeCalSettings.html"
+                        title="next chapter"> NTB Eye Calibration Settings</a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
@@ -104,18 +297,19 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="NTB_DatapixxInterface.html" title="DataPixx Interface Box"
+          <a href="NTB_EyeCalSettings.html" title="NTB Eye Calibration Settings"
              >next</a> |</li>
         <li class="right" >
           <a href="NTB_DatapixxSettings.html" title="NTB Datapixx Settings"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="NIF-Toolbar.html">NIF Toolbar</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="NTB_SettingsTab.html" > NTB Settings Tab</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href=""> NTB Reward Settings</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Aidan P. Murphy, Ph.D.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

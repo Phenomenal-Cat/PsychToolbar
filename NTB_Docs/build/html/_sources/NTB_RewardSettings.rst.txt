@@ -25,6 +25,9 @@ Params.Reward fields
 
 .. _Params-Reward:
 
-Some stuff here
-
+.. csv-table::
+   :file: _static/ParamsCsv/TestParams.csv
+   :align: left
+   :widths: 20, 50, 30
+   :header-rows: 1
 
