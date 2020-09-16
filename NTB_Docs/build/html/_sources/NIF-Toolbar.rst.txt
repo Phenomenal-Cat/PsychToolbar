@@ -24,7 +24,7 @@ The NIF Toolbar is flexibly designed to be of benefit to both novice and experie
 * Presentation of movie clips (e.g. fMRI block design)
 * Presentation of abstract graphics (e.g. dot motion, gratings, retinotopic mapping stimuli)
 
-For the advanced user, NIF Toolbar provides a fast and user-friendly means of editing and organizing the many variables involved (via GUIs), which can then be optionally accessed in your own experimental code through the `Params` super-structure. NTB sub-functions allow common tasks that may occur throughout an experiment (e.g. reward delivery) to be executed with a single line of code, thus minimizing the amount of code required to write new experiments.
+For the advanced user, NIF Toolbar provides a fast and user-friendly means of editing and organizing the many variables involved (via GUIs), which can then be optionally accessed in your own experimental code through the `Params` `object class <https://www.mathworks.com/help/matlab/matlab_oop/example-representing-structured-data.html>`_. NTB sub-functions allow common tasks that may occur throughout an experiment (e.g. reward delivery) to be executed with a single line of code, thus minimizing the amount of code required to write new experiments.
 
 
 Requirements
@@ -37,15 +37,15 @@ All systems running the NIF Toolbar comprise of the following:
 * PC with 32GB RAM, 1TB SSD
 * `NVidia Geforce GTX 1080 <https://www.nvidia.com/en-us/geforce/10-series/>`_ (8GB)
 * `VPixx DataPixx 2 <https://vpixx.com/products/datapixx2/>`_ interface
-* Video-based eye tracking PC with analog output
-* :ref: `DataPixx Interface box <InterfaceBox>`_ (optional)
+* Video-based eye tracking PC with analog output and ethernet communication
+* :ref:`DataPixx Interface rack-mount box <InterfaceBox>`_ (optional)
 * Neurophysiology recording system (optional)
 
 **Software:**
 
-* `Ubuntu <https://ubuntu.com/download/desktop>`_ 16.04
+* `Ubuntu <https://ubuntu.com/download/desktop>`_ 20.04 LTS
 * `NVidia drivers  <https://www.nvidia.com/Download/index.aspx>`_ 450.66.
-* `Matlab <https://www.mathworks.com/products/matlab.html>`_ R2020a+
+* `Matlab <https://www.mathworks.com/products/matlab.html>`_ R2020a
 * `PsychToolbox <http://psychtoolbox.org/>`_ Version 3.0.16
 * `DataPixx Toolbox <http://www.vpixx.com/manuals/psychtoolbox/html/install.html>`_ (optional)
 * `PLDAPS <https://github.com/HukLab/PLDAPS>`_ Version 4.3.0 (optional)
@@ -53,7 +53,7 @@ All systems running the NIF Toolbar comprise of the following:
 Installation
 ===================
 
-The NIF Toolbar can be downloaded from the `GitHub repository <https://github.com/Phenomenal-Cat/NIF-Toolbar>`_. The computer system should already be configured as outlined in :ref:`SystemInstall`.
+The NIF Toolbar can be downloaded or cloned from the `GitHub repository <https://github.com/Phenomenal-Cat/NIF-Toolbar>`_. The computer system should already be configured as outlined in :ref:`SystemInstall`.
 
 
 Contents

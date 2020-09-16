@@ -15,7 +15,7 @@
   :width: 100%
   :alt: NIF Toolbar Datapixx Settings GUI.
 
-The NTB Datapixx Settings GUI allows the user to quickly make changes to parameters related to the analog and digital I/O capabilities of the `VPixx DataPixx interface box <https://vpixx.com/products/datapixx2/>`_. All variables controlled by the Datapixx Settings GUI are saved to the :ref:`DPx field <Params-DPx>` of the **Params** structure.
+The NTB Datapixx Settings GUI allows the user to quickly make changes to parameters related to the analog and digital I/O capabilities of the `VPixx DataPixx interface box <https://vpixx.com/products/datapixx2/>`_. All variables controlled by the Datapixx Settings GUI are saved to the :ref:`DPx field <Params-DPx>` of the **Params** object.
 
 
 Top Panel
@@ -82,7 +82,7 @@ Opens the NTB |GUIname| Settings GUI documentation page in a web browser.
   :width: 30
   :alt: Close GUI
 
-Closes the NTB |GUIname| Settings GUI and returns the updated variables to the Params structure of the main NIF Toolbar.
+Closes the NTB |GUIname| Settings GUI and returns the updated variables to the Params object of the main NIF Toolbar.
 
 
 .. _Params-DPx:
