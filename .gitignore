@@ -1,0 +1,7 @@
+bin
+.Python
+_build
+include
+lib
+.DS_Store
+pyenv.cfg
