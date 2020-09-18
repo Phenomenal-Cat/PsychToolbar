@@ -87,6 +87,30 @@ The X-screens tab of the `Profile` panel displays information about the physical
 
 * **Experimenter copy**: user selected position of the experimenter's copy of the visual stimulus on the selected X-screen, relative to the subject's copy. Options 'Left' and 'Right' both assume that the selected X-screen spans two physical displays of equal resolution. If this is not the case, stimuli will not be displayed correctly, so you should select 'None' instead.
 
+.. _DS_PTBTab:
+
+PTB tab
+----------
+
+.. figure:: _images/NTB_GUIs/NTB_DisplaySettings/DisplaySettings_SystemProfile_PTBTab.png
+  :align: right
+  :figwidth: 40%
+  :width: 100%
+  :alt: Display Settings PTB tab.
+
+The PTB tab of the `Profile` panel contains editable fields related to how `PsychToolbox (PTB) <http://psychtoolbox.org/>`_ operates when drawing to the screen. 
+
+* **PTB - Skip sync tests?** Skip the synchronization tests that PTB automatically runs to verify display timing precision.
+
+* **PTB - Suppress all warnings?** Turn off all warnings that PTB might otherwise print to the command line.
+
+* **Visual debug level**: see `here <https://github.com/Psychtoolbox-3/Psychtoolbox-3/wiki/FAQ:-Control-Verbosity-and-Debugging>`_ for further information.
+
+* **Psych Default Setup**: 
+
+* **Verbosity**: sets how verbose the output printed to the Matlab command line window will be when running. Note that printing to the Matlab command line can slow down code execution, so higher levels are only recommended for troubleshooting purposes and not during experimental data collection. See `here <https://github.com/Psychtoolbox-3/Psychtoolbox-3/wiki/FAQ:-Control-Verbosity-and-Debugging>`_ for further information.
+
+
 
 Viewing Geometry Panel
 =========================
@@ -151,6 +175,7 @@ OpenGL Tab
 
 .. todo:: OpenGL settings for online rendering of 2D or 3D graphics.
 
+.. _DS_PreviewPanel:
 
 Preview Panel
 =========================
@@ -164,6 +189,8 @@ Preview Panel
 The `Preview` panel provides a preview of how various components of the visual display will appear to both the subject and the experimenter. The visual appearance of these components is controlled via a series of tabs in the panel below the preview display, and is also updated based on selections in the :ref:`X-screens tab <DS_XScreensTab>` and :ref:`Stereo tab <DS_StereoTab>`.
 
 * **Background color**: sets the RGB value of the default background color of the PTB window.
+
+.. _DS_GridTab:
 
 Grid Tab
 ------------
@@ -186,6 +213,8 @@ This tab controls the appearance of the grid (fields belonging to `Params.Displa
 
 * **Spacing (°)**: Spacing between concentric / consecutive grid lines in degrees of visual angle.
 
+.. _DS_FixTab:
+
 Fixation Tab
 --------------
 
@@ -207,6 +236,8 @@ This tab controls the appearance of the central fixation marker (via fields belo
 
 * **Diameter (°)**: Diameter of the fixation marker in degrees of visual angle.
 
+.. _DS_GazeWinTab:
+
 Gaze Window Tab
 -----------------
 
@@ -224,7 +255,7 @@ This tab controls the appearance of the gaze constraint window (via fields belon
 
 * **Line width (px)**: Width of gaze window lines specified in pixels.
 
-.. _DS_WIndowShape:
+.. _DS_WindowShape:
 
 * **Window shape**: shape of gaze window. The options are circular (for fixations maintained within a given radius), square, or rectangular. 
 
@@ -233,7 +264,7 @@ This tab controls the appearance of the gaze constraint window (via fields belon
 * **Dimensions ((°)**: X and Y dimensions of the gaze window in degrees of visual angle. Only available when :ref:`Window shape <DS_WindowShape> is set to 'rectangle'.
 
 
-.. _PhotodiodeTab:
+.. _DS_PhotodiodeTab:
 
 Photodiode Tab
 ----------------
@@ -253,6 +284,8 @@ The photodiode tab controls the appearance of the on screen marker(s) used to tr
 * **Photodiode size (pixels)**: Diameter of the photodiode marker in pixels. This value should be adjusted so that the marker drawn on screen covers the entire area illuminating the photodiode. To avoid distracting the subject, the marker should ideally not be visible beyond the position of the the photodiode.
 
 * **Photodiode contrasts (RGB)**: Set the RGB values for photodiode marker 'off' and 'on' states. Typically these should be black and white (or vice-versa), although use of grey-scale values can generate 
+
+.. _DS_EyeTraceTab:
 
 Eye Trace Tab
 ---------------
@@ -275,7 +308,7 @@ This tab controls the appearance of the subject's eye position (via fields belon
 
 * **Marker Diameter (°)**: Diameter of the eye trace in degrees of visual angle. Only used when :ref:`Marker style <DS_MarkerStyle> is set to 'Dot'.
 
-
+.. _DS_InfoTab:
 
 Info Tab
 ---------------
@@ -288,23 +321,29 @@ Info Tab
 
 The Info tab controls the appearance of session information overlaid on the experimenter's display. This includes various text and graphical elements to track progress and subjects' performance.
 
-* **Text color**: set the font color of text elements in the experimenter's display overlay.
+* **Position**: set the position on the experimenter's display for the info panel to appear. The dropdown menu allows the user to select one of the four corners of the display, but the exact position and dimensions of the info panel can be adjusted by dragging and dropping the rectangle shown on the experimenter's display in the :ref:`Preview panel <DS_PreviewPanel>`.
+
+* **Background**: the checkbox toggles the info background panel on or off, while the colored button allows selection of an RGB color value for the background panel and the slider allows the user to set the alpha transparency level (0-1 = transparent to opaque).
+
+* **Font color**: set the font color of text elements in the experimenter's display overlay.
 
 * **Font size**: set the font size of text elements in the experimenter's display overlay.
+
+* **Font name**: set the font of the text elements in the experimenter's display overlay.
 
 * **Progress**: select the format of the graphical display element to indicate progress through the current run. 
 
 * **Epoch**: select the epoch used to measure progress in the experiment. This can be based either on time or completion of trials.
 
-* **Timer**: 
+* **Timer**: checkbox to toggle timer text information on or off.
 
-* **Epoch counter**: 
+* **Epoch counter**: checkbox to toggle epoch counter text information on or off.
 
-* **Reward counter**: 
+* **Reward counter**: checkbox to toggle reward count (number of reward deliveries) text information on or off.
 
-* **Fixation accuracy**: 
+* **Fixation accuracy**: checkbox to toggle fixation accuracy (%) text information on or off.
 
-* **Response accuracy**: 
+* **Response accuracy**: checkbox to toggle behavioral response accuracy text information on or off.
 
 
 Options Panel
@@ -361,75 +400,9 @@ Params.Display fields
 
 .. _Params-Display:
 
-.. table:: 
+.. csv-table:: 
+  :file: _static/ParamsCsv/Display.csv
+  :header: Subfield, Full field, Description
   :align: left
   :widths: 20 40 40
-
-  +------------+--------------------------------------+---------------------------+
-  | Subfield   | Full field name                      | Description               |
-  +============+======================================+===========================+
-  | Basic      | Params.Display.Basic.ViewingDist     | X                         |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Basic.ScreenDim       |  X                        |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Basic.ScreenRes       |  X                        |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Basic.XScreenRes      |  X                        |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Basic.TDTconnected    |  X                        |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Basic.EyeLinkInterf   |  X                        |
-  +------------+--------------------------------------+---------------------------+
-  | Screen     | Params.DPx.AnalogIn.Rate             |  X                        |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.DPx.AnalogIn.Channels         | X                         |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.DPx.AnalogIn.Options          | X                         |
-  +------------+--------------------------------------+---------------------------+
-  | Stereo     | Params.Display.Stereo.IPD            |  X                        |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Stereo.Mode           | X                         |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Stereo.Format         | X                         |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Stereo.Format         | X                         |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Stereo.Format         | X                         |
-  +------------+--------------------------------------+---------------------------+
-  | OpenGL     | Params.Display.OpenGL.               |  X                        |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Stereo.Mode           | X                         |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Stereo.Format         | X                         |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Stereo.Format         | X                         |
-  +------------+--------------------------------------+---------------------------+
-  | Grid       | Params.Display.Grid.On               |  X                        |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Grid.MeridiansOn      | X                         |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Grid.Format           | X                         |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Grid.Color            | X                         |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Grid.Width            | X                         |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Grid.Spacing          | X                         |
-  +------------+--------------------------------------+---------------------------+
-  | Fix        | Params.Display.Fix.On                | X                         |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Fix.Format            | X                         |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Fix.Diameter          | X                         |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Fix.Color             | X                         |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Fix.Width             | X                         |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Fix.Rect              | X                         |
-  +            +--------------------------------------+---------------------------+
-  |            | Params.Display.Fix.Tex               | X                         |
-  +------------+--------------------------------------+---------------------------+
-
-
 

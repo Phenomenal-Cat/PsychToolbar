@@ -10,7 +10,7 @@ if ~exist(ParamsFile, 'file')
 end
 [~,file] = fileparts(ParamsFile);
 Params = load(ParamsFile);
-Fields = fieldnames(Params);
+Fields = sort(fieldnames(Params));
 for f1 = 1:numel(Fields)
     if ~strcmp(class(eval(sprintf('Params.%s', Fields{f1}))), 'struct')
        break; 

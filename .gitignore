@@ -1,7 +1,9 @@
 bin
 .Python
 _build
+build
 include
 lib
 .DS_Store
+._.DS_Store
 pyenv.cfg
