@@ -32,10 +32,12 @@ Screen,Params.Display.Screen.ID
 ,Params.Display.Screen.BackgroundColor
 ,Params.Display.Screen.SubExpFlip
 ,Params.Display.Screen.ExpDispPos
+,Params.Display.Screen.NoXScreens
 Basic,Params.Display.Basic.ViewingDist
 ,Params.Display.Basic.ScreenDims
 ,Params.Display.Basic.Rect
 ,Params.Display.Basic.WinScale
+,Params.Display.Basic.PixPerDeg
 Stereo,Params.Display.Stereo.IPD
 ,Params.Display.Stereo.Mode
 ,Params.Display.Stereo.DisplayFormat
@@ -60,8 +62,3 @@ Info,Params.Display.Info.BkgOn
 ,Params.Display.Info.ToggleFixation
 ,Params.Display.Info.ToggleResponse
 ,Params.Display.Info.PanelPosStr
-PTB,Params.Display.PTB.SkipSyncTests
-,Params.Display.PTB.SuppressWarnings
-,Params.Display.PTB.VisualDebugLevel
-,Params.Display.PTB.Verbosity
-,Params.Display.PTB.PsychDefaultSetup

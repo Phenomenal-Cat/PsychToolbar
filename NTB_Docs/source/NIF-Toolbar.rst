@@ -65,6 +65,7 @@ Contents
    NTB Session Panel <NTB_SessionPanel>
    NTB Actions Tab <NTB_ActionsTab>
    NTB Settings Tab <NTB_SettingsTab>
+   NTB Experiments Tab <NTB_ExperimentsTab>
    NTB Calibrations Tab <NTB_CalibrationsTab>
    NTB Review Panel <NTB_ReviewPanel>
    NTB Hardware <NTB_Hardware>

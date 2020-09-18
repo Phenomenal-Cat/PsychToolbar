@@ -99,31 +99,10 @@ The Settings tab of the NIF Toolbar GUI allows the user to launch various settin
 
 
 
-.. table:: 
+.. csv-table:: 
+  :file: _static/CSVs/NTB_SettingsTab.csv
+  :header-rows: 1
   :widths: 8 15 15 60
   :align: left
   :class: special
   
-  +--------------+----------------------------------------------+----------------------------------------+----------------------+
-  | Icon         | Setting GUI                                  | Output Structure                       | Brief Description    |
-  +==============+==============================================+========================================+======================+
-  ||Display|     | :ref:`Display <NTB_DisplaySettings>`         | :ref:`Params.Display <Params-Display>` | |DisplayDesc|        |
-  +--------------+----------------------------------------------+----------------------------------------+----------------------+
-  ||Datapixx|    | :ref:`Datapixx <NTB_DatapixxSettings>`       | :ref:`Params.DPx <Params-DPx>`         | |DPxDesc|            |
-  +--------------+----------------------------------------------+----------------------------------------+----------------------+
-  ||EyeTracking| | :ref:`Eye tracking <NTB_EyeCalSettings>`     | :ref:`Params.Eye <Params-Eye>`         | |EyeCalDesc|         |
-  +--------------+----------------------------------------------+----------------------------------------+----------------------+
-  ||Reward|      | :ref:`Reward <NTB_RewardSettings>`           | :ref:`Params.Reward <Params-Reward>`   | |RewardDesc|         |
-  +--------------+----------------------------------------------+----------------------------------------+----------------------+
-  ||Keyboard|    | :ref:`Keyboard <NTB_KeyboardSettings>`       | :ref:`Params.Keys <Params-Keys>`       | |KeyboardDesc|       |
-  +--------------+----------------------------------------------+----------------------------------------+----------------------+
-  ||Image|       | :ref:`Image pres. <NTB_ImagesSettings>`      | :ref:`Params.Images <Params-Images>`   | |ImagesDesc|         |
-  +--------------+----------------------------------------------+----------------------------------------+----------------------+
-  ||Movie|       | :ref:`Movie pres. <NTB_MoviesSettings>`      | :ref:`Params.Movies <Params-Movies>`   | |MoviesDesc|         |
-  +--------------+----------------------------------------------+----------------------------------------+----------------------+
-  ||TDT|         | :ref:`TDT ephys. <NTB_TDTSettings>`          | :ref:`Params.TDT <Params-TDT>`         | |TDTDesc|            |
-  +--------------+----------------------------------------------+----------------------------------------+----------------------+
-  ||OpenEphys|   | :ref:`Open Ephys <NTB_OESettings>`           | :ref:`Params.OE <Params-OE>`           | |OEDesc|             |
-  +--------------+----------------------------------------------+----------------------------------------+----------------------+
-  ||NI_Logo|     | :ref:`National Instruments <NTB_NISettings>` | :ref:`Params.NI <Params-NI>`           | |NIDesc|             |
-  +--------------+----------------------------------------------+----------------------------------------+----------------------+

@@ -1,0 +1,5 @@
+﻿Icon,Setting GUI,Output Structure,Bief Description
+|Image|,:ref:`Image <NTB_ImageSettings>`,:ref:`Params.Image <Params-Image>`,|ImageDesc| 
+|Movie|,:ref:`Movie <NTB_MovieSettings>`  ,:ref:`Params.Movie <Params-Movie>`,|MovieDesc|
+|Retinotopy|,:ref:`Retinotopy <NTB_RetinotopySettings>`  ,:ref:`Params.Retinotopy <Params-Retinotopy>`,|RetinotopyDesc|
+|Saccade|,:ref:`Saccade map <NTB_SaccadeSettings>` ,:ref:`Params.Saccade <Params-Saccade>`,|SaccadeDesc|

@@ -13,7 +13,7 @@ Params = load(ParamsFile);
 Fields = sort(fieldnames(Params));
 for f1 = 1:numel(Fields)
     if ~strcmp(class(eval(sprintf('Params.%s', Fields{f1}))), 'struct')
-       break; 
+       continue; 
     end
   	Subfields = fieldnames(eval(sprintf('Params.%s', Fields{f1})));
     C = {};

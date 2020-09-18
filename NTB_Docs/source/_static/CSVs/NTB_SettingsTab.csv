@@ -1,0 +1,9 @@
+﻿Icon,Setting GUI,Output Structure,Brief Description
+|Display|,:ref:`Display <NTB_DisplaySettings>` ,:ref:`Params.Display <Params-Display>`,|DisplayDesc|
+|Datapixx|, :ref:`Datapixx <NTB_DatapixxSettings>`,:ref:`Params.DPx <Params-DPx>`,|DPxDesc| 
+|EyeTracking|, :ref:`Eye tracking <NTB_EyeCalSettings>` , :ref:`Params.Eye <Params-Eye>`,|EyeCalDesc|  
+|Reward|,:ref:`Reward <NTB_RewardSettings>`,:ref:`Params.Reward <Params-Reward>`,|RewardDesc|
+|Keyboard|,:ref:`Keyboard <NTB_KeyboardSettings>` ,:ref:`Params.Keys <Params-Keys>` ,|KeyboardDesc|
+|TDT|,:ref:`TDT ephys. <NTB_TDTSettings>`, :ref:`Params.TDT <Params-TDT>`,|TDTDesc|
+|OpenEphys|, :ref:`Open Ephys <NTB_OESettings>`  , :ref:`Params.OE <Params-OE>`    , |OEDesc| 
+|NI_Logo| , :ref:`National Instruments <NTB_NISettings>`,:ref:`Params.NI <Params-NI>`,|NIDesc|

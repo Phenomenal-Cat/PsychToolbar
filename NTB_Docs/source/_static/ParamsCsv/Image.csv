@@ -1,0 +1,13 @@
+Source,Params.Image.Source.ImDir
+,Params.Image.Source.BackgroundDir
+,Params.Image.Source.Format
+,Params.Image.Source.SubDirOpt
+,Params.Image.Source.SBS
+Transform,Params.Image.Transform.Fullscreen
+,Params.Image.Transform.Diameter
+,Params.Image.Transform.UseAlpha
+,Params.Image.Transform.ColorMode
+,Params.Image.Transform.MaskType
+,Params.Image.Transform.Rotation
+,Params.Image.Transform.Contrast
+,Params.Image.Transform.SizeUnits
