@@ -66,6 +66,8 @@ Contents
    NTB Actions Tab <NTB_ActionsTab>
    NTB Settings Tab <NTB_SettingsTab>
    NTB Experiments Tab <NTB_ExperimentsTab>
+   NTB fMRI Tab <NTB_fMRITab>
+   NTB Ephys Tab <NTB_EphysTab>
    NTB Calibrations Tab <NTB_CalibrationsTab>
    NTB Review Panel <NTB_ReviewPanel>
    NTB Hardware <NTB_Hardware>

@@ -1,0 +1,4 @@
+﻿Icon,Setting GUI,Output Structure,Brief Description
+|EPI|,:ref:`EPI audio <NTB_EPIaudio>`,:ref:`Params.EPI <NTB_ParamsEPI>`,Set EPI audio playback for scanner acclimation training.
+|Block|,:ref:`Block Design <NTB_BlockDesign>`,:ref:`Params.Block <NTB_ParamsBlock>`,Set parameters for fMRI block design experiment.
+|BNC|,:ref:`Scanner TTL <NTB_ScannerTTL>`,NA,Test scanner TTL pulse input.
