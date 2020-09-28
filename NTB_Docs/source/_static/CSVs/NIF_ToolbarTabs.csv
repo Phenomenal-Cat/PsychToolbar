@@ -1,0 +1,8 @@
+﻿Icon,Tab,Description
+|Session|,:ref:`Session panel <NTB_SessionPanel>`,
+|Actions|,:ref:`Actions tab <NTB_ActionsTab>`,
+|Settings|,:ref:`Settings tab <NTB_SettingsTab>`,
+|Experiments|,:ref:`Experiments tab <NTB_ExperimentsTab>`,
+|fMRI|,:ref:`fMRI tab <NTB_fMRITab>`,
+|Ephys|,:ref:`Ephys tab <NTB_EphysTab>`,
+|Calib|,:ref:`Calibrations tab <NTB_CalibrationsTab>`,

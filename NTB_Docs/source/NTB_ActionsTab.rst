@@ -2,13 +2,13 @@
   :width: 30
   :alt: Actions
 
+.. _NTB_ActionsTab:
+
 ===================================
 |Actions| NTB Actions Tab
 ===================================
 
-.. NTB_ActionsTab:
-
-The Actions tab of the NIF Toolbar GUI allows the user to execute various actions based on the current settings. The most important action.
+The Actions tab of the NIF Toolbar GUI allows the user to execute various actions based on the current settings. The most important actions button is the 'Play' button, which executes the function to run the experiment that is currently selected in the :ref:Session panel <NTB_SessionPanel>`.
 
 
 .. |Play| image:: _images/NTB_Icons/W_Play.png

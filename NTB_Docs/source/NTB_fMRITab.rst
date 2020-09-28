@@ -2,11 +2,20 @@
   :width: 30
   :alt: fMRI
 
-.. NTB_fMRITab:
+.. _NTB_fMRITab:
 
 ===================================
 |fMRI| NTB fMRI Tab
 ===================================
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+   NTB EPI audio <NTB_EPIaudio>
+   NTB Block Design <NTB_Block Design>
+   NTB Scanner TTL  <NTB_ScannerTTL>
+
 
 The fMRI tab of the NIF Toolbar GUI allows the user to...
 

@@ -15,7 +15,7 @@
   :width: 100%
   :alt: NIF Toolbar Display Settings GUI.
 
-The NTB Display Settings GUI allows the user to quickly make changes to parameters that will affect aspects of the visual display for both the subject and the experimenter. All variables controlled by the Display Settings GUI are saved to the :ref:`Display field <Params-Display>` of the Params structure.
+The NTB Display Settings GUI allows the user to quickly make changes to parameters that will affect aspects of the visual display for both the subject and the experimenter. All variables controlled by the Display Settings GUI are saved to the :ref:`Display field <Params-Display>` of the **Params** object.
 
 The original display trick proposed by VPixx when using the DataPixx 2 is to use modified `color look-up tables (CLUTs) <http://www.vpixx.com/manuals/psychtoolbox/html/PROPixxDemo7.html>`_ in order to efficiently draw a copy of what the subject is viewing to a second display for the experimenter, with additional information overlaid such as eye position. However, this approach will not work for 24-bit color RGB content such as photo images and movies.
 
@@ -395,10 +395,10 @@ The Options panel is standardized across NTB Settings GUIs and contains buttons 
   +------------+-------------+----------------+
 
 
+.. _Params-Display:
+
 Params.Display fields
 ========================
-
-.. _Params-Display:
 
 .. csv-table:: 
   :file: _static/ParamsCsv/Display.csv
