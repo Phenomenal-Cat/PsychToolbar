@@ -2,12 +2,11 @@
   :width: 30
   :alt: Settings
 
+.. _NTB_SettingsTab:
+
 ===================================
 |Settings| NTB Settings Tab
 ===================================
-
-.. NTB_SettingsTab:
-
 
 .. toctree::
    :maxdepth: 2
@@ -32,70 +31,40 @@ The Settings tab of the NIF Toolbar GUI allows the user to launch various settin
   :alt: Display
   :target: NTB_DisplaySettings.html
 
-.. |DisplayDesc| replace:: Configure visual display geometry and appearance for both subject and experimenter.
-
 .. |Datapixx| image:: _images/NTB_Icons/W_Datapixx.png
   :height: 40
   :alt: Datapixx
   :target: NTB_DatapixxSettings.html
-
-.. |DPxDesc| replace:: Set analog and digital IO channels for the DataPixx interface box.
 
 .. |EyeTracking| image:: _images/NTB_Icons/W_Eye.png
   :height: 40
   :alt: EyeTracking
   :target: NTB_EyeTrackerSettings.html
 
-.. |EyeCalDesc| replace:: Set parameters for eye-tracker calibration in order to convert analog eye signals into screen coordinates.
-
 .. |Reward| image:: _images/NTB_Icons/W_Liquid.png
   :height: 40
   :alt: Reward
   :target: NTB_RewardSettings.html
-
-.. |RewardDesc| replace:: Set parameters for liquid reward delivery schedule.
 
 .. |Keyboard| image:: _images/NTB_Icons/W_Keyboard.png
   :height: 40
   :alt: Keyboard
   :target: NTB_KeyboardSettings.html
 
-.. |KeyboardDesc| replace:: Set experimenter keyboard shortcuts that are active while the experiment is running.
-
-.. |Image| image:: _images/NTB_Icons/W_Slideshow.png
+.. |Save| image:: _images/NTB_Icons/W_Save.png
   :height: 40
-  :alt: Image
-  :target: NTB_ImageExpSettings.html
+  :alt: Save Data
+  :target: NTB_SaveDataSettings.html
 
-.. |ImagesDesc| replace:: Set parameters for an image presentation experiment, including the paths of the images to be presented.
-
-.. |Movie| image:: _images/NTB_Icons/W_Movie.png
+.. |GitHub| image:: _images/NTB_Icons/W_Github.png
   :height: 40
-  :alt: Movie
-  :target: NTB_MovieExpSettings.html
-
-.. |MoviesDesc| replace:: Set parameters for a movie presentation experiment, including the paths of the movies to be presented.
-
-.. |TDT| image:: _images/NTB_Icons/W_TDT.png
-  :height: 40
-  :alt: TDT
-  :target: NTB_TDTSettings.html
-
-.. |TDTDesc| replace:: Set parameters for communication with Tucker Davis Technologies (TDT) neurophysiology recording systems.
-
-.. |OpenEphys| image:: _images/NTB_Icons/W_OpenEphys.png
-  :height: 40
-  :alt: OpenEphys
-  :target: NTB_OESettings.html
-
-.. |OEDesc| replace:: Set parameters for communication with Open EPhys (OE) neurophysiology recording systems.
+  :alt: Github
+  :target: NTB_GithubSettings.html
 
 .. |NI_Logo| image:: _images/NTB_Icons/W_NationalInstruments.png
   :height: 40
   :alt: National Instruments
   :target: NTB_NISettings.html
-
-.. |NIDesc| replace:: Set parameters for communication with National Instruments (NI) data acquisition systems.
 
 
 

@@ -36,6 +36,7 @@ extensions = [
     'sphinx.ext.githubpages',
     #'recommonmark',
     # 'zot4rst.sphinx',
+    'sphinx.ext.intersphinx',
     'matplotlib.sphinxext.plot_directive',
     #'sphinxcontrib.video',
 ]

@@ -1,0 +1,9 @@
+﻿Icon,Calibration,Brief Description
+|Grid|,Display - Spatial,"Presents customized grids on the subject's display in order to perform spatial calibrations of the projectors (e.g. centering, keystone distortion, etc.)"
+|Luminance|,Display - Luminance,Screen luminance measurement.
+|Gamma|,Display - Gamma,Calculation of normalized Gamma color look-up tables (CLUTs) for linear display luminance.
+|Reward|,Reward volume,Perform automated liquid reward delivery at different system pressure levels to calculate volume (ml) per unit time (ms) of solenoid valve opening.
+|Photodiode|,Photodiode marker,Test expected photodiode input signals (analog / digital) across a range of luminance changes in order to check placement and determine appropriate marker settings.
+|EPI|,Scanner sync.,Test expected scanner TTL pulse input to make sure that pulses are accurately detected and stimulus timing is locked to scanner TRs.
+|Audio|,Audio SPL,Audio sound pressure level measurement.
+|Lever|,Lever response,Test lever inputs.

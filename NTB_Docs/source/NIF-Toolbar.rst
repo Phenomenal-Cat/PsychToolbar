@@ -4,6 +4,12 @@ NIF Toolbar
 
 .. _NIF_Toolbar_Home:
 
+.. figure:: _images/NTB_Images/DisplayMockUp.png
+  :align: right
+  :figwidth: 100%
+  :width: 100%
+  :alt: NTB Display Example
+
 .. figure:: _images/NTB_GUIs/NIF_Toolbar.png
   :align: right
   :figwidth: 100%
@@ -25,6 +31,51 @@ The NIF Toolbar is flexibly designed to be of benefit to both novice and experie
 * Presentation of abstract graphics (e.g. dot motion, gratings, retinotopic mapping stimuli)
 
 For the advanced user, NIF Toolbar provides a fast and user-friendly means of editing and organizing the many variables involved (via GUIs), which can then be optionally accessed in your own experimental code through the `Params` `object class <https://www.mathworks.com/help/matlab/matlab_oop/example-representing-structured-data.html>`_. NTB sub-functions allow common tasks that may occur throughout an experiment (e.g. reward delivery) to be executed with a single line of code, thus minimizing the amount of code required to write new experiments.
+
+
+Panels and Tabs
+===================
+
+.. |Session| image:: _images/NTB_Icons/W_Calendar.png
+  :width: 40
+  :alt: Session
+  :target: NTB_SessionPanel.html
+
+.. |Actions| image:: _images/NTB_Icons/W_Play.png
+  :width: 40
+  :alt: Actions
+  :target: NTB_ActionsTab.html
+
+.. |Settings| image:: _images/NTB_Icons/W_Settings.png
+  :width: 40
+  :alt: Settings
+  :target: NTB_SettingsTab.html
+
+.. |Experiments| image:: _images/NTB_Icons/W_Experiment.png
+  :width: 40
+  :alt: Experiments
+  :target: NTB_ExperimentsTab.html
+
+.. |fMRI| image:: _images/NTB_Icons/W_EPI.png
+  :width: 40
+  :alt: fMRI
+  :target: NTB_fMRITab.html
+
+.. |Ephys| image:: _images/NTB_Icons/W_Ephys2.png
+  :width: 40
+  :alt: Ephys
+  :target: NTB_EphysTab.html
+
+.. |Calib| image:: _images/NTB_Icons/W_Calibrate.png
+  :width: 40
+  :alt: Calibrations
+  :target: NTB_CalibrationsTab.html
+
+.. csv-table::
+  :file: _static/CSVs/NIF_ToolbarTabs.csv
+  :header-rows: 1
+  :widths: 10 20 60
+  :align: left
 
 
 Requirements

@@ -2,12 +2,11 @@
   :width: 30
   :alt: Experiments
 
+.. _NTB_ExperimentsTab:
+
 ===================================
 |Experiments| NTB Experiments Tab
 ===================================
-
-.. NTB_ExperimentsTab:
-
 
 .. toctree::
    :maxdepth: 2

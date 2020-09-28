@@ -1,73 +1,51 @@
-.. |Actions| image:: _images/NTB_Icons/Play.png
+.. |Ephys| image:: _images/NTB_Icons/Ephys2.png
   :width: 30
-  :alt: Actions
+  :alt: Ephys
+
+.. _NTB_EphysTab:
 
 ===================================
-|Actions| NTB Actions Tab
+|Ephys| NTB Ephys Tab
 ===================================
 
-.. NTB_ActionsTab:
+.. toctree::
+   :maxdepth: 2
+   :hidden:
 
-The Actions tab of the NIF Toolbar GUI allows the user to execute various actions based on the current settings. The most important action.
+   NTB TDT Settings <NTB_TDTSettings>
+   NTB Open Ephys <NTB_OESettings>
+   NTB OptiTrack Settings  <NTB_OptitrackSettings>
+   NTB Photodiode Settings  <NTB_PhotodiodeSettings>
+   NTB Stimulation Settings  <NTB_StimSettings>
+
+The Ephys tab of the NIF Toolbar GUI allows the user to edit settings related to specific electrophysiological recording and stimulation hardware.
 
 
-.. |Play| image:: _images/NTB_Icons/W_Play.png
+.. |TDT| image:: _images/NTB_Icons/W_TDT.png
   :height: 40
-  :alt: Play
+  :alt: TDT
 
-.. |PlayDesc| replace:: Runs the experiment function that is currently selected in the NTB Session panel's 'Experiment' dropdown menu.
-
-.. |Stop| image:: _images/NTB_Icons/W_PlayOff.png
+.. |OE| image:: _images/NTB_Icons/W_OpenEphys.png
   :height: 40
-  :alt: Stop
+  :alt: OpenEphys
 
-.. |StopDesc| replace:: Stops the currently running experiment (without closing the onscreen window).
-
-.. |EyeTracking| image:: _images/NTB_Icons/W_Eye.png
+.. |PD| image:: _images/NTB_Icons/W_Photodiode.png
   :height: 40
-  :alt: EyeTracking
+  :alt: Photodiode
 
-.. |EyeCalDesc| replace:: Runs an eye calibration routine based on the settings selected in the :ref:`eye calibration settings GUI <NTB_EyeCalSettings>`.
-
-.. |Reward| image:: _images/NTB_Icons/W_Liquid.png
+.. |OptiTrack| image:: _images/NTB_Icons/W_Motive.png
   :height: 40
-  :alt: Manual reward
+  :alt: OptiTrack Motive
 
-.. |RewardDesc| replace:: Manually delivers liquid reward to the subject based on the settings selected in the :ref:`reward settings GUI <NTB_RewardSettings>`.
-
-.. |PlayMovie| image:: _images/NTB_Icons/W_Movie.png
+.. |Stim| image:: _images/NTB_Icons/W_Stimulation.png
   :height: 40
-  :alt: Play movie
-
-.. |MoviesDesc| replace:: Present a movie / movies based on the settings in the :ref:`movie settings GUI <NTB_MovieExpSettings>`.
-
-.. |PlaySound| image:: _images/NTB_Icons/W_SpeakerOn.png
-  :height: 40
-  :alt: PlaySound
-
-.. |AudioDesc| replace:: Play the audio file(s) selected in the :ref:`audio settings GUI <NTB_AudioSettings>`.
+  :alt: Stimulation
 
 
-.. table:: 
-  :widths: 10 30 60
+.. csv-table:: 
+  :file: _static/CSVs/NTB_EphysTab.csv
+  :widths: 8 15 15 60
+  :header-rows: 1
   :align: left
   :class: special
-  
-  +--------------+-------------------------------+-----------------------------------------+
-  | Icon         | Action                        | Brief Description                       |
-  +==============+===============================+=========================================+
-  ||Play|        | **Run selected experiment**   | |PlayDesc|                              |
-  +--------------+-------------------------------+-----------------------------------------+
-  ||Stop|        | **Stop current experiment**   | |StopDesc|                              |
-  +--------------+-------------------------------+-----------------------------------------+
-  ||EyeTracking| | **Run eye calibration**       | |EyeCalDesc|                            |
-  +--------------+-------------------------------+-----------------------------------------+
-  ||Reward|      | **Deliver manual reward**     | |RewardDesc|                            |
-  +--------------+-------------------------------+-----------------------------------------+
-  ||PlaySound|   | **Play audio**                | |AudioDesc|                             |
-  +--------------+-------------------------------+-----------------------------------------+
-  ||PlayMovie|   | **Play movie**                | |MovieDesc|                             |
-  +--------------+-------------------------------+-----------------------------------------+
-
-
 

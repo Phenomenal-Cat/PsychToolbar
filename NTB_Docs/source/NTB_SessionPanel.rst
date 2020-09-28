@@ -2,11 +2,11 @@
   :width: 30
   :alt: Session
 
+.. _NTB_SessionPanel:
+
 ===================================
 |Session| NTB Session Panel
 ===================================
-
-.. _NTB_SessionPanel:
 
 .. figure:: _images/NTB_GUIs/NTB_Main_SessionPanel.png
   :align: right
@@ -14,7 +14,7 @@
   :width: 100%
   :alt: NIF Toolbar Session panel.
 
-The Session panel of the NIF Toolbar GUI allows the user to quickly load variables associated with a specific computer, researcher, subject, experiment and session date. All variables controlled by the Session panel are saved to the :ref:`Session field <Params-Session>` of the **Params** structure.
+The Session panel of the NIF Toolbar GUI allows the user to quickly load variables associated with a specific computer, researcher, subject, experiment and session date. All variables controlled by the Session panel are saved to the :ref:`Session field <Params-Session>` of the **Params** object.
 
 
 .. |Settings| image:: _images/NTB_Icons/Settings.png

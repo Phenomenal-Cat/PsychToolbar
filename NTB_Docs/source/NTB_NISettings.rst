@@ -20,10 +20,10 @@ The National Instruments (NI) Settings GUI allows the user to quickly set channe
 
 
 
+.. _Params-NI:
+
 Params.NI fields
 ======================
-
-.. _Params-NI:
 
 Some stuff here
 
