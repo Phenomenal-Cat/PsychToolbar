@@ -17,7 +17,7 @@
    NTB Scanner TTL  <NTB_ScannerTTL>
 
 
-The fMRI tab of the NIF Toolbar GUI allows the user to...
+The :badge:`fMRI,badge-primary` tab of the NIF Toolbar GUI allows the user to launch apps for configuring parameter specific to functional MRI experiments.  
 
 .. |EPI| image:: _images/NTB_Icons/W_SpeakerOn.png
   :height: 40

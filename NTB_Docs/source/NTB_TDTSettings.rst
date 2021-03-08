@@ -15,8 +15,7 @@
   :width: 100%
   :alt: NTB National Instruments Settings GUI.
 
-The Tucker Davis Technologies (TDT) Settings GUI allows the user to quickly set communication preferences for TDT electrophysiology recordings.
- All variables controlled by the TDT settings GUI are saved to the :ref:`TDT field <Params-TDT>` of the **Params** object.
+The :badge:`TDT Settings,badge-success` GUI allows the user to quickly set communication preferences for Tucker Davis Technologies (TDT) electrophysiology recordings. All variables controlled by the TDT settings GUI are saved to the :ref:`TDT field <Params-TDT>` of the **Params** object.
 
 
 .. _Params-TDT:

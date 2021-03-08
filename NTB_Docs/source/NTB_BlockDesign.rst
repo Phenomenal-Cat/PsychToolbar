@@ -17,7 +17,7 @@
   :width: 100%
   :alt: NIF Block Design GUI
 
-The Block Design GUI allows the user to quickly set variables for generating block design sequences for task-related fMRI experiments. All variables controlled by the Block Design GUI are saved to the :ref:`Block <Params-Block>` of the **Params** object.
+The :badge:`Block Design,badge-success` GUI allows the user to quickly set variables for generating block design sequences for task-related fMRI experiments. All variables controlled by the Block Design GUI are saved to the :ref:`Block <Params-Block>` of the **Params** object.
 
 Theoretical notes
 ==========================

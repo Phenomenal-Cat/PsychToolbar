@@ -10,7 +10,7 @@
 
 .. NTB_CalibrationsTab:
 
-The Calibrations tab of the NIF Toolbar GUI allows the user to test and calibrate various aspects of the hardware and software, for optimal performance during experiments.
+The :badge:`Calibrations,badge-primary` tab of the NIF Toolbar GUI allows the user to test and calibrate various aspects of the hardware and software, for optimal performance during experiments.
 
 .. |Grid| image:: _images/NTB_Icons/W_Cal.png
   :height: 40

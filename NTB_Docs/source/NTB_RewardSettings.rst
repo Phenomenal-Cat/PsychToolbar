@@ -17,7 +17,7 @@
   :width: 100%
   :alt: NIF Toolbar Session panel.
 
-The Reward Settings GUI allows the user to quickly set variables affecting the reward schedule for the subject based on timing and/or performance. All variables controlled by the Reward settings GUI are saved to the :ref:`Reward field <Params-Reward>` of the Params structure.
+The :badge:`Reward Settings,badge-success` GUI allows the user to quickly set variables affecting the reward schedule for the subject based on timing and/or performance. All variables controlled by the Reward settings GUI are saved to the :ref:`Reward field <Params-Reward>` of the Params structure.
 
 
 Params.Reward fields

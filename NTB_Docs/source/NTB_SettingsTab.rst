@@ -14,16 +14,13 @@
 
    NTB Display Settings <NTB_DisplaySettings>
    NTB Datapixx Settings <NTB_DatapixxSettings>
-   NTB Reward Settings <NTB_RewardSettings>
    NTB Eye Calibration Settings <NTB_EyeCalSettings>
+   NTB Reward Settings <NTB_RewardSettings>
    NTB Keyboard Settings <NTB_KeyboardSettings>
-   NTB Images Settings <NTB_ImagesSettings>
-   NTB Movies Settings <NTB_MoviesSettings>
-   NTB TDT Settings <NTB_TDTSettings>
    NTB NI Settings <NTB_NISettings>
 
 
-The Settings tab of the NIF Toolbar GUI allows the user to launch various settings apps to quickly load, edit and save variables related to specific aspects of behavioral experiments and associated hardware. The variables controlled by each app in the Settings tab are saved to a unique field of the **Params** structure, as listed in the table below. Click on the icon or name of each setting GUI to view it's documentation, or click on the output structure to see the list of fields within each settings output structure.
+The :badge:`Settings,badge-primary` tab of the NIF Toolbar GUI allows the user to launch various settings apps to quickly load, edit and save variables related to specific aspects of behavioral experiments and associated hardware. The variables controlled by each app in the Settings tab are saved to a unique field of the **Params** structure, as listed in the table below. Click on the icon or name of each setting GUI to view it's documentation, or click on the output structure to see the list of fields within each settings output structure.
 
 
 .. |Display| image:: _images/NTB_Icons/W_Display.png

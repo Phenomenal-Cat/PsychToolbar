@@ -1,7 +1,7 @@
 ﻿Icon,Action,Brief Description
 |Play|,**Run selected experiment**,Runs the experiment function that is currently selected in the NTB Session panel's 'Experiment' dropdown menu.
 |Stop|,**Stop current experiment**,Stops the currently running experiment (without closing the onscreen window).
-|EyeTracking|,**Run eye calibration**,Runs an eye calibration routine based on the settings selected in the :ref:`Eye Calibration Settings GUI <NTB_EyeCalSettings>`.
-|Reward|,**Deliver manual reward**,Manually delivers liquid reward to the subject based on the settings selected in the :ref:`Reward Settings GUI <NTB_RewardSettings>`.
-|PlaySound|,**Play audio**,Play the audio file(s) selected in the :ref:`Audio Settings GUI <NTB_AudioSettings>`.
-|PlayMovie|,**Play movie**,Present a movie / movies based on the settings in the :ref:`Movie Settings GUI <NTB_MovieExpSettings>`.
+|EyeTracking|,**Run eye calibration**,"Runs an eye calibration routine based on the settings selected in the :link-badge:`NTB_EyeCalSettings,Eye Calibration Settings,ref,badge-success  text-white,hallo` GUI"
+|Reward|,**Deliver manual reward**,"Manually delivers liquid reward to the subject based on the settings selected in the :link-badge:`NTB_RewardSettings,Reward Settings,ref,badge-success  text-white,hallo` GUI."
+|PlaySound|,**Play audio**,"Play the audio file(s) selected in the :link-badge:`NTB_AudioSettings,Audio Settings,ref,badge-success  text-white,hallo` GUI."
+|PlayMovie|,**Play movie**,"Present a movie / movies based on the settings in the :link-badge:`NTB_MovieSettings,Movie Settings,ref,badge-success  text-white,hallo` GUI. "

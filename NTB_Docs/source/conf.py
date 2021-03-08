@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.abspath('.'))
 
 project = 'NIF Toolbar'
 now     = datetime.datetime.now()       # Get current date
-author  = 'Aidan P. Murphy, Ph.D'
+author  = 'Dr. Aidan Murphy'
 copyright = '%d, %s' % (now.year, author)
 version = '1.0'                     # The short X.Y version
 release = '1.0'                     # The full version, including alpha/beta/rc tags
@@ -34,9 +34,11 @@ release = '1.0'                     # The full version, including alpha/beta/rc 
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.githubpages',
-    #'recommonmark',
+    'recommonmark',
     # 'zot4rst.sphinx',
     'sphinx.ext.intersphinx',
+    'sphinx_inline_tabs',
+    'sphinx_panels',
     'matplotlib.sphinxext.plot_directive',
     #'sphinxcontrib.video',
 ]
@@ -71,6 +73,7 @@ html_logo = './_images/Logos/NTB Logo w.png'
 
 html_show_sourcelink = False
 
+#html_favicon = './_images/Logos/NIF_favicon.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -91,4 +94,5 @@ html_sidebars = { '**': ['globaltoc.html', 'relations.html', 'sourcelink.html', 
 # Custom CSS
 html_css_files = [
     'css/nif.css',
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
 ]

@@ -18,7 +18,10 @@
    NTB Saccade Map Settings <NTB_SaccadeMapSettings>
 
 
-The Experiments tab of the NIF Toolbar GUI allows the user to launch apps to quickly load, edit and save variables related to specific pre-programmed experiments. The variables controlled by each app in the Settings tab are saved to a unique field of the **Params** structure, as listed in the table below. Click on the icon or name of each experiment GUI to view its documentation, or click on the output structure to see the list of fields within each experiment's output structure.
+The :badge:`Experiments,badge-primary` tab of the NIF Toolbar GUI allows the user to launch apps to quickly load, edit and save variables related to specific pre-programmed experiments. The variables controlled by each app in the Settings tab are saved to a unique field of the **Params** structure, as listed in the table below. Click on the icon or name of each experiment GUI to view its documentation, or click on the output structure to see the list of fields within each experiment's output structure.
+
+.. note:: 
+  If you are programming your own experiment and want to utilize NIF Toolbar controls or features, see the :ref:`guide to adding custom experiments <CustomExperiments>` for further information. 
 
 
 .. |Image| image:: _images/NTB_Icons/W_Slideshow.png

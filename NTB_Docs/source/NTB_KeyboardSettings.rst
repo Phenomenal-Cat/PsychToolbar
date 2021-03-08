@@ -17,7 +17,7 @@
   :width: 100%
   :alt: NTB Keyboard Settings
 
-The Keyboard Settings GUI allows the user to quickly set variables affecting .... All variables controlled by the Keyboard settings GUI are saved to the :ref:`Keys field <Params-Keys>` of the Params structure.
+The :badge:`Keyboard Settings,badge-success` GUI allows the user to quickly set variables affecting .... All variables controlled by the Keyboard settings GUI are saved to the :ref:`Keys field <Params-Keys>` of the Params structure.
 
 
 Params.Keys fields

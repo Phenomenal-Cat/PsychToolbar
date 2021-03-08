@@ -15,8 +15,7 @@
   :width: 100%
   :alt: NTB Movie Experiments Settings GUI.
 
-The Movie Experiments settings GUI allows the user to quickly set parameters for experiments involving the visual presentation of video(s). All variables controlled by the Movie settings GUI are saved to the :ref:`Movie field <Params-Movie>` of the Params object.
-
+The :badge:`Movie Settings,badge-success` GUI allows the user to quickly set parameters for experiments involving the visual presentation of video(s). All variables controlled by the Movie settings GUI are saved to the :ref:`Movie field <Params-Movie>` of the Params object.
 
 
 

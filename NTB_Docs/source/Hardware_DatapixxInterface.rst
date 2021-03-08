@@ -20,6 +20,7 @@ another:
 
 -  `VPixx DataPixx2 box <https://vpixx.com/products/datapixx2/>`_ (3 x DB25 connectors)
 -  `SR Research EyeLink II <https://www.sr-research.com/eyelink-ii/>`_ (1 x 68-pin D-sub)
+-  `Arrington Research ViewPoint <>`_ 
 -  `TDT RZ2 bioamp <https://www.tdt.com/component/rz2-bioamp-processor/>`_ (2 x DB25 connectors)
 -  `Open Ephys board <https://open-ephys.org/acq-board>`_ (4 x HDMI connectors)
 
@@ -50,11 +51,12 @@ Analog signals
   Figure 2. Schematic of the Datapixx Interface Box's connections to other hardware devices.
   
 
-The interface box houses a series of breakout boards, with the main one
-being a `Data Translation
-DT330 <https://www.mccdaq.com/PDFs/Manuals/UM330.pdf>`__, which accepts
-the 68-pin D-sub cable that comes from the analog-out cards in the
-EyeLink PCs. The six channels of eye signal (X, Y and pupil for both
+The interface box houses a series of breakout boards:
+
+* The eye signal boards in the SCNI interface boxes are `Data Translation DT330 <https://www.mccdaq.com/PDFs/Manuals/UM330.pdf>`_, which accepts the 68-pin D-sub cable that comes from the analog-out cards in the EyeLink PCs. 
+* The eye signal boards in the NIF interface boxes are `CIO-MINI50 <https://www.mccdaq.com/productsearch.aspx?q=cio-mini>`_, which accept one 50-pin connector from the 100-channel ribbon cable from the Arrington ViewPoint analog output PCI card.
+
+The six channels of eye signal (X, Y and pupil for both
 left and right eyes) are routed via filtering stages (consisting of a 50
 Ohm resistor and a 1uF capacitor) to the first 6 analog input channels
 of the DataPixx2, the TDT RZ2, and the Open Ephys board. An additional

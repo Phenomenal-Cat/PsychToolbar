@@ -18,7 +18,7 @@
    NTB Photodiode Settings  <NTB_PhotodiodeSettings>
    NTB Stimulation Settings  <NTB_StimSettings>
 
-The Ephys tab of the NIF Toolbar GUI allows the user to edit settings related to specific electrophysiological recording and stimulation hardware.
+The :badge:`Ephys,badge-primary` tab of the NIF Toolbar GUI allows the user to edit settings related to specific electrophysiological recording and stimulation hardware.
 
 
 .. |TDT| image:: _images/NTB_Icons/W_TDT.png

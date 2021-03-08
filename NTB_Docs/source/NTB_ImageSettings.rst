@@ -15,100 +15,108 @@
   :width: 100%
   :alt: NTB Image Experiments Settings GUI.
 
-The Image Experiments settings GUI allows the user to quickly set parameters for experiments involving the visual presentation of static images. All variables controlled by the Image settings GUI are saved to the :ref:`Image field <Params-Image>` of the Params object.
+The :badge:`Image Settings,badge-success` GUI allows the user to quickly set parameters for experiments involving the visual presentation of static images. All variables controlled by the Image settings GUI are saved to the :ref:`Image field <Params-Image>` of the Params object.
 
-Settings Panel
+
+Tabs
 =================
 
+.. dropdown:: Selection Tab
+  :container: + shadow
+  :title: bg-secondary text-white text-left font-weight-bold
+  :body: bg-dark text-left
 
-Selection Tab
-------------------
+  * :badge:`Image directory,badge-primary`: full path of the folder to load image stimuli from.
 
-* **Image directory**: full path of the folder to load image stimuli from.
+  * :badge:`Background directory,badge-primary`: full path of the folder to load background images from. If selected, background images will be presented behind the stimulus images and hence will only be visible where the stimulus image contains transparent pixels.
 
-* **Background directory**: full path of the folder to load background images from. If selected, background images will be presented behind the stimulus images and hence will only be visible where the stimulus image contains transparent pixels.
+  * :badge:`Image format,badge-primary`: File format of the images to load. Images in other formats from the selected image directory will be ignored.
 
-* **Image format**: File format of the images to load. Images in other formats from the selected image directory will be ignored.
+  * :badge:`Subdirectories,badge-primary`: Select how to treat subdirectories found inside the image directory:
 
-* **Subdirectories**: Select how to treat subdirectories found inside the image directory:
+    - **Ignore**: only load images found in the top level of the image directory.
+    - **Load all**: search the image directory recursively and load all images from any subdirectories.
+    - **Use as conditions**: treat each subdirectory found in the image directory as a separate experimental condition and load the images from each.
 
-  - **Ignore**: only load images found in the top level of the image directory.
-  - **Load all**: search the image directory recursively and load all images from any subdirectories.
-  - **Use as conditions**: treat each subdirectory found in the image directory as a separate experimental condition and load the images from each.
+  * :badge:`Conditions,badge-primary`: If the **Subdirectories** field above is set to **Use as conditions** then this dropdown menu will be populated with the subdirectory names. Selecting a name in this dropdown menu will make the image preview jump to the first image belonging to that condition.
 
-* **Conditions**: If the **Subdirectories** field above is set to **Use as conditions** then this dropdown menu will be populated with the subdirectory names. Selecting a name in this dropdown menu will make the image preview jump to the first image belonging to that condition.
+  * :badge:`Backgrounds,badge-primary`: Select how to use background images found in the **Background directory**. If there is a specific background image for each stimulus then background images should be named with a similar convention to the images so that they retain the same order. If there are fewer background images than stimulus images then the background can either be randomized per trial or randomized per block.
 
-* **Backgrounds**: Select how to use background images found in the **Background directory**. If there is a specific background image for each stimulus then background images should be named with a similar convention to the images so that they retain the same order. If there are fewer background images than stimulus images then the background can either be randomized per trial or randomized per block.
-
-* **SDS 3D format?**: Select this checkbox if the stimuli are in side-by-side (SBS) stereoscopic 3D format. For stereoscopic presentation, settings must also be updated in :ref:`NTB Display Settings GUI <NTB_DisplaySettings>`.
-
-
-Transforms Tab
-------------------
-
-* **Present fullscreen**: 
-
-* **Stimulus width (units)**:
-
-* **Stimulus width**:
-
-* **Use alpha channel?**:
-
-* **Color**: 
-
-* **Apply mask**:
-
-* **Image rotation ()**:
-
-* **Image contrast**:
-
-* **Normalize luminance**: 
+  * :badge:`SDS 3D format?,badge-primary`: Select this checkbox if the stimuli are in side-by-side (SBS) stereoscopic 3D format. For stereoscopic presentation, settings must also be updated in :ref:`NTB Display Settings GUI <NTB_DisplaySettings>`.
 
 
-Presentation Tab
-------------------
+.. dropdown:: Transforms Tab
+  :container: + shadow
+  :title: bg-secondary text-white text-left font-weight-bold
+  :body: bg-dark text-left
 
-* **Stimulus order**:
+  * :badge:`Present fullscreen,badge-primary`:
 
-* **Trials per run**:
+  * :badge:`Stimulus width (units),badge-primary`: 
 
-* **Stim. per trial**:
+  * :badge:`Stimulus width,badge-primary`: 
 
-* **Stim. duration (ms)**:
+  * :badge:`Use alpha channel?,badge-primary`:
 
-* **Inter-stim interval (ms)**:
+  * :badge:`Color,badge-primary`:
 
-* **Inter-trial interval (ms)**:
+  * :badge:`Apply mask,badge-primary`:
 
-* **Temporal jitter (mean ms)**:
+  * :badge:`Image rotation (°),badge-primary`:
+
+  * :badge:`Image contrast,badge-primary`:
+
+  * :badge:`Normalize luminance,badge-primary`: Luminance normalization of a set of images using the `SHINE Toolbox <http://www.mapageweb.umontreal.ca/gosselif/SHINE/>`_ (`Willenbockel et al., 2010 <https://doi.org/10.3758/BRM.42.3.671>`_). 
 
 
+.. dropdown:: Presentation Tab
+  :container: + shadow
+  :title: bg-secondary text-white text-left font-weight-bold
+  :body: bg-dark text-left
 
-fMRI Tab
-------------------
+  * :badge:`Stimulus order,badge-primary`:
 
-* **Add fixation blocks**: 
+  * :badge:`Trials per run,badge-primary`:
 
-* **Blocks per run**: 
+  * :badge:`Stim. per trial,badge-primary`:
 
-* **Stim. Per block**: 
+  * :badge:`Stim. duration (ms),badge-primary`:
 
-* **Stim. Duration (ms)**: 
+  * :badge:`Inter-stim interval (ms),badge-primary`:
 
-* **Inter-stim interval (ms)**: 
+  * :badge:`Inter-trial interval (ms),badge-primary`:
 
-* **Sync stim to TTL?**: 
+  * :badge:`Temporal jitter (mean ms),badge-primary`:
+
+  * :badge:`Temporal jitter (SD ms),badge-primary`:
+
+
+.. dropdown:: fMRI Tab
+  :container: + shadow
+  :title: bg-secondary text-white text-left font-weight-bold
+  :body: bg-dark text-left
+
+  * :badge:`Add fixation blocks,badge-primary`: 
+
+  * :badge:`Blocks per run,badge-primary`: 
+
+  * :badge:`Stim. Per block,badge-primary`: 
+
+  * :badge:`Stim. Duration (ms),badge-primary`: 
+
+  * :badge:`Inter-stim interval (ms),badge-primary`: 
+
+  * :badge:`Sync stim to TTL?,badge-primary`: 
 
 
 Stimulus Panel
 ==================
 
-* **No. images**:
+* :badge:`No. Images,badge-primary`: 
 
-* **Image res (px)**:
+* :badge:`Image res (px),badge-primary`:
 
-* **Preview image**:
-
+* :badge:`Preview image,badge-primary`:
 
 
 
