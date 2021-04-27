@@ -19,7 +19,7 @@ pipeline {
         stage ('Create HTML') {
             steps {
                 echo 'Run Sphinx..'
-                sh 'source bin/activate && make sphinx-build'
+                sh 'source bin/activate && NTB_Docs/make sphinx-build'
             }
         }
         stage ('Deploy HTML') {
