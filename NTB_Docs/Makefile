@@ -36,7 +36,7 @@ install: pip-install
 #virtualenv: python-virtualenv-3-8
 
 sphinx-build:
-	cd NTB_Docs/source; sphinx-build -b html -d _build/doctrees . _build/html
+	cd source; sphinx-build -b html -d _build/doctrees . _build/html
 
 pip-upgrade-pip:
 	pip install -U pip
