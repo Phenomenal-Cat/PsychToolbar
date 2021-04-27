@@ -25,7 +25,7 @@ pipeline {
         stage ('Deploy HTML') {
             steps {
                 echo 'Deploy..'
-                sh 'rsync -av --partial --progress source/_build/html/ /srv/website/doc/nif-toolbar'
+                sh 'rsync -av --partial --progress NTB_Docs/source/_build/html/ /srv/website/doc/nif-toolbar'
 
             }
         }
