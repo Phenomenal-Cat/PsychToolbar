@@ -54,7 +54,7 @@ templates_path = ['_templates']
 exclude_patterns = []
 
 # The master toctree document.
-master_doc = 'NIF-Toolbar'
+master_doc = 'index'
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'monokai' #'sphinx'
