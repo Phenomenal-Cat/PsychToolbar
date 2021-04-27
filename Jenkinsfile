@@ -13,7 +13,7 @@ pipeline {
         stage ('Install Sphinx') {
             steps {
                 echo 'Install Sphinx..'
-                sh 'source bin/activate && export LD_LIBRARY_PATH=/library/software/openssl/openssl-1.1.1h-install/lib/; pip3 install -r requirements.txt'
+                sh 'source bin/activate && export LD_LIBRARY_PATH=/library/software/openssl/openssl-1.1.1h-install/lib/; pip3 install -r NTB_Docs/requirements.txt'
             }
         }
         stage ('Create HTML') {
@@ -25,7 +25,7 @@ pipeline {
         stage ('Deploy HTML') {
             steps {
                 echo 'Deploy..'
-                sh 'rsync -av --partial --progress source/_build/html/ /srv/website/doc/nif-internal'
+                sh 'rsync -av --partial --progress source/_build/html/ /srv/website/doc/nif-toolbar'
 
             }
         }
