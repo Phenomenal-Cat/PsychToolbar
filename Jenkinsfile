@@ -13,19 +13,19 @@ pipeline {
         stage ('Install Sphinx') {
             steps {
                 echo 'Install Sphinx..'
-                sh 'NTB_Docs/source bin/activate && export LD_LIBRARY_PATH=/library/software/openssl/openssl-1.1.1h-install/lib/; pip3 install -r requirements.txt'
+                sh 'source bin/activate && export LD_LIBRARY_PATH=/library/software/openssl/openssl-1.1.1h-install/lib/; pip3 install -r requirements.txt'
             }
         }
         stage ('Create HTML') {
             steps {
                 echo 'Run Sphinx..'
-                sh 'NTB_Docs/source bin/activate && make sphinx-build'
+                sh 'source bin/activate && make sphinx-build'
             }
         }
         stage ('Deploy HTML') {
             steps {
                 echo 'Deploy..'
-                sh 'rsync -av --partial --progress NTB_Docs/source/_build/html/ /srv/website/doc/nif-internal'
+                sh 'rsync -av --partial --progress source/_build/html/ /srv/website/doc/nif-internal'
 
             }
         }
