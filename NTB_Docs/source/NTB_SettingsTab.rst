@@ -28,7 +28,7 @@ The :badge:`Settings,badge-primary` tab of the NIF Toolbar GUI allows the user t
   :alt: Display
   :target: NTB_DisplaySettings.html
 
-.. |Datapixx| image:: _images/NTB_Icons/W_Datapixx.png
+.. |Datapixx| image:: _images/NTB_Icons/W_DataPixx.png
   :height: 40
   :alt: Datapixx
   :target: NTB_DatapixxSettings.html

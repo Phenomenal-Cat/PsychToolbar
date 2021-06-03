@@ -1,4 +1,4 @@
-.. |DPx_icon| image:: _images/NTB_Icons/Datapixx.png
+.. |DPx_icon| image:: _images/NTB_Icons/DataPixx.png
   :align: bottom
   :height: 30
   :alt: NTB Datapixx Settings
