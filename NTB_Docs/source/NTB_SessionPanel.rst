@@ -8,13 +8,15 @@
 |Session| NTB Session Panel
 ===================================
 
+.. |Params| replace:: :link-badge:`NTB_ParamsObject,Params,ref,cls=badge-warning text-dark`
+
 .. figure:: _images/NTB_GUIs/NTB_Main_SessionPanel.png
   :align: right
   :figwidth: 30%
   :width: 100%
   :alt: NIF Toolbar Session panel.
 
-The :badge:`Session,badge-primary` panel of the NIF Toolbar GUI allows the user to quickly load variables associated with a specific computer, researcher, subject, experiment and session date. All variables controlled by the Session panel are saved to the :ref:`Session field <Params-Session>` of the **Params** object.
+The :badge:`Session,badge-primary` panel of the NIF Toolbar GUI allows the user to quickly load variables associated with a specific computer, researcher, subject, experiment and session date. All variables controlled by the Session panel are saved to the :ref:`Session field <Params-Session>` of the |Params| object.
 
 
 .. |Settings| image:: _images/NTB_Icons/Settings.png
@@ -24,7 +26,7 @@ The :badge:`Session,badge-primary` panel of the NIF Toolbar GUI allows the user 
 |Settings| Parameters
 =========================
 
-The parameters file is a .mat file containing a 'Params' super-structure, which contains all of the experimental variables. By default, when the NIF Toolbar is launched is checks in the :opticon:`file-directory` ``NTB_Params`` folder for a .mat file containing the name of the computer on which it is running. If a single match is found then the file is automatically loaded. If no match is found or multiple matches are found, the user will immediately be asked to select a params file to load.
+The parameters file is a .mat file containing a |Params| object, which contains all of the experimental variables. By default, when the NIF Toolbar is launched it checks in the :opticon:`file-directory` ``NTB_Params`` folder for a .mat file containing the name of the computer on which it is running. If a single match is found then the file is automatically loaded. If no match is found or multiple matches are found, the user will immediately be asked to select a params file to load.
 
 The parameters dropdown menu shows all of the available parameters files located in the same folder as the currently selected parameters file. Selecting another filename from this menu will immediately load that file. Clicking on the 'parameters' gear icon will allow you to select a new parameters file from any directory.
 

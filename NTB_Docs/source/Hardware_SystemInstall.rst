@@ -241,43 +241,4 @@ Install DataPixx Tools
    `/home/lab/Downloads/VPixx_Software_Tools/DatapixxToolbox_trunk/`
    to MATLAB's path.
 
-
-.. _SetupNvidiaXscreens:
-
-Setup NVIDIA X-Screens
-========================
-
-.. figure:: _images/NTB_Images/NVidia_settings1.png
-  :figwidth: 40%
-  :width: 100%
-  :align: right
-
--  Connect displays (or matrix switch inputs) to 3 of the display port
-   outputs on the NVIDIA GTX 1080 card
-
--  In Ubuntu, open the **NVIDIA XServer Settings** manager and select
-   **XServer display configuration**
-
--  Click and drag to arrange your displays from left to right: 1) Matlab
-   command line 2) Experimenter display 3) Monkey display
-
--  Select display 2, click the drop down menu next to ``Configuration``
-   and select ``Add new Xscreen``
-
-.. figure:: _images/NTB_Images/NVidia_settings2.png
-  :figwidth: 40%
-  :width: 100%
-  :align: right
-
-
--  Set display 1 to use Xscreen 0 and displays 2 and 3 to use Xscreen 1
-
--  Click the **Save to X Configuration File** button
-
--  You will be propted to overwrite the existing file. Accept.
-
--  After reboot, the new settings will take effect. The experimenter
-   display and monkey display will now remain black after logon. Content
-   will only appear on these screens when we tell Matlab to open a
-   PsychToolbox window on Xscreen 1. Both the experimenter and monkey
-   displays are treated as a single extended window (7680 x 2160 pixels)
+- Set :ref:`X window configuration settings <Xwindows>`

@@ -1,29 +1,28 @@
-function Params = SCNI_ShowImages(Params)
+function Params = NTB_ShowImages(Params)
 
-%=========================== SCNI_ShowImages.m ============================
+%============================ NTB_ShowImages.m ============================
 % This function serves as a template for how to write an experiment using
-% the SCNI toolbar subfunctions. As is, this particular function allows the
+% the NIF Toolbar subfunctions. As is, this particular function allows the
 % experimenter to present a series of image files in an order of their
 % choosing (e.g. a block design for fMRI experiments, or pseudorandomly for
 % neurophysiology). The numerous variables can be adjusted by running the
-% accompanying SCNI_ShowImagesSettings.m GUI and saving to your parameters
-% file.
+% accompanying NTB_ImagesSettings.m GUI and saving to your parameters file.
 %
 %==========================================================================
 
 %================= SET DEFAULT PARAMETERS
-if nargin == 0 || ~isfield(Params,'ImageExp') || ~isfield(Params.ImageExp,'ImgTex') || (Params.ImageExp.Preload == 1 && Params.ImageExp.ImagesLoaded == 0)
-    Params = SCNI_ShowImagesSettings(Params, 0);
+if nargin == 0 || ~isfield(Params,'ImageExp') || ~isfield(Params.Image.Exp,'ImgTex') || (Params.Image.Exp.Preload == 1 && Params.Image.Exp.ImagesLoaded == 0)
+    Params = NTB_ImagesSettings(Params, 0);
 end
 
 %================= PRE-ALLOCATE RUN AND REWARD FIELDS
-Params.Run.ValidFixations       = nan(Params.ImageExp.TrialsPerRun, (Params.ImageExp.DurationMs+Params.ImageExp.ISIms)/10^3*Params.DPx.AnalogInRate, 3);
+Params.Run.ValidFixations       = nan(Params.Image.Exp.TrialsPerRun, (Params.Image.Exp.DurationMs+Params.Image.Exp.ISIms)/10^3*Params.DPx.AnalogInRate, 3);
 Params.Run.LastRewardTime       = GetSecs;
 Params.Run.StartTime            = GetSecs;
 Params.Run.LastPress            = GetSecs;
 Params.Run.TextColor            = [1,1,1]*255;
 Params.Run.TextRect             = [100, 100, [100, 100]+[200,300]];
-Params.Run.MaxTrialDur          = (Params.ImageExp.StimPerTrial*(Params.ImageExp.DurationMs+Params.ImageExp.ISIms+Params.ImageExp.ISIjitter)*10^-3)+1;
+Params.Run.MaxTrialDur          = (Params.Image.Exp.StimPerTrial*(Params.Image.Exp.DurationMs+Params.Image.Exp.ISIms+Params.Image.Exp.ISIjitter)*10^-3)+1;
 Params.Run.TrialCount           = 1;                            % Start trial count at 1
 Params.Run.StimCount            = 1;
 Params.Run.EndRun               = 0;
@@ -41,73 +40,73 @@ Params	= SCNI_GetPDrect(Params, Params.Display.UseSBS3D);
 Params  = SCNI_InitKeyboard(Params);
 
 %================= GENERATE FIXATION TEXTURE
-if Params.ImageExp.FixType > 1
-    Fix.Type        = Params.ImageExp.FixType-1;                % Fixation marker format
+if Params.Image.Exp.FixType > 1
+    Fix.Type        = Params.Image.Exp.FixType-1;                % Fixation marker format
     Fix.Color       = [0,1,0];                                 	% Fixation marker color (RGB, 0-1)
     Fix.MarkerSize  = 1;                                        % Fixation marker diameter (degrees)
     Fix.LineWidth   = 4;                                        % Fixation marker line width (pixels)
     Fix.Size        = Fix.MarkerSize*Params.Display.PixPerDeg;
-    Params.ImageExp.FixTex = SCNI_GenerateFixMarker(Fix, Params);
+    Params.Image.Exp.FixTex = SCNI_GenerateFixMarker(Fix, Params);
 end
 
 %================= CALCULATE SCREEN RECTANGLES
-img = imread(Params.ImageExp.ImByCond{1}{1});
-%Params.ImageExp.SizePix = [size(img,2), size(img,1)];
+img = imread(Params.Image.Exp.ImByCond{1}{1});
+%Params.Image.Exp.SizePix = [size(img,2), size(img,1)];
 
-if Params.ImageExp.Fullscreen == 1          %============ Fullscreen image
-    Params.ImageExp.RectExp         = Params.Display.Rect;
-    Params.ImageExp.RectMonk        = Params.Display.Rect + [Params.Display.Rect(3), 0, Params.Display.Rect(3), 0];
-    if Params.ImageExp.FixType == 1                             % If fixation marker is OFF...
-        Params.ImageExp.GazeRect 	= Params.ImageExp.RectExp;  % Anywhere on screen is valid eye position
+if Params.Image.Exp.Fullscreen == 1          %============ Fullscreen image
+    Params.Image.Exp.RectExp         = Params.Display.Rect;
+    Params.Image.Exp.RectMonk        = Params.Display.Rect + [Params.Display.Rect(3), 0, Params.Display.Rect(3), 0];
+    if Params.Image.Exp.FixType == 1                             % If fixation marker is OFF...
+        Params.Image.Exp.GazeRect 	= Params.Image.Exp.RectExp;  % Anywhere on screen is valid eye position
     end
     
-elseif Params.ImageExp.Fullscreen == 0      %============ Scaled image (degrees)
-    Params.ImageExp.RectExp     = CenterRect([1, 1, Params.ImageExp.SizePix], Params.Display.Rect); 
-    Params.ImageExp.RectMonk    = Params.ImageExp.RectExp + [Params.Display.Rect(3), 0, Params.Display.Rect(3), 0];
-    if Params.ImageExp.FixType == 1                           	% If fixation marker is OFF...
-        Params.ImageExp.GazeRect	= Params.ImageExp.RectExp + [-1,-1, 1, 1]*Params.ImageExp.GazeRectBorder*Params.Display.PixPerDeg(1);  	% Rectangle specifying gaze window on experimenter's display
+elseif Params.Image.Exp.Fullscreen == 0      %============ Scaled image (degrees)
+    Params.Image.Exp.RectExp     = CenterRect([1, 1, Params.Image.Exp.SizePix], Params.Display.Rect); 
+    Params.Image.Exp.RectMonk    = Params.Image.Exp.RectExp + [Params.Display.Rect(3), 0, Params.Display.Rect(3), 0];
+    if Params.Image.Exp.FixType == 1                           	% If fixation marker is OFF...
+        Params.Image.Exp.GazeRect	= Params.Image.Exp.RectExp + [-1,-1, 1, 1]*Params.Image.Exp.GazeRectBorder*Params.Display.PixPerDeg(1);  	% Rectangle specifying gaze window on experimenter's display
     end
 end
-if Params.ImageExp.FixType > 1                                  % If fixation marker is ON...
-    Params.ImageExp.GazeRect    = CenterRect([1,1,Params.ImageExp.FixWinDeg.*Params.Display.PixPerDeg], Params.Display.Rect);
+if Params.Image.Exp.FixType > 1                                  % If fixation marker is ON...
+    Params.Image.Exp.GazeRect    = CenterRect([1,1,Params.Image.Exp.FixWinDeg.*Params.Display.PixPerDeg], Params.Display.Rect);
 end
 
 %================= ADJUST FOR 3D FORMAT...
-if Params.ImageExp.SBS3D == 1                       % If images are rendered as SBS stereo 3D...
+if Params.Image.Exp.SBS3D == 1                       % If images are rendered as SBS stereo 3D...
     if Params.Display.UseSBS3D == 1               	% If SBS stereo 3D presentation was requested...
         NoEyes                              = 2;
-        Params.ImageExp.SourceRectExp       = [1, 1, Params.ImageExp.SizePix(1)/2, Params.ImageExp.SizePix(2)];
-        Params.ImageExp.SourceRectMonk      = [1, 1, Params.ImageExp.SizePix];
+        Params.Image.Exp.SourceRectExp       = [1, 1, Params.Image.Exp.SizePix(1)/2, Params.Image.Exp.SizePix(2)];
+        Params.Image.Exp.SourceRectMonk      = [1, 1, Params.Image.Exp.SizePix];
         Params.Display.FixRectExp           = CenterRect([1, 1, Fix.Size], Params.Display.Rect);
         Params.Display.FixRectMonk(1,:)     = CenterRect([1, 1, Fix.Size./[2,1]], Params.Display.Rect./[1,1,2,1]) + [Params.Display.Rect(3),0,Params.Display.Rect(3),0]; 
         Params.Display.FixRectMonk(2,:)     = Params.Display.FixRectMonk(1,:) + Params.Display.Rect([3,1,3,1]).*[0.5,0,0.5,0];
     elseif Params.Display.UseSBS3D == 0            	% If SBS stereo 3D presentation was NOT requested...
         NoEyes                              = 1;
-        Params.ImageExp.SourceRectExp       = [1, 1, Params.ImageExp.SizePix(1)/2, Params.ImageExp.SizePix(2)];
-        Params.ImageExp.SourceRectMonk      = [1, 1, Params.ImageExp.SizePix(1)/2, Params.ImageExp.SizePix(2)];
+        Params.Image.Exp.SourceRectExp       = [1, 1, Params.Image.Exp.SizePix(1)/2, Params.Image.Exp.SizePix(2)];
+        Params.Image.Exp.SourceRectMonk      = [1, 1, Params.Image.Exp.SizePix(1)/2, Params.Image.Exp.SizePix(2)];
         Params.Display.FixRectExp           = CenterRect([1, 1, Fix.Size], Params.Display.Rect);
         Params.Display.FixRectMonk(1,:)     = CenterRect([1, 1, Fix.Size], Params.Display.Rect + [Params.Display.Rect(3), 0, Params.Display.Rect(3), 0]); 
         Params.Display.FixRectMonk(2,:)     = Params.Display.FixRectMonk(1,:);
     end
     
-elseif Params.ImageExp.SBS3D == 0                   % If images are rendered as regular 2D...
+elseif Params.Image.Exp.SBS3D == 0                   % If images are rendered as regular 2D...
     NoEyes                                  = 1;
-	Params.ImageExp.SourceRectExp           = [];
-    Params.ImageExp.SourceRectMonk          = [];
+	Params.Image.Exp.SourceRectExp           = [];
+    Params.Image.Exp.SourceRectMonk          = [];
     Params.Display.FixRectExp               = CenterRect([1, 1, Fix.Size], Params.Display.Rect);
     Params.Display.FixRectMonk(1,:)         = CenterRect([1, 1, Fix.Size], Params.Display.Rect + [Params.Display.Rect(3), 0, Params.Display.Rect(3), 0]); 
     Params.Display.FixRectMonk(2,:)         = Params.Display.FixRectMonk(1,:);
 end
-Params.Eye.GazeRect = Params.ImageExp.GazeRect;
+Params.Eye.GazeRect = Params.Image.Exp.GazeRect;
 
 
 %================= LOAD / GENERATE STIMULUS ORDER
-%if ~isfield(Params.ImageExp, 'Design') || Params.Toolbar.CurrentRun == 1
+%if ~isfield(Params.Image.Exp, 'Design') || Params.Toolbar.CurrentRun == 1
     fprintf('Generating new design matrix for SCNI_ShowImages.m...\n');
-    Params.Design.Type          = Params.ImageExp.DesignType;
-    Params.Design.TotalStim     = Params.ImageExp.TotalImages;
-    Params.Design.StimPerTrial	= Params.ImageExp.StimPerTrial;
-    Params.Design.TrialsPerRun  = Params.ImageExp.TrialsPerRun;
+    Params.Design.Type          = Params.Image.Exp.DesignType;
+    Params.Design.TotalStim     = Params.Image.Exp.TotalImages;
+    Params.Design.StimPerTrial	= Params.Image.Exp.StimPerTrial;
+    Params.Design.TrialsPerRun  = Params.Image.Exp.TrialsPerRun;
     Params                      = SCNI_GenerateDesign(Params, 0);
     Params                      = AllocateRand(Params);
     size(Params.Design.CondMatrix)
@@ -118,7 +117,7 @@ SCNI_SaveExperiment(Params);    % Save all parameters for current run to .mat fi
 Stages(1).Name       = 'ISI';
 Stages(1).StimOn     = 0;
 Stages(2).Name       = 'Stimulus On';
-Stages(2).Duration   = Params.ImageExp.DurationMs/10^3;
+Stages(2).Duration   = Params.Image.Exp.DurationMs/10^3;
 Stages(2).StimOn     = 1;
 
 %================= Attempt to communicate eye calibration values to TDT via
@@ -129,7 +128,7 @@ Params = SendEyeCalToTDT(Params);
 %% ============================ BEGIN RUN =================================
 FrameOnset              = GetSecs;
 
-while Params.Run.TrialCount < Params.ImageExp.TrialsPerRun && Params.Run.EndRun == 0
+while Params.Run.TrialCount < Params.Image.Exp.TrialsPerRun && Params.Run.EndRun == 0
 
     Params.Run.AbortTrial   = 0;
     AdcStatus = SCNI_StartADC(Params);                                      % Start DataPixx ADC running
@@ -144,46 +143,46 @@ while Params.Run.TrialCount < Params.ImageExp.TrialsPerRun && Params.Run.EndRun 
     
     %================== LOOP THROUGH STIMULI
     Params.Run.FixOnset = GetSecs;
-    for StimNo = 1:Params.ImageExp.StimPerTrial                             % Loop through stimuli for this trial
+    for StimNo = 1:Params.Image.Exp.StimPerTrial                             % Loop through stimuli for this trial
        
         Params.Run.CurrentStimNo = StimNo;
         
         %================== GET TRIAL STAGE DURATIONS 
         if StimNo == 1
-            ISI           	= Params.ImageExp.InitialFixDur/10^3;
+            ISI           	= Params.Image.Exp.InitialFixDur/10^3;
             PDstatus     	= 2;
             
         elseif StimNo > 1
-            if Params.ImageExp.ISIjitter == 0
-                ISI = Params.ImageExp.ISIms/10^3;
-            elseif Params.ImageExp.ISIjitter ~= 0
-                ISI = Params.ImageExp.ISIms/10^3 + Params.Run.ISIjitter(Params.Run.StimCount);
+            if Params.Image.Exp.ISIjitter == 0
+                ISI = Params.Image.Exp.ISIms/10^3;
+            elseif Params.Image.Exp.ISIjitter ~= 0
+                ISI = Params.Image.Exp.ISIms/10^3 + Params.Run.ISIjitter(Params.Run.StimCount);
             end
         end
 
         %================= SET NEXT STIMULUS RECT
-        RectExp     = Params.ImageExp.RectExp;
-        RectMonk    = Params.ImageExp.RectMonk;
-        if Params.ImageExp.ScaleJitter ~= 0
-            RectExp     = Params.ImageExp.RectExp * Params.Run.ScaleJitter(Params.Run.StimCount);
-            RectMonk    = Params.ImageExp.RectMonk * Params.Run.ScaleJitter(Params.Run.StimCount);
+        RectExp     = Params.Image.Exp.RectExp;
+        RectMonk    = Params.Image.Exp.RectMonk;
+        if Params.Image.Exp.ScaleJitter ~= 0
+            RectExp     = Params.Image.Exp.RectExp * Params.Run.ScaleJitter(Params.Run.StimCount);
+            RectMonk    = Params.Image.Exp.RectMonk * Params.Run.ScaleJitter(Params.Run.StimCount);
         end
-        if Params.ImageExp.PosJitter ~= 0
-            RectExp     = Params.ImageExp.RectExp + repmat(Params.Run.PosJitter(Params.Run.StimCount,:),[1,2]);
-            RectMonk    = Params.ImageExp.RectMonk + repmat(Params.Run.PosJitter(Params.Run.StimCount,:),[1,2]);
+        if Params.Image.Exp.PosJitter ~= 0
+            RectExp     = Params.Image.Exp.RectExp + repmat(Params.Run.PosJitter(Params.Run.StimCount,:),[1,2]);
+            RectMonk    = Params.Image.Exp.RectMonk + repmat(Params.Run.PosJitter(Params.Run.StimCount,:),[1,2]);
         end
 
         %=============== Get handle to next stimulus texture                                                         	
         Cond        = Params.Design.CondMatrix(Params.Toolbar.CurrentRun, Params.Run.StimCount);                     	% Get condition number from design matrix
         Stim        = Params.Design.StimMatrix(Params.Toolbar.CurrentRun, Params.Run.StimCount);                      	% Get stimulus number from design matrix
-        if Params.ImageExp.Preload == 0
+        if Params.Image.Exp.Preload == 0
         	ImageTex    = LoadImage(Params, Cond, Stim);
-            Params.ImageExp.MaskTex = [];
-        elseif Params.ImageExp.Preload == 1
-            ImageTex    = Params.ImageExp.ImgTex{Cond}(Stim);                                                             	% Get texture handle for next stimulus
+            Params.Image.Exp.MaskTex = [];
+        elseif Params.Image.Exp.Preload == 1
+            ImageTex    = Params.Image.Exp.ImgTex{Cond}(Stim);                                                             	% Get texture handle for next stimulus
         end
-        if isfield(Params.ImageExp, 'BckgrndTex') && ~isempty(Params.ImageExp.BckgrndTex)                               % If background textures were loaded...
-            BackgroundTex = Params.ImageExp.BckgrndTex{Cond}(Stim);                                                     % Get texture handle for corresponding background texture
+        if isfield(Params.Image.Exp, 'BckgrndTex') && ~isempty(Params.Image.Exp.BckgrndTex)                               % If background textures were loaded...
+            BackgroundTex = Params.Image.Exp.BckgrndTex{Cond}(Stim);                                                     % Get texture handle for corresponding background texture
         else
             BackgroundTex = [];
         end
@@ -203,16 +202,16 @@ while Params.Run.TrialCount < Params.ImageExp.TrialsPerRun && Params.Run.EndRun 
                 if Stages(stage).StimOn == 1
                     %============ Draw background texture
                     if ~isempty(BackgroundTex)          
-                        Screen('DrawTexture', Params.Display.win, BackgroundTex, Params.ImageExp.SourceRectExp, RectExp);               % Draw to the experimenter's display
-                        Screen('DrawTexture', Params.Display.win, BackgroundTex, Params.ImageExp.SourceRectMonk, RectMonk);             % Draw to the subject's display
+                        Screen('DrawTexture', Params.Display.win, BackgroundTex, Params.Image.Exp.SourceRectExp, RectExp);               % Draw to the experimenter's display
+                        Screen('DrawTexture', Params.Display.win, BackgroundTex, Params.Image.Exp.SourceRectMonk, RectMonk);             % Draw to the subject's display
                     end
                     %============ Draw image texture
-                    Screen('DrawTexture', Params.Display.win, ImageTex, Params.ImageExp.SourceRectExp, RectExp, Params.ImageExp.Rotation, [], Params.ImageExp.Contrast);        % Draw to the experimenter's display
-                    Screen('DrawTexture', Params.Display.win, ImageTex, Params.ImageExp.SourceRectMonk, RectMonk, Params.ImageExp.Rotation, [], Params.ImageExp.Contrast);     % Draw to the subject's display
+                    Screen('DrawTexture', Params.Display.win, ImageTex, Params.Image.Exp.SourceRectExp, RectExp, Params.Image.Exp.Rotation, [], Params.Image.Exp.Contrast);        % Draw to the experimenter's display
+                    Screen('DrawTexture', Params.Display.win, ImageTex, Params.Image.Exp.SourceRectMonk, RectMonk, Params.Image.Exp.Rotation, [], Params.Image.Exp.Contrast);     % Draw to the subject's display
                     %============ Draw mask texture
-                    if isfield(Params.ImageExp,'MaskTex') & ~isempty(Params.ImageExp.MaskTex) & Params.ImageExp.MaskType > 1
-                        Screen('DrawTexture', Params.Display.win, Params.ImageExp.MaskTex, Params.ImageExp.SourceRectExp, RectExp);
-                        Screen('DrawTexture', Params.Display.win, Params.ImageExp.MaskTex, Params.ImageExp.SourceRectMonk, RectMonk);
+                    if isfield(Params.Image.Exp,'MaskTex') & ~isempty(Params.Image.Exp.MaskTex) & Params.Image.Exp.MaskType > 1
+                        Screen('DrawTexture', Params.Display.win, Params.Image.Exp.MaskTex, Params.Image.Exp.SourceRectExp, RectExp);
+                        Screen('DrawTexture', Params.Display.win, Params.Image.Exp.MaskTex, Params.Image.Exp.SourceRectMonk, RectMonk);
                     end
                 end
 
@@ -223,8 +222,8 @@ while Params.Run.TrialCount < Params.ImageExp.TrialsPerRun && Params.Run.EndRun 
                         Screen('FillOval', Params.Display.win, Params.Display.PD.Color{PDstatus}*255, Params.Display.PD.ExpRect);
                     end
                     %============ Draw fixation marker
-                    if Params.ImageExp.FixType > 1
-                        Screen('DrawTexture', Params.Display.win, Params.ImageExp.FixTex, [], Params.Display.FixRectMonk(Eye,:));  	% Draw fixation marker
+                    if Params.Image.Exp.FixType > 1
+                        Screen('DrawTexture', Params.Display.win, Params.Image.Exp.FixTex, [], Params.Display.FixRectMonk(Eye,:));  	% Draw fixation marker
                     end
                 end
 
@@ -245,14 +244,14 @@ while Params.Run.TrialCount < Params.ImageExp.TrialsPerRun && Params.Run.EndRun 
                     Screen('DrawLines', Params.Display.win, Params.Display.Grid.Meridians, 1, Params.Display.Exp.GridColor*255);                
                 end
                 if Params.Display.Exp.GazeWinOn == 1
-                    if Params.ImageExp.FixType > 1
-                        Screen('FrameOval', Params.Display.win, Params.Display.Exp.GazeWinColor(FixIn+1,:)*255, Params.ImageExp.GazeRect, 3); 	% Draw border of gaze window that subject must fixate within
-                    elseif Params.ImageExp.FixType == 1
-                        Screen('FrameRect', Params.Display.win, Params.Display.Exp.GazeWinColor(FixIn+1,:)*255, Params.ImageExp.GazeRect, 3); 	% Draw border of gaze window that subject must fixate within
+                    if Params.Image.Exp.FixType > 1
+                        Screen('FrameOval', Params.Display.win, Params.Display.Exp.GazeWinColor(FixIn+1,:)*255, Params.Image.Exp.GazeRect, 3); 	% Draw border of gaze window that subject must fixate within
+                    elseif Params.Image.Exp.FixType == 1
+                        Screen('FrameRect', Params.Display.win, Params.Display.Exp.GazeWinColor(FixIn+1,:)*255, Params.Image.Exp.GazeRect, 3); 	% Draw border of gaze window that subject must fixate within
                     end
                 end
-                if Params.ImageExp.FixType > 1
-                    Screen('DrawTexture', Params.Display.win, Params.ImageExp.FixTex, [], Params.Display.FixRectExp);
+                if Params.Image.Exp.FixType > 1
+                    Screen('DrawTexture', Params.Display.win, Params.Image.Exp.FixTex, [], Params.Display.FixRectExp);
                 end
                 if Eye(Params.Eye.EyeToUse).Pixels(1) < Params.Display.Rect(3)
                     Screen('FillOval', Params.Display.win, Params.Display.Exp.EyeColor(FixIn+1,:)*255, EyeRect);    % Draw current gaze position
@@ -297,14 +296,14 @@ while Params.Run.TrialCount < Params.ImageExp.TrialsPerRun && Params.Run.EndRun 
     %% ================= ANALYSE FIXATION
     if Params.Run.AbortTrial == 0
     	Params                  = SCNI_CheckImageTrialEyePos(Params);
-        ITIduration             = Params.ImageExp.ITIms/10^3;           
+        ITIduration             = Params.Image.Exp.ITIms/10^3;           
         Params.Run.TrialCount   = Params.Run.TrialCount+1;              % Count as one completed trial
         RewardEarned            = 1;
          
     elseif Params.Run.AbortTrial == 1
         SCNI_SendEventCode('Fixation_Broken', Params); 
-        Params.ImageExp.PenaltyTimeout = 2000;
-        ITIduration             = Params.ImageExp.PenaltyTimeout/10^3; 
+        Params.Image.Exp.PenaltyTimeout = 2000;
+        ITIduration             = Params.Image.Exp.PenaltyTimeout/10^3; 
         Params.Run.FixIsOn      = 0;
         RewardEarned            = 0;
         Datapixx('StopAdcSchedule');   
@@ -331,14 +330,14 @@ while Params.Run.TrialCount < Params.ImageExp.TrialsPerRun && Params.Run.EndRun 
             Screen('DrawLines', Params.Display.win, Params.Display.Grid.Meridians, 1, Params.Display.Exp.GridColor*255);                
         end
         if Params.Display.Exp.GazeWinOn == 1
-            if Params.ImageExp.FixType > 1
-                Screen('FrameOval', Params.Display.win, Params.Display.Exp.GazeWinColor(FixIn+1,:)*255, Params.ImageExp.GazeRect, 3); 	% Draw border of gaze window that subject must fixate within
-            elseif Params.ImageExp.FixType == 1
-                Screen('FrameRect', Params.Display.win, Params.Display.Exp.GazeWinColor(FixIn+1,:)*255, Params.ImageExp.GazeRect, 3); 	% Draw border of gaze window that subject must fixate within
+            if Params.Image.Exp.FixType > 1
+                Screen('FrameOval', Params.Display.win, Params.Display.Exp.GazeWinColor(FixIn+1,:)*255, Params.Image.Exp.GazeRect, 3); 	% Draw border of gaze window that subject must fixate within
+            elseif Params.Image.Exp.FixType == 1
+                Screen('FrameRect', Params.Display.win, Params.Display.Exp.GazeWinColor(FixIn+1,:)*255, Params.Image.Exp.GazeRect, 3); 	% Draw border of gaze window that subject must fixate within
             end
         end
-      	if Params.ImageExp.FixType > 1 && Params.Run.FixIsOn == 1
-            Screen('DrawTexture', Params.Display.win, Params.ImageExp.FixTex, [], Params.Display.FixRectExp);
+      	if Params.Image.Exp.FixType > 1 && Params.Run.FixIsOn == 1
+            Screen('DrawTexture', Params.Display.win, Params.Image.Exp.FixTex, [], Params.Display.FixRectExp);
         end
         if Eye(Params.Eye.EyeToUse).Pixels(1) < Params.Display.Rect(3)
             Screen('FillOval', Params.Display.win, Params.Display.Exp.EyeColor(FixIn+1,:)*255, EyeRect);                            % Draw current gaze position
@@ -352,13 +351,13 @@ while Params.Run.TrialCount < Params.ImageExp.TrialsPerRun && Params.Run.EndRun 
             SCNI_SendEventCode('Stim_Off', Params);                                                         % Send event code to connected neurophys systems
             Params.Run.StimOffTime  = ITIoffset;
         end
-        if Params.Run.FixIsOn == 1 && (GetSecs-Params.Run.StimOffTime)> Params.ImageExp.ISIms/10^3
+        if Params.Run.FixIsOn == 1 && (GetSecs-Params.Run.StimOffTime)> Params.Image.Exp.ISIms/10^3
             Params.Run.FixIsOn = 0;
             SCNI_SendEventCode('Fix_Off', Params);                                                          % Send event code to connected neurophys systems
         end
         
       	%=============== Check whether to deliver reward
-        if RewardEarned  == 1 && (GetSecs - Params.Run.StimOffTime) > Params.ImageExp.ISIms/10^3
+        if RewardEarned  == 1 && (GetSecs - Params.Run.StimOffTime) > Params.Image.Exp.ISIms/10^3
             Params = SCNI_GiveReward(Params);
             SCNI_SendEventCode('Reward_Auto', Params); 
             RewardEarned = 0;
@@ -407,7 +406,7 @@ end
 
 %=============== LOAD IMAGE TO TEXTURE ON THE FLY
 function ImageTex = LoadImage(Params, Cond, Stim)
-    img = imread(Params.ImageExp.ImByCond{Cond}{Stim});                                     	% Load image file
+    img = imread(Params.Image.Exp.ImByCond{Cond}{Stim});                                     	% Load image file
     if isa(img, 'uint16')                                                                      	% If image is 16-bit color
         img = uint8(img)/256;                                                                  	% Reduce bit depth to 8-bit
         Bits16 = 0;
@@ -415,8 +414,8 @@ function ImageTex = LoadImage(Params, Cond, Stim)
         Bits16 = 0;
     end
     img = double(img);
-    if Params.ImageExp.UseAlpha == 1
-        [~,~, imalpha] = imread(Params.ImageExp.ImByCond{Cond}{Stim});                          % Read alpha channel
+    if Params.Image.Exp.UseAlpha == 1
+        [~,~, imalpha] = imread(Params.Image.Exp.ImByCond{Cond}{Stim});                          % Read alpha channel
         if ~isempty(imalpha)                                                                 	% If image file contains transparency data...
             imalpha     = double(imalpha);
             img(:,:,4)  = imalpha;                                                          	% Combine into a single RGBA image matrix
@@ -429,15 +428,15 @@ end
 
 %=============== PREALLOCATE RANDOMIZATIONS
 function Params	= AllocateRand(Params)
-    NoStim = Params.ImageExp.StimPerTrial*Params.ImageExp.TrialsPerRun;
-    if Params.ImageExp.ISIjitter ~= 0
-        Params.Run.ISIjitter = ((rand([1,NoStim])*2)-1)*Params.ImageExp.ISIjitter/10^3;
+    NoStim = Params.Image.Exp.StimPerTrial*Params.Image.Exp.TrialsPerRun;
+    if Params.Image.Exp.ISIjitter ~= 0
+        Params.Run.ISIjitter = ((rand([1,NoStim])*2)-1)*Params.Image.Exp.ISIjitter/10^3;
     end
-    if Params.ImageExp.PosJitter ~= 0
-        Params.Run.PosJitter = ((rand([2,NoStim])*2)-1)'.*Params.ImageExp.PosJitter.*Params.Display.PixPerDeg;
+    if Params.Image.Exp.PosJitter ~= 0
+        Params.Run.PosJitter = ((rand([2,NoStim])*2)-1)'.*Params.Image.Exp.PosJitter.*Params.Display.PixPerDeg;
     end
-    if Params.ImageExp.ScaleJitter ~= 0
-    	Params.Run.ScaleJitter = ((rand([1,NoStim])*2)-1)*Params.ImageExp.ScaleJitter;
+    if Params.Image.Exp.ScaleJitter ~= 0
+    	Params.Run.ScaleJitter = ((rand([1,NoStim])*2)-1)*Params.Image.Exp.ScaleJitter;
     end
 end
 
@@ -511,8 +510,8 @@ function Params = SCNI_UpdateStats(Params)
 	Params.Run.CurrentTime      = GetSecs-Params.Run.StartTime;                                            % Calulate time elapsed
     Params.Run.CurrentMins      = floor(Params.Run.CurrentTime/60);                    
     Params.Run.CurrentSecs      = rem(Params.Run.CurrentTime, 60);
-    Params.Run.CurrentPercent   = (Params.Run.TrialCount/Params.ImageExp.TrialsPerRun)*100;
-	Params.Run.TextContent      = [Params.Toolbar.CurrentRun, Params.Run.TrialCount, Params.ImageExp.TrialsPerRun, Params.Run.CurrentStimNo, Params.ImageExp.StimPerTrial, Params.Run.CurrentMins, Params.Run.CurrentSecs, Params.Reward.RunCount, Params.Run.ValidFixPercent];
+    Params.Run.CurrentPercent   = (Params.Run.TrialCount/Params.Image.Exp.TrialsPerRun)*100;
+	Params.Run.TextContent      = [Params.Toolbar.CurrentRun, Params.Run.TrialCount, Params.Image.Exp.TrialsPerRun, Params.Run.CurrentStimNo, Params.Image.Exp.StimPerTrial, Params.Run.CurrentMins, Params.Run.CurrentSecs, Params.Reward.RunCount, Params.Run.ValidFixPercent];
     Params.Run.TextString       = sprintf(Params.Run.TextFormat, Params.Run.TextContent);
 
     %========= Update stats bars

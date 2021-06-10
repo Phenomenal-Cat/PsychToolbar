@@ -30,7 +30,7 @@ The NIF Toolbar is flexibly designed to be of benefit to both novice and experie
 * Presentation of movie clips (e.g. fMRI block design)
 * Presentation of abstract graphics (e.g. dot motion, gratings, retinotopic mapping stimuli)
 
-For the advanced user, NIF Toolbar provides a fast and user-friendly means of editing and organizing the many variables involved (via GUIs), which can then be optionally accessed in your own experimental code through the `Params` `object class <https://www.mathworks.com/help/matlab/matlab_oop/example-representing-structured-data.html>`_. NTB sub-functions allow common tasks that may occur throughout an experiment (e.g. reward delivery) to be executed with a single line of code, thus minimizing the amount of code required to write new experiments.
+For the advanced user, NIF Toolbar provides a fast and user-friendly means of editing and organizing the many variables involved (via GUIs), which can then be optionally accessed in your own experimental code through the :link-badge:`NTB_ParamsObject,Params,ref,cls=badge-warning text-dark` `object class <https://www.mathworks.com/help/matlab/matlab_oop/example-representing-structured-data.html>`_. NTB sub-functions allow common tasks that may occur throughout an experiment (e.g. reward delivery) to be executed with a single line of code, thus minimizing the amount of code required to write new experiments.
 
 
 Panels and Tabs
