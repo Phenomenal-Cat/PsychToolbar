@@ -20,7 +20,7 @@
    NTB NI Settings <NTB_NISettings>
 
 
-The :badge:`Settings,badge-primary` tab of the NIF Toolbar GUI allows the user to launch various settings apps to quickly load, edit and save variables related to specific aspects of behavioral experiments and associated hardware. The variables controlled by each app in the Settings tab are saved to a unique field of the **Params** structure, as listed in the table below. Click on the icon or name of each setting GUI to view it's documentation, or click on the output structure to see the list of fields within each settings output structure.
+The :badge:`Settings,badge-primary` tab of the NIF Toolbar GUI allows the user to launch various settings apps to quickly load, edit and save variables related to specific aspects of behavioral experiments and associated hardware. The variables controlled by each app in the Settings tab are saved to a unique field of the :link-badge:`NTB_ParamsObject,Params,ref,cls=badge-warning text-dark` object, as listed in the table below. Click on the icon or name of each setting GUI to view it's documentation, or click on the output structure to see the list of fields within each settings output structure.
 
 
 .. |Display| image:: _images/NTB_Icons/W_Display.png
@@ -28,7 +28,7 @@ The :badge:`Settings,badge-primary` tab of the NIF Toolbar GUI allows the user t
   :alt: Display
   :target: NTB_DisplaySettings.html
 
-.. |Datapixx| image:: _images/NTB_Icons/W_Datapixx.png
+.. |Datapixx| image:: _images/NTB_Icons/W_DataPixx.png
   :height: 40
   :alt: Datapixx
   :target: NTB_DatapixxSettings.html

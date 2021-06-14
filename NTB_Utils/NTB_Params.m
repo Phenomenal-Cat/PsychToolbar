@@ -1,45 +1,47 @@
 classdef NTB_Params < handle
     
+    
+    % https://www.mathworks.com/help/matlab/matlab_oop/example-representing-structured-data.html
+    % https://www.mathworks.com/matlabcentral/answers/441430-how-to-return-values-from-mlapp-to-the-m-caller
+    
     properties 
+        Block
+        Design
         Display
         DPx
         Eye
+        Exp
         File
+        Grid
+        Image
         Key
+        Lever
+        Movie
+        NI
         Reward
+        TDT
     end
 
-    
-    methods
-        function set.Display(obj,Display)
-            obj.Display = Display;
-        end
-        function set.DPx(obj,DPx)
-            obj.DPx = DPx;
-        end
-        
-    end
-    
     methods ( Static, Access = public )
-        
-        function setFields(obj, v)
-            obj.Display = v;
-        end
 
-        function obj = Struct2Obj(Params)
-            if ~isstruct(Params)
-                error('Struct2Obj method requires a Params struct input!\n');
-            end
-            Fieldnames = fieldnames(Params);
-            for f = 1:numel(Fieldnames)
-                try
-                    eval(sprintf('obj.%s = Params.%s;', Fieldnames{f}, Fieldnames{f}));
-                catch
-                    fprintf('Unable to add field ''%s'' to Params class object!\n', Fieldnames{f});
+        %======= Constructor
+        function np = NTB_Params(Params)
+            if nargin > 0
+                if ~isstruct(Params)
+                    error('Input to NTB_Params method must be a struct!\n');
+                end
+                Fieldnames = fieldnames(Params);
+                for f = 1:numel(Fieldnames)
+                    try
+                        eval(sprintf('np.%s = Params.%s;', Fieldnames{f}, Fieldnames{f}));
+                    catch
+                        fprintf('Unable to add field ''%s'' to Params class object!\n', Fieldnames{f});
+                    end
                 end
             end
+
         end
-        
+            
         
     end
 

@@ -4,10 +4,23 @@
 System Installation
 =======================
 
-.. warning::
+.. panels::
+  :column: col-lg-12 p-0 border-1
+  :header: bg-warning text-bold text-dark p-1
+  :body: bg-warning text-dark border-0 p-2 
+  
+  :fa:`exclamation-triangle` **Warning**
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
   NIF users **should not make changes to any computer system** in the NIF without the permission and direct supervision of a member of the NIF support team! The NIF is a shared resource and any changes made to these systems will affect all NIF users research.
 
-.. note::
+.. panels::
+  :column: col-lg-12 p-0 border-1
+  :header: bg-primary text-bold p-1 pl-2
+  :body: bg-secondary border-0 p-2
+
+  :opticon:`info,mr-1` **Note**
+  ^^^^^^^^^^^^^^^^^^^^^^^^
   If you encounter issues that you believe to be related to system updates or changes, please contact `NIF support <nifadmins@mail.nih.gov>`_ so that we can help to resolve the problem for all users.
 
 
@@ -24,7 +37,14 @@ NIF Datapixx Systems
 
 The following NIF and SCNI Datapixx PCs can be accessed remotely from a computer connected to the NIH network or via VPN. We recommend installing the cross-platform remote desktop application `NoMachine <https://www.nomachine.com/>`_ on your local computer for this (see figure below). 
 
-.. Warning:: Remote connections should not be made to DataPixx PCs during working hours unless you are certain that they are not in use by other researchers. If you observe that a DataPixx PC is in use when you connect remotely, please disconnect in order to give priority to those physically at the computer.
+.. panels::
+  :column: col-lg-12 p-0 border-1
+  :header: bg-warning text-bold text-dark p-1
+  :body: bg-warning text-dark border-0 p-2 
+  
+  :fa:`exclamation-triangle` **Warning**
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Remote connections should not be made to DataPixx PCs during working hours unless you are certain that they are not in use by other researchers. If you observe that a DataPixx PC is in use when you connect remotely, please disconnect in order to give priority to those physically at the computer.
 
 .. csv-table::
   :file: _static/CSVs/DataPixxPCs.csv
@@ -83,10 +103,17 @@ Aptitude is a friendlier apt-get, use either based on your preference.
     sudo reboot
 
 
-Install NVIDIA drivers for GTX 1080
+Install Graphics Card Drivers
 =======================================
 
-.. Note:: Most NIF and SCNI DataPixx PCs currently have Nvidia GTX 1000-series GPUs, which were the recommended GPU at the time of purchase (circa 2016). Since then, AMD have become the preferred GPU manufacturer for use in PsychToolbox (PTB) setups. This is primarily because open-source drivers (e.g. `MESA <https://www.mesa3d.org/>`_) for these cards are more efficient than the the open-source `nouveau <https://nouveau.freedesktop.org/wiki/>`_ drivers for Nvidia cards, which yield less than 10% of maximum card performance (compared to the proprietary Nvidia drivers).
+.. panels::
+  :column: col-lg-12 p-0 border-1
+  :header: bg-primary text-bold p-1 pl-2
+  :body: bg-secondary border-0 p-2
+
+  :opticon:`info,mr-1` **Note**
+  ^^^^^^^^^^^^^^^^^^^^^^^^
+  Most NIF and SCNI DataPixx PCs currently have Nvidia GTX 1000-series GPUs, which were the recommended GPU at the time of purchase (circa 2016). Since then, AMD have become the preferred GPU manufacturer for use in PsychToolbox (PTB) setups. This is primarily because open-source drivers (e.g. `MESA <https://www.mesa3d.org/>`_) for these cards are more efficient than the the open-source `nouveau <https://nouveau.freedesktop.org/wiki/>`_ drivers for Nvidia cards, which yield less than 10% of maximum card performance (compared to the proprietary Nvidia drivers).
 
 
 -  Logged in as `nifsupport`, download the appropriate `NVidia drivers <http://.www.nvidia.com/Download/index.aspx>`_ and save to the nifsupport `downloads` directory.
@@ -214,43 +241,4 @@ Install DataPixx Tools
    `/home/lab/Downloads/VPixx_Software_Tools/DatapixxToolbox_trunk/`
    to MATLAB's path.
 
-
-.. _SetupNvidiaXscreens:
-
-Setup NVIDIA X-Screens
-========================
-
-.. figure:: _images/NTB_Images/NVidia_settings1.png
-  :figwidth: 40%
-  :width: 100%
-  :align: right
-
--  Connect displays (or matrix switch inputs) to 3 of the display port
-   outputs on the NVIDIA GTX 1080 card
-
--  In Ubuntu, open the **NVIDIA XServer Settings** manager and select
-   **XServer display configuration**
-
--  Click and drag to arrange your displays from left to right: 1) Matlab
-   command line 2) Experimenter display 3) Monkey display
-
--  Select display 2, click the drop down menu next to ``Configuration``
-   and select ``Add new Xscreen``
-
-.. figure:: _images/NTB_Images/NVidia_settings2.png
-  :figwidth: 40%
-  :width: 100%
-  :align: right
-
-
--  Set display 1 to use Xscreen 0 and displays 2 and 3 to use Xscreen 1
-
--  Click the **Save to X Configuration File** button
-
--  You will be propted to overwrite the existing file. Accept.
-
--  After reboot, the new settings will take effect. The experimenter
-   display and monkey display will now remain black after logon. Content
-   will only appear on these screens when we tell Matlab to open a
-   PsychToolbox window on Xscreen 1. Both the experimenter and monkey
-   displays are treated as a single extended window (7680 x 2160 pixels)
+- Set :ref:`X window configuration settings <Xwindows>`
