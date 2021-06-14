@@ -89,7 +89,7 @@ All systems running the NIF Toolbar comprise of the following:
 * `NVidia Geforce GTX 1080 <https://www.nvidia.com/en-us/geforce/10-series/>`_ (8GB)
 * `VPixx DataPixx 2 <https://vpixx.com/products/datapixx2/>`_ interface
 * Video-based eye tracking PC with analog output and ethernet communication
-* :ref:`DataPixx Interface rack-mount box <InterfaceBox>`_ (optional)
+* :ref:`DataPixx Interface rack-mount box <InterfaceBox>` (optional)
 * Neurophysiology recording system (optional)
 
 **Software:**
