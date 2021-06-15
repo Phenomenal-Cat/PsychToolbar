@@ -20,7 +20,7 @@ another:
 
 -  `VPixx DataPixx2 box <https://vpixx.com/products/datapixx2/>`_ (3 x DB25 connectors)
 -  `SR Research EyeLink II <https://www.sr-research.com/eyelink-ii/>`_ (1 x 68-pin D-sub)
--  `Arrington Research ViewPoint <>`_ 
+-  `Arrington Research ViewPoint <http://www.arringtonresearch.com/viewpoint.html>`_ 
 -  `TDT RZ2 bioamp <https://www.tdt.com/component/rz2-bioamp-processor/>`_ (2 x DB25 connectors)
 -  `Open Ephys board <https://open-ephys.org/acq-board>`_ (4 x HDMI connectors)
 

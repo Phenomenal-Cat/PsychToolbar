@@ -4,6 +4,16 @@
 NIF PLDAPS
 ===================================
 
+.. panels::
+  :column: col-lg-12 p-0 border-1
+  :header: bg-primary text-bold p-1 pl-2
+  :body: bg-secondary border-0 p-2
+
+  :opticon:`info,mr-1` **Note**
+  ^^^^^^^^^^^^^^^^^^^^^^^^
+  NIF Toolbar is the recommended replacement for the Krauzlis lab's PLDAPS GUI when running fMRI experiments in the NIF. PLDAPS itself has also been updated substantially since this GUI was written. This page documents how to use the Krauzlis PLDAPS GUI code for reference.
+
+
 A brief history
 -----------------
 
@@ -28,11 +38,35 @@ The GUI is composed of two files: pldaps_gui2_ms.fig and pldaps_gui2_ms.m. It ca
 Settings file
 ----------------
 
+When you click the :badge:`Browse,badge-primary` button on the GUI, it will open a file browser window that by default will be in the :code:`Settings` subdirectory of the current directory (i.e. where pldaps_gui2_ms.m is executed from). The window allows you to select a Matlab script (.m file) that should have the necessary experiment parameters hard-coded inside it. Parameters specified in this file will be loaded into the GUI and can be modified there. 
 
+Parameters should be stored in 3 structures, organized as follows:
+
+- :badge:`m,badge-primary`: m-file references
+- :badge:`c,badge-primary`: most variables
+- :badge:`s,badge-primary`: status values
 
 
 Experiment files
 ------------------
+
+After loading the settings file, an :badge:`Initialize,badge-primary` button will appear on the GUI. Pressing this button will run the corresponding initialization function for the selected experiment, which should be named in the format :code:`*_init.m` (where * is replaced with a unique string indicating the experiment). The GUI expects each experiment to be composed of four separate .m files with a specific naming convention as follows:
+
+1. **ExpName_init.m** - this function should initialize all aspects of the experiment, including opening the DataPixx connection, opening a PsychToolbox window, calculating on-screen rectangles for drawing textures to, and optionally even pre-loading images into offscreen textures.
+
+2. **ExpName_run.m** - this function is executed when the :badge:`Run,badge-primary` button on the GUI is pressed. It should contain all code for running the actual experiment, including checking for experimenter keyboard input, the subject's current eye position, drawing image textures to screen, and saving any data to file.
+
+3. **ExpName_next.m** - this function is executed when the previous *_run.m function ends. It is typically left blank.
+
+4. **ExpName_finish.m** - this function is executed after the *_run.m function has executed the number of times specified in the status (:badge:`badge-primary`) structure.
+
+
+Block Design Example
+----------------------
+
+
+
+
 
 
 
