@@ -1,2 +1,0 @@
-numpy==1.11.3
-pyparsing==2.3.1

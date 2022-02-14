@@ -7,3 +7,5 @@ lib
 .DS_Store
 ._.DS_Store
 pyenv.cfg
+pyvenv.cfg
+share
