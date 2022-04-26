@@ -8,6 +8,11 @@ function Params = NTB_ShowImages(Params)
 % neurophysiology). The numerous variables can be adjusted by running the
 % accompanying NTB_ImagesSettings.m GUI and saving to your parameters file.
 %
+%     ____    ___ __  _______
+%    /    |  /  //  //  ____/    Neurophysiology Imaging Facility Core
+%   /  /| | /  //  //  /___      Building 49 Convent Drive
+%  /  / | |/  //  //  ____/      NATIONAL INSTITUTES OF HEALTH
+% /__/  |____//__//__/          
 %==========================================================================
 
 %================= SET DEFAULT PARAMETERS
