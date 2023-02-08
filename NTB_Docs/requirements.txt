@@ -7,7 +7,7 @@ Sphinx
 alabaster
 commonmark
 cycler
-docutils==0.16
+docutils
 imagesize
 latexcodec
 matplotlib

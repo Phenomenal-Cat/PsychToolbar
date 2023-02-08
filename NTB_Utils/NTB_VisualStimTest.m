@@ -1,7 +1,9 @@
+
 % Visual test stimulus for fMRI block
 
 Params = load('NTB_MH02183714MACLT.mat');
-Display = Params.Display;
+Params.Display.Basic.PixPerDeg = Params.Display.Basic.Rect([3,4])./Params.Display.Basic.ScreenDims;
+
 
 %====== Generate dyamic continuous flash suppresion texture frames
 DCFS.Duration       = 2;                % loop duration (seconds)
@@ -17,7 +19,6 @@ Screen('Preference', 'SkipSyncTests', 1);
 Params.Display.Screen.BackgroundColor = DCFS.Background;
 Params  = NTB_OpenWindow(Params);
 Display = Params.Display;
-Display.Basic.PixPerDeg = Display.Basic.PixPerDeg*2;
 DCFStextures  = NTB_GenerateDCFS(DCFS, Display, 0, 1);
 
 %===== Generate fixation marker
@@ -33,11 +34,32 @@ BlockDuration   = 5;     % Duration in seconds
 NoBlocks        = 6;        
 
 
+Screen('FillRect', Display.Win, DCFS.Background);
+DrawFormattedText(Params.Display.Win, 'Press any key to begin.', 500,'center', [1,1,1]*255);
+Screen('Flip',Display.Win);
+Start = 0;
+KbName('UnifyKeyNames');
+% while Start == 0
+%     [keyIsDown,secs,keyCode] = KbCheck();
+%     if any(keyIsDown)
+%         Start = 1;
+%         break;
+%     end
+% end
+
+%ScannerOn = NTB_WaitForTTL(Params, 4, 1, 1);
+
+
+
 %===== Begin stimulus presentation loop
 StartTime = GetSecs;
 for b = 1:NoBlocks
     BlockStart(b) = GetSecs;
     while GetSecs < BlockStart(b)+BlockDuration
+        [keyIsDown,secs,keyCode] = KbCheck();
+        if any(keyIsDown)
+            break;
+        end
         if mod(b,2) == 1
             Screen('FillRect', Display.Win, DCFS.Background);
             Screen('DrawTexture', Display.Win, FixTexture);

@@ -1,13 +1,13 @@
 function app = NTB_SplashScreen(app)
 
 
-SplashLogo = 'NIFmagnetic.png';
-[im,~, alpha] = imread(SplashLogo);
-im(:,:,4) = alpha;
+SplashLogo      = 'NIF_MagneticField_White.gif';
+[im,~, alpha]   = imread(SplashLogo);
+im = repmat(im,[1,1,4]);
+%im(:,:,4)       = alpha;
 app.Run.SplashTex = Screen('MakeTexture', app.Run.Win, im);
-SourceRect = round([1,1,size(im,2),size(im,1)]/2);
-
-ScreenIDtext = {'Experimenter display', 'Subject display'};
+SourceRect      = round([1,1,size(im,2),size(im,1)]/2);
+ScreenIDtext    = {'Experimenter display', 'Subject display'};
 Screen('FillRect', app.Run.Win, [0.5,0.5,0.5]);
 Screen('TextSize', app.Run.Win, 60);
 Screen('TextFont', app.Run.Win, 'Arial');

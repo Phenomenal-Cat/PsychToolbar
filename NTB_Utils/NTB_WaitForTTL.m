@@ -1,6 +1,6 @@
-function [ScannerOn] = SCNI_WaitForTTL(Params, NoTTLs, Polarity, Print)
+function [ScannerOn] = NTB_WaitForTTL(Params, NoTTLs, Polarity, Print)
 
-%========================== SCNI_WaitForTTL.m =============================
+%========================== NTB_WaitForTTL.m =============================
 % This function is used to temporally align with incoming TTL pulses, or to
 % wait for a specified number of TTL pulses before proceeeding. For
 % example, the Bruker vertical 4.7T outputs a constant +5V, with variable 
@@ -12,6 +12,11 @@ function [ScannerOn] = SCNI_WaitForTTL(Params, NoTTLs, Polarity, Print)
 %           Polarity:   -1 = pulse goes low; 1 = pulse goes high
 %           Print:      flag for whether to print updates to experimenter's display
 %
+%     ____    ___ __  _______
+%    /    |  /  //  //  ____/    Neurophysiology Imaging Facility Core
+%   /  /| | /  //  //  /___      Building 49 Convent Drive
+%  /  / | |/  //  //  ____/      NATIONAL INSTITUTES OF HEALTH
+% /__/  |____//__//__/          
 %==========================================================================
 
 Datapixx('RegWrRd');                                                        % Update registers for GetAdcStatus
@@ -20,7 +25,7 @@ Datapixx('RegWrRd');                                                        % Wr
 Datapixx('RegWrRd');                                                        % Give time for ADCs to convert, then read back data to local cache
 
 ScannerThresh   = 2.5;                                                      % Set voltage threshold (V)
-ScannerChannel  = find(~cellfun(@isempty, strfind(Params.DPx.AnalogInLabels, 'Scanner')));    % Find which ADC channel the scanner is connected to
+ScannerChannel  = find(~cellfun(@isempty, strfind(Params.DPx.AnalogIn.Options, 'Scanner')));    % Find which ADC channel the scanner is connected to
 TTLcount        = 0;
 ScannerOn       = 0;
 StartTime       = GetSecs;
@@ -28,8 +33,8 @@ StartTime       = GetSecs;
 while TTLcount < NoTTLs
     
     if Print == 1 && NoTTLs > 1                                                     % Print update to experimenter's screen only if waiting for more than 1 TTL pulse
-        DrawFormattedText(Params.Display.win, sprintf('Waiting for TTL pulse %d/ %d from scanner on DataPixx ADC channel %d...', TTLcount+1, NoTTLs, ScannerChannel-1), 500,'center', [1,1,1]*255);
-        Screen('Flip', Params.Display.win);  
+        DrawFormattedText(Params.Display.Win, sprintf('Waiting for TTL pulse %d/ %d from scanner on DataPixx ADC channel %d...', TTLcount+1, NoTTLs, ScannerChannel-1), 500,'center', [1,1,1]*255);
+        Screen('Flip', Params.Display.Win);  
     end
     
     while ScannerOn == 0

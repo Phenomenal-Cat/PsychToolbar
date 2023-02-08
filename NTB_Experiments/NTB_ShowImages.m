@@ -17,7 +17,7 @@ function Params = NTB_ShowImages(Params)
 
 %================= SET DEFAULT PARAMETERS
 if nargin == 0 || ~isfield(Params,'ImageExp') || ~isfield(Params.Image.Exp,'ImgTex') || (Params.Image.Exp.Preload == 1 && Params.Image.Exp.ImagesLoaded == 0)
-    Params = NTB_ImagesSettings(Params, 0);
+    Params = NTB_ImageSettings(Params, 0);
 end
 
 %================= PRE-ALLOCATE RUN AND REWARD FIELDS
