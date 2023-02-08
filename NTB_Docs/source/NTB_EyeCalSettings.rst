@@ -25,6 +25,6 @@ Params.Eye fields
 
 .. _Params-Eye:
 
-Some stuff here
+Analog Input
 
 

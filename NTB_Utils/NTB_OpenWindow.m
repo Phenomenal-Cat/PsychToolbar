@@ -1,5 +1,10 @@
 function Params = NTB_OpenWindow(Params)
 
+if ismac
+    fprintf('This code is running on an Apple Mac, which is not supported hardware for timing critical vision experiments. PTB sync tests will be truned off!\n');
+    Screen('Preference', 'SkipSyncTests', 1);
+end
+
 %================= OPEN NEW PTB WINDOW 
 HideCursor;                                                                         % Hide mouse cursor
 winPtr = Screen('Windows');                                                         % Find all current PTB window pointers

@@ -2,6 +2,10 @@
 NIF Toolbar
 ====================
 
+The NIF Toolbar is a suite of graphical user interfaces (GUIs) and functions, intended to simplify the management of experimental control parameters for running behavioral neuroscience experiments involving non-human primates (NHPs). NIF Toolbar is written in Matlab and designed to interface with commonly used Matlab extensions for behavioral neuroscience.
+
+As the name suggests, the NIF Toolbar has been developed specifically for use in the `NIF (Neurophysiology Imaging Facility) <nif.nimh.nih.gov>`_ and `SCNI (Section on Cognitive Neurophysiology and Imaging) <ttps://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/ln/scni/index.shtml>`_ at the National Institutes of Health. It is provided to NIF users as a more open-ended alternative to the excellent `NIMH Monkey Logic <https://monkeylogic.nimh.nih.gov/>`_ extension for Matlab, which is also available for use in the NIF and is worth considering for your research needs.
+
 .. _NIF_Toolbar_Home:
 
 .. figure:: _images/NTB_Images/DisplayMockUp.png
@@ -16,9 +20,7 @@ NIF Toolbar
   :width: 100%
   :alt: NIF Toolbar GUI
 
-The NIF Toolbar is a suite of graphical user interfaces (GUIs) and functions, intended to simplify the management of experimental control parameters for running behavioral neuroscience experiments involving non-human primates (NHPs). NIF Toolbar is written in Matlab and designed to interface with commonly used Matlab extensions for behavioral neuroscience.
 
-As the name suggests, the NIF Toolbar has been developed specifically for use in the `NIF (Neurophysiology Imaging Facility) <nif.nimh.nih.gov>`_ and `SCNI (Section on Cognitive Neurophysiology and Imaging) <ttps://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/ln/scni/index.shtml>`_ at the National Institutes of Health. It is provided to NIF users as a more open-ended alternative to the excellent `NIMH Monkey Logic <https://monkeylogic.nimh.nih.gov/>`_ extension for Matlab, which is also available for use in the NIF and is worth considering for your research needs.
 
 Basic Overview
 ================
