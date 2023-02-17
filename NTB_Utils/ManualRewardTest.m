@@ -4,14 +4,14 @@ function EyePos = ManualRewardTest()
 
 
 AutomaticReward    = true;
-SolenoidDurationMs = 200;         
-RewardInterval     = 3;
+SolenoidDurationMs = 100;         
+RewardInterval     = 8;                    
 TimeOutDur         = 8;    
-FixType             = 2;   % 0 = none; 1 = fix dot; 2 = faces
-FixInterval         = 0.5;    
-FixDur              = 4;  % Duration of fixation marker presentation (seconds)
-FixWidthPx          = 600;  % Width of fixation marker / image in pixels
-
+FixType             = 1;   % 0 = none; 1 = fix dot; 2 = faces
+FixInterval         = 6;    
+FixDur              = 1;  % Duration of fixation marker presentation (seconds)
+FixWidthPx          = 50;  % Width of fixation marker / image in pixels
+FixPosCenterOnly    = 1;
 
 Screen('Preference','SkipSyncTests', 1);
 BackgroundRGB = [127,127,127]/4;
@@ -23,11 +23,26 @@ KbName('UnifyKeyNames');
 %========== Fixation settings
 
 FixDims     = [0,0,FixWidthPx,FixWidthPx];
+FixReqDims  = [0,0,100,100];
+FixOffsets  = [0,0;  0,1; 1,1; 1,0; 1,-1; 0,-1; -1,-1; -1,0; -1,1];
+FixOffsetPx = 350;
 ScreenDims  = Screen('Rect',1).*[1,1,0.5,1];
-FixRect{1}  = CenterRect(FixDims,ScreenDims);
-FixRect{2}  = FixRect{1}+[ScreenDims(3), 0, ScreenDims(3), 0];
+if FixPosCenterOnly == 1
+    FixRect{1,1}  = CenterRect(FixDims,ScreenDims);
+    FixRect{1,2}  = FixRect{1,1}+[ScreenDims(3), 0, ScreenDims(3), 0];
+    FixReqRect{1,1} = CenterRect(FixReqDims,ScreenDims);
+    FixReqRect{1,2} = FixReqRect{1,1}+[ScreenDims(3), 0, ScreenDims(3), 0];
+    
+elseif FixPosCenterOnly == 0
+    for n = 1:size(FixOffsets,1)
+        FixRect{n,1}  = CenterRect(FixDims,ScreenDims) + repmat([FixOffsets(n,:)*FixOffsetPx],[1,2]);
+        FixRect{n,2}  = FixRect{n,1}+[ScreenDims(3), 0, ScreenDims(3), 0];
+        FixReqRect{n,1} = CenterRect(FixReqDims,ScreenDims) + repmat([FixOffsets(n,:)*FixOffsetPx],[1,2]);
+        FixReqRect{n,2} = FixReqRect{n,1}+[ScreenDims(3), 0, ScreenDims(3), 0];
+    end
+end
 FixIsOn     = 0;   
-FixColor    = randi(255,[1,3]);  
+FixColor    = randi(255,[1,3])/2+[127,127,127];  
 FixOnset    = GetSecs;
 FixOffset   = GetSecs;
 LastFlip    = GetSecs;      
@@ -71,12 +86,15 @@ Datapixx('SetAdcSchedule', 0, analogInRate, 0, adcChannels, adcBufferAddress, 20
 Datapixx('StartAdcSchedule');
 Datapixx('RegWrRd');
 
-EyeChannels = [4,5];
-EyePos.V  = [];
-EyePos.OffsetV = [0,0];
-EyePos.Gain = [200,200];
-EyePosColor = [1,0,0]*255;
-EyePos.Px = [];
+EyeChannels     = [4,5];
+nSamples        = 10;               % Number of eye signal samples to average for display
+EyePos.V        = [];
+EyePos.OffsetV  = [0,0];
+EyePos.Gain     = [400,400];
+EyePosColor     = {[1,0,0]*255, [0,1,0]*255};
+EyePos.Px       = zeros(nSamples,2);
+EyeIsIn         = 0;
+NewFixPos       = 1;
 
 fprintf('Press ''space'' to give reward (%d ms) or ''Esc'' to quit.\n', SolenoidDurationMs)
 LastPress = GetSecs;
@@ -122,6 +140,7 @@ while 1
         if GetSecs > FixOffset+FixInterval
             FixIsOn =1;
             FixOnset = LastFlip;
+            NewFixPos = randi(size(FixRect,1));
             if FixType == 1
                 FixColor    = randi(255,[1,3]);  
             elseif FixType == 2
@@ -140,11 +159,12 @@ while 1
     if FixIsOn == 1
         for s = 1:2
             if FixType == 1
-                Screen('FillOval', win, FixColor, FixRect{s});
+                Screen('FillOval', win, FixColor, FixRect{NewFixPos, s});
             elseif FixType == 2            
-                Screen('DrawTexture', win, FaceTex{NextIm}, [], FixRect{s});
+                Screen('DrawTexture', win, FaceTex{NextIm}, [], FixRect{NewFixPos,s});
             end
         end
+        Screen('FrameOval', win, EyePosColor{EyeIsIn+1}, FixReqRect{NewFixPos, 1}, 3);
     end
       
 
@@ -158,11 +178,24 @@ while 1
     XYposPx = (XYposV.*EyePos.Gain) - (EyePos.OffsetV.*EyePos.Gain) + ScreenDims([3,4])/2;
     EyePos.V = [EyePos.V; XYposV];
     EyePos.Px = [EyePos.Px; XYposPx];
+    XYposPx = mean(EyePos.Px(end-nSamples:end,:),1);
+    XYposStd = std(EyePos.Px(end-nSamples:end,:),1);
+%     EyeMarker = [0,0,XYposStd];
+    EyeMarker = [0,0,20,20];
     if XYposPx(1) < ScreenDims(3)
-        EyePosRect = CenterRectOnPoint([0,0,50,50],XYposPx(1), XYposPx(2));
-        Screen('FillOval', win, EyePosColor, EyePosRect);
+        if IsInRect(XYposPx(1), XYposPx(2), FixReqRect{NewFixPos, 1})
+            EyeIsIn = 1;
+        else
+            EyeIsIn = 0;
+        end
+        EyePosRect = CenterRectOnPoint(EyeMarker,XYposPx(1), XYposPx(2));
+        Screen('FillOval', win, EyePosColor{EyeIsIn+1}, EyePosRect);
     end   
     LastFlip = Screen('Flip', win);
+
+%     %=========== Check proprotion of fixation samples
+%     SamplesElapsed = (GetSecs-FixOnset)*analogInRate;
+%     EyePos.Px(end-SamplesElapsed:end,:)
 
     if TimeOut == 1
         if GetSecs > (TimeOutStart + TimeOutDur)

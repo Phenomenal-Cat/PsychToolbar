@@ -3,6 +3,9 @@ function NTB_CommandColor(BkgColor, TextColor)
 % Changes the Matlab command window background and text color. Input
 % arguments can be either strings for standard colors, or RGB arrays (double). 
 
+if nargin == 0
+    BkgColor = 'reset';
+end
 if ischar(BkgColor)
     if strcmpi(BkgColor, 'reset')
         com.mathworks.services.Prefs.setBooleanPref('ColorsUseSystem',1);       % Return to using system colors

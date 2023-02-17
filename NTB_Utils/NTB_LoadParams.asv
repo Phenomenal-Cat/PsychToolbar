@@ -1,0 +1,32 @@
+function Params = NTB_LoadParams(ParamsFile)
+
+if nargin == 1
+    if ~exist(ParamsFile, 'file')
+        msg = sprintf('The file ''%s'' was not found on the Matlab path or in the current directory.', ParamsFile);
+    else
+        p       = load(ParamsFile);         % Load params from .mat file
+        if class(p) == 'struct'             % If params is a structure...
+            Params  = NTB_Params(p);        % Create instance of NTB_Params object class from struct data
+        else
+            Params = p;
+        end
+        return;
+    end
+end
+
+
+%===== Load default params file for this host
+[~, CompName]   = system('hostname');
+[RootDir]       = fileparts(fileparts(mfilename('fullpath')));
+if ~exist('play.png','file')
+    addpath(genpath(RootDir));
+end
+ParamsPrefix    = 'NTB';
+ParamsFile      = sprintf('%s_%s.mat', ParamsPrefix, deblank(CompName));
+if ~exist(ParamsFile, 'file')
+    msg = sprintf('');
+    e
+p               = load(ParamsFile);         % Load parameters struct
+np              = NTB_Params(p);            % Create instance of NTB_Params class from struct data
+
+
