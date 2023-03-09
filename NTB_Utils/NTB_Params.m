@@ -19,6 +19,7 @@ classdef NTB_Params < handle
         NI
         Reward
         TDT
+        P
     end
 
     methods ( Static, Access = public )

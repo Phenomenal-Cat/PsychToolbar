@@ -20,6 +20,10 @@ As the name suggests, the NIF Toolbar has been developed specifically for use in
   :width: 100%
   :alt: NIF Toolbar GUI
 
+.. container:: clearer
+
+    .. image :: _images/spacer.png
+       :width: 1
 
 
 Basic Overview

@@ -1,4 +1,4 @@
-                                                                              % Test manual reward
+% Test manual reward
 
 function EyePos = ManualRewardTest()
 
