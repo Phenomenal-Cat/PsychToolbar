@@ -13,6 +13,8 @@ if nargin == 2
         end
         return;
     end
+elseif nargin == 0
+
 end
 
 %===== Load default params info for this host
@@ -35,7 +37,11 @@ P.AllParamsFiles{end+1} = 'Create new';
 if ~exist(P.ParamsFile, 'file')
     msg = sprintf('The default params file for this computer (''%s'') was not found on the matlab path!', P.ParamsFile);
     q = sprintf('Would you like to create a new default parameters file named %s for this computer?', P.ParamsFile);
-    ans = uiconfirm(app.NIFToolbarUIFigure, sprintf('%s\n%s', msg, q), 'Create new params?','Cancel','OK');
+    if exist('app', 'var')
+        ans = uiconfirm(app.NIFToolbarUIFigure, sprintf('%s\n%s', msg, q), 'Create new params?','Cancel','OK');
+    else
+        
+    end
 else
     prm   = load(P.ParamsFile);             % Load parameters struct
     prm.P = P;                              % Append local params info
