@@ -18,12 +18,10 @@ pybtex
 pyparsing
 python-dateutil
 pytz
-recommonmark
 rst2pdf
 six
 snowballstemmer
 sphinxcontrib-bibtex
-sphinx-inline-tabs
 sphinx_panels
 sphinx_fontawesome
 sphinx-notfound-page
