@@ -34,11 +34,15 @@ release = '1.0'                     # The full version, including alpha/beta/rc 
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.githubpages',
-    #'recommonmark',
+    'recommonmark',
     # 'zot4rst.sphinx',
     'sphinx.ext.intersphinx',
-    'sphinx_panels',
+    'sphinx_inline_tabs',
+    #'sphinx_panels',
+    'sphinx_design',
     'matplotlib.sphinxext.plot_directive',
+    'sphinx_copybutton',
+    #'sphinx_tippy',
     #'sphinxcontrib.video',
 ]
 
