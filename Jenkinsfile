@@ -13,19 +13,19 @@ pipeline {
         stage ('Install Sphinx') {
             steps {
                 echo 'Install Sphinx..'
-                 sh 'source bin/activate && pip3 install -r NTB_Docs/requirements.txt'
+                 sh 'source bin/activate && pip3 install -r PTB_Docs/requirements.txt'
             }
         }
         stage ('Create HTML') {
             steps {
                 echo 'Run Sphinx..'
-                sh 'source bin/activate && cd NTB_Docs; make sphinx-build'
+                sh 'source bin/activate && cd PTB_Docs; make sphinx-build'
             }
         }
         stage ('Deploy HTML') {
             steps {
                 echo 'Deploy..'
-                sh 'cd NTB_Docs; make deploy'
+                sh 'cd PTB_Docs; make deploy'
             }
         }
     }

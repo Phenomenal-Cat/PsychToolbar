@@ -3,7 +3,7 @@ Jinja2
 MarkupSafe
 PyYAML
 Pygments
-Sphinx>=5.0
+Sphinx
 alabaster
 commonmark
 cycler
@@ -22,12 +22,8 @@ rst2pdf
 six
 snowballstemmer
 sphinxcontrib-bibtex
-recommonmark
-sphinx-design
-sphinx-copybutton
+sphinx_panels
 sphinx_fontawesome
 sphinx-notfound-page
 sphinx-csv-filter
-sphinx-inline-tabs
-sphinx-tippy
 git+https://github.com/sphinx-contrib/video.git

@@ -37,7 +37,6 @@ extensions = [
     #'recommonmark',
     # 'zot4rst.sphinx',
     'sphinx.ext.intersphinx',
-    'sphinx_inline_tabs',
     'sphinx_panels',
     'matplotlib.sphinxext.plot_directive',
     #'sphinxcontrib.video',
