@@ -22,7 +22,7 @@ rst2pdf
 six
 snowballstemmer
 sphinxcontrib-bibtex
-sphinx-design
+sphinx_design
 sphinx-copybutton
 sphinx_fontawesome
 sphinx-notfound-page
