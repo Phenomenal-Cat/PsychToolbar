@@ -18,9 +18,9 @@ sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'NIF Toolbar'
+project = 'Psych Toolbar'
 now     = datetime.datetime.now()       # Get current date
-author  = 'Dr. Aidan Murphy'
+author  = 'New Atlantis Labs'
 copyright = '%d, %s' % (now.year, author)
 version = '1.0'                     # The short X.Y version
 release = '1.0'                     # The full version, including alpha/beta/rc tags
@@ -67,8 +67,8 @@ pygments_style = 'monokai' #'sphinx'
 html_theme = 'nature'
 
 html_static_path = ['_static']
-html_title = 'NIF Toolbar'
-html_short_title = 'NIF Toolbar'
+html_title = 'Psych Toolbar'
+html_short_title = 'PsychToolbar'
 html_logo = './_images/Logos/NTB Logo w.png'
 
 html_show_sourcelink = False
