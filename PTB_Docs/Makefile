@@ -52,7 +52,7 @@ include base.mk
 #db-init: my-init
 
 # Uncomment the next line to include additional makefiles
-include ntb.mk
+include ptb.mk
 #
 # Uncomment the next line to customize the default goal
 #.DEFAULT_GOAL := git-commit-push
