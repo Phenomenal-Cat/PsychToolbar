@@ -84,33 +84,11 @@ Panels and Tabs
   :align: left
 
 
-Requirements
-==============
-
-All systems running the Psych Toolbar comprise of the following:
-
-**Hardware:**
-
-* PC with 32GB RAM, 1TB SSD
-* `NVidia Geforce GTX 1080 <https://www.nvidia.com/en-us/geforce/10-series/>`_ (8GB)
-* `VPixx DataPixx 2 <https://vpixx.com/products/datapixx2/>`_ interface
-* Video-based eye tracking PC with analog output and ethernet communication
-* :ref:`DataPixx Interface rack-mount box <InterfaceBox>` (optional)
-* Neurophysiology recording system (optional)
-
-**Software:**
-
-* `Ubuntu <https://ubuntu.com/download/desktop>`_ 20.04 LTS
-* `NVidia drivers  <https://www.nvidia.com/Download/index.aspx>`_ 450.66.
-* `Matlab <https://www.mathworks.com/products/matlab.html>`_ R2020a
-* `PsychToolbox <http://psychtoolbox.org/>`_ Version 3.0.16
-* `DataPixx Toolbox <http://www.vpixx.com/manuals/psychtoolbox/html/install.html>`_ (optional)
-* `PLDAPS <https://github.com/HukLab/PLDAPS>`_ Version 4.3.0 (optional)
 
 Installation
 ===================
 
-The Psych Toolbar can be downloaded or cloned from the `GitHub repository <https://github.com/Phenomenal-Cat/Psych-Toolbar>`_. The computer system should already be configured as outlined in :ref:`SystemInstall`.
+The Psych Toolbar can be eitehr downloaded or cloned from the `GitHub repository <https://github.com/Phenomenal-Cat/Psych-Toolbar>`_. The computer system should already be configured as outlined in :ref:`SystemInstall`.
 
 
 Contents
