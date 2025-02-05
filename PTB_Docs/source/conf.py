@@ -72,7 +72,7 @@ html_theme = 'nature'
 html_static_path = ['_static']
 html_title = 'Psych Toolbar'
 html_short_title = 'PsychToolbar'
-html_logo = './_images/Logos/NTB Logo w.png'
+html_logo = './_images/Logos/PTB_Logo_w.png'
 
 html_show_sourcelink = False
 
