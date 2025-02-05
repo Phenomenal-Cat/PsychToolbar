@@ -8,7 +8,7 @@
 |Actions| PTB Actions Tab
 ===================================
 
-The :badge:`Actions,badge-primary` tab of the Psych Toolbar GUI allows the user to execute various actions based on the current settings. The most important actions button is the 'Play' button, which executes the function to run the experiment that is currently selected in the :ref:`Session panel <PTB_SessionPanel>`.
+The :bdg-primary:`Actions` tab of the Psych Toolbar GUI allows the user to execute various actions based on the current settings. The most important actions button is the 'Play' button, which executes the function to run the experiment that is currently selected in the :ref:`Session panel <PTB_SessionPanel>`.
 
 
 .. |Play| image:: _images/PTB_Icons/W_Play.png

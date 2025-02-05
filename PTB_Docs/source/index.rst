@@ -2,9 +2,9 @@
 Psych Toolbar
 ====================
 
-The Psych Toolbar is a suite of graphical user interfaces (GUIs) and functions, intended to simplify the management of experimental control parameters for running behavioral neuroscience experiments. Psych Toolbar is written in Matlab and designed to interface with commonly used Matlab extensions for behavioral neuroscience, namely `PsychToolbox <https://psychtoolbox.org/>`_.
+Psych Toolbar is a suite of graphical user interfaces (GUIs) and functions, intended to simplify the management of experimental control parameters for running behavioral neuroscience experiments. Psych Toolbar is written in Matlab and designed to interface with commonly used Matlab extensions for behavioral neuroscience, namely `PsychToolbox <https://psychtoolbox.org/>`_.
 
-Psych Toolbar was initially developed specifically for use in the `Neurophysiology Imaging Facility <nif.nimh.nih.gov>`_ and `SCNI (Section on Cognitive Neurophysiology and Imaging) <ttps://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/ln/scni/index.shtml>`_ at the National Institutes of Health. It is provided to users as a more open-ended alternative to the excellent `NIMH Monkey Logic <https://monkeylogic.nimh.nih.gov/>`_ extension for Matlab, which is also worth considering for your research needs.
+Psych Toolbar was initially developed for use in the `Neurophysiology Imaging Facility <nif.nimh.nih.gov>`_ and `SCNI (Section on Cognitive Neurophysiology and Imaging) <https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/ln/scni/index.shtml>`_ at the National Institutes of Health. It is provided to users as a more open-ended alternative to the excellent `NIMH Monkey Logic <https://monkeylogic.nimh.nih.gov/>`_ extension for Matlab, which is also worth considering for your research needs.
 
 .. _Psych_Toolbar_Home:
 
@@ -14,7 +14,7 @@ Psych Toolbar was initially developed specifically for use in the `Neurophysiolo
   :width: 100%
   :alt: PTB Display Example
 
-.. figure:: _images/PTB_GUIs/Psych_Toolbar.png
+.. figure:: _images/PTB_GUIs/PsychToolbar.png
   :align: right
   :figwidth: 100%
   :width: 100%
@@ -29,14 +29,14 @@ Psych Toolbar was initially developed specifically for use in the `Neurophysiolo
 Basic Overview
 ================
 
-The Psych Toolbar is flexibly designed to be of benefit to both novice and experienced researchers. For the novice with little programming experience, the Psych Toolbar's graphic environment offers an intuitive way of getting simple visual experiments up and running quickly. For this purpose, a series of commonly used experimental templates are provided, including:
+Psych Toolbar is flexibly designed to be of benefit to both novice and experienced researchers. For the novice with little programming experience, the Psych Toolbar's graphic environment offers an intuitive way of getting simple visual experiments up and running quickly. For this purpose, a series of commonly used experimental templates are provided, including:
 
 * Eye-tracker calibration
 * Presentation of static images (e.g. fMRI 'face patch localizer')
 * Presentation of movie clips (e.g. fMRI block design)
 * Presentation of abstract graphics (e.g. dot motion, gratings, retinotopic mapping stimuli)
 
-For the advanced user, Psych Toolbar provides a fast and user-friendly means of editing and organizing the many variables involved (via GUIs), which can then be optionally accessed in your own experimental code through the :link-badge:`PTB_ParamsObject,Params,ref,cls=badge-warning text-dark` `object class <https://www.mathworks.com/help/matlab/matlab_oop/example-representing-structured-data.html>`_. PTB sub-functions allow common tasks that may occur throughout an experiment (e.g. reward delivery) to be executed with a single line of code, thus minimizing the amount of code required to write new experiments.
+For the advanced user, Psych Toolbar provides a fast and user-friendly means of editing and organizing the many variables involved (via GUIs), which can then be optionally accessed in your own experimental code through the :bdg-ref-warning:`Params <PTB_ParamsObject>` `object class <https://www.mathworks.com/help/matlab/matlab_oop/example-representing-structured-data.html>`_. PTB sub-functions allow common tasks that may occur throughout an experiment (e.g. reward delivery) to be executed with a single line of code, thus minimizing the amount of code required to write new experiments.
 
 
 Panels and Tabs
