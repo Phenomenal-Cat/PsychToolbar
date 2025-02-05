@@ -17,7 +17,7 @@
    PTB Scanner TTL  <PTB_ScannerTTL>
 
 
-The :badge:`fMRI,badge-primary` tab of the Psych Toolbar GUI allows the user to launch apps for configuring parameter specific to functional MRI experiments.  
+The :bdg-primary:`fMRI` tab of the Psych Toolbar GUI allows the user to launch apps for configuring parameter specific to functional MRI experiments.  
 
 .. |EPI| image:: _images/PTB_Icons/W_SpeakerOn.png
   :height: 40

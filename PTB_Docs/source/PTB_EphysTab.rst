@@ -18,7 +18,7 @@
    PTB Photodiode Settings  <PTB_PhotodiodeSettings>
    PTB Stimulation Settings  <PTB_StimSettings>
 
-The :badge:`Ephys,badge-primary` tab of the Psych Toolbar GUI allows the user to edit settings related to specific electrophysiological recording and stimulation hardware.
+The :bdg-primary:`Ephys` tab of the Psych Toolbar GUI allows the user to edit settings related to specific electrophysiological recording and stimulation hardware.
 
 
 .. |TDT| image:: _images/PTB_Icons/W_TDT.png
