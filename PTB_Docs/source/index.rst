@@ -91,6 +91,11 @@ Installation
 The Psych Toolbar can be eitehr downloaded or cloned from the `GitHub repository <https://github.com/Phenomenal-Cat/Psych-Toolbar>`_. The computer system should already be configured as outlined in :ref:`SystemInstall`.
 
 
+.. |NA| image:: _images/Logos/NALabs_w.png
+  :height: 30
+  :alt: New Atlantis Labs Logo
+  :target: https://newatlantis.rtfd.io
+
 Contents
 ===============================
 
