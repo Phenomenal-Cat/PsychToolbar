@@ -1,15 +1,15 @@
-.. |PD_icon| image:: _images/NTB_Icons/Photodiode.png
+.. |PD_icon| image:: _images/PTB_Icons/Photodiode.png
   :align: bottom
   :height: 30
-  :alt: NTB Photodiodes
+  :alt: PTB Photodiodes
 
-.. NTB_Photodiodes:
+.. PTB_Photodiodes:
 
 ===================================
 |PD_icon| Photodiodes
 ===================================
 
-.. figure:: _images/NTB_Images/Photodiode.jpg
+.. figure:: _images/PTB_Images/Photodiode.jpg
   :align: right
   :figwidth: 30%
   :width: 100%
@@ -24,4 +24,4 @@ In the **NIF**, photodiodes cannot be attached to the subject's display (i.e. pr
 Photodiode Settings and Calibration
 =====================================
 
-The appearance of the on-screen marker used to trigger the photodiode circuit is controlled in the :ref:`NTB Display Settings GUI <NTB_DisplaySettings>` under the :ref:`Photodiode Tab <PhotodiodeTab>`. 
+The appearance of the on-screen marker used to trigger the photodiode circuit is controlled in the :ref:`PTB Display Settings GUI <PTB_DisplaySettings>` under the :ref:`Photodiode Tab <PhotodiodeTab>`. 

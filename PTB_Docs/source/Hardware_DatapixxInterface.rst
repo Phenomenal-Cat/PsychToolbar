@@ -11,7 +11,7 @@ the need for BNC cables. The box allows for the connection of four key
 systems, allowing them to communicate analog and digital data with one
 another:
 
-.. figure:: _images/NTB_Images/SCNI_InterfaceBox_1.jpg
+.. figure:: _images/PTB_Images/SCNI_InterfaceBox_1.jpg
   :figwidth: 50%
   :width: 100%
   :align: right
@@ -36,14 +36,14 @@ Circuit
 The circuit, which is completely passive, was designed by Aidan Murphy
 and Bruce Pritchard and constructed by Danny Trang in the NIMH `Section on
 Instrumentation <https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/research-support-services/section-on-instrumentation/index.shtml>`_. The LEDs on the left of the front panel draw current from the connected systems in order to indicate which systems are currently connected to the box. The full schematic diagram can be found
-:download:`here <_images/NTB_Images/SCNI_NeurophysInterfaceBox_20171119a_17615.pdf>`,
+:download:`here <_images/PTB_Images/SCNI_NeurophysInterfaceBox_20171119a_17615.pdf>`,
 and a basic overview of the signal path is given below.
 
 
 Analog signals
 ---------------
 
-.. figure:: _images/NTB_Images/SCNI_InterfaceBox_2.png
+.. figure:: _images/PTB_Images/SCNI_InterfaceBox_2.png
   :figwidth: 50%
   :width: 100%
   :align: right

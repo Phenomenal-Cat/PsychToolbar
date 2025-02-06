@@ -1,8 +1,8 @@
 ﻿Icon,Tab,Description
-|Session|,:ref:`Session panel <NTB_SessionPanel>`,Menus to specify detals for the current session
-|Actions|,:ref:`Actions tab <NTB_ActionsTab>`,"Buttons to execute specific actions, such as starting or stopping an experiment."
-|Settings|,:ref:`Settings tab <NTB_SettingsTab>`,"Launch apps to control settings of essential components of behavioural experiments, such as visual displays, eye tracking and reward."
-|Experiments|,:ref:`Experiments tab <NTB_ExperimentsTab>`,Launch apps to adjust settings for specific pre-programmed behavioral experiment types. Optionally add apps to adjust parameters of your own custom experiments.
-|fMRI|,:ref:`fMRI tab <NTB_fMRITab>`,Launch apps to adjust settings specific to functional MRI experiments.
-|Ephys|,:ref:`Ephys tab <NTB_EphysTab>`,Launch apps to adjust settings specific to electrophysiology experiments.
-|Calib|,:ref:`Calibrations tab <NTB_CalibrationsTab>`,Launch apps to run equipment calibration functions.
+|Session|,:ref:`Session panel <PTB_SessionPanel>`,Menus to specify detals for the current session
+|Actions|,:ref:`Actions tab <PTB_ActionsTab>`,"Buttons to execute specific actions, such as starting or stopping an experiment."
+|Settings|,:ref:`Settings tab <PTB_SettingsTab>`,"Launch apps to control settings of essential components of behavioural experiments, such as visual displays, eye tracking and reward."
+|Experiments|,:ref:`Experiments tab <PTB_ExperimentsTab>`,Launch apps to adjust settings for specific pre-programmed behavioral experiment types. Optionally add apps to adjust parameters of your own custom experiments.
+|fMRI|,:ref:`fMRI tab <PTB_fMRITab>`,Launch apps to adjust settings specific to functional MRI experiments.
+|Ephys|,:ref:`Ephys tab <PTB_EphysTab>`,Launch apps to adjust settings specific to electrophysiology experiments.
+|Calib|,:ref:`Calibrations tab <PTB_CalibrationsTab>`,Launch apps to run equipment calibration functions.

@@ -5,33 +5,33 @@
 .. _PTB_ActionsTab:
 
 ===================================
-|Actions| PTB Actions Tab
+:fa:`circle-play` PTB Actions Tab
 ===================================
 
 The :bdg-primary:`Actions` tab of the Psych Toolbar GUI allows the user to execute various actions based on the current settings. The most important actions button is the 'Play' button, which executes the function to run the experiment that is currently selected in the :ref:`Session panel <PTB_SessionPanel>`.
 
 
-.. |Play| image:: _images/PTB_Icons/W_Play.png
+.. |Play| image:: _images/PTB_Icons/Play.png
   :height: 40
   :alt: Play
 
-.. |Stop| image:: _images/PTB_Icons/W_PlayOff.png
+.. |Stop| image:: _images/PTB_Icons/PlayOff.png
   :height: 40
   :alt: Stop
 
-.. |EyeTracking| image:: _images/PTB_Icons/W_Eye.png
+.. |EyeTracking| image:: _images/PTB_Icons/Eye.png
   :height: 40
   :alt: EyeTracking
 
-.. |Reward| image:: _images/PTB_Icons/W_Liquid.png
+.. |Reward| image:: _images/PTB_Icons/Liquid.png
   :height: 40
   :alt: Manual reward
 
-.. |PlayMovie| image:: _images/PTB_Icons/W_Movie.png
+.. |PlayMovie| image:: _images/PTB_Icons/Movie.png
   :height: 40
   :alt: Play movie
 
-.. |PlaySound| image:: _images/PTB_Icons/W_SpeakerOn.png
+.. |PlaySound| image:: _images/PTB_Icons/SpeakerOn.png
   :height: 40
   :alt: PlaySound
 

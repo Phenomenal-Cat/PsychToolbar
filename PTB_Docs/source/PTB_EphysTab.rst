@@ -21,23 +21,23 @@
 The :bdg-primary:`Ephys` tab of the Psych Toolbar GUI allows the user to edit settings related to specific electrophysiological recording and stimulation hardware.
 
 
-.. |TDT| image:: _images/PTB_Icons/W_TDT.png
+.. |TDT| image:: _images/PTB_Icons/TDT.png
   :height: 40
   :alt: TDT
 
-.. |OE| image:: _images/PTB_Icons/W_OpenEphys.png
+.. |OE| image:: _images/PTB_Icons/OpenEphys.png
   :height: 40
   :alt: OpenEphys
 
-.. |PD| image:: _images/PTB_Icons/W_Photodiode.png
+.. |PD| image:: _images/PTB_Icons/Photodiode.png
   :height: 40
   :alt: Photodiode
 
-.. |OptiTrack| image:: _images/PTB_Icons/W_Motive.png
+.. |OptiTrack| image:: _images/PTB_Icons/Motive.png
   :height: 40
   :alt: OptiTrack Motive
 
-.. |Stim| image:: _images/PTB_Icons/W_Stimulation.png
+.. |Stim| image:: _images/PTB_Icons/Stimulation.png
   :height: 40
   :alt: Stimulation
 

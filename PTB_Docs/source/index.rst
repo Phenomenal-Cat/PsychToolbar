@@ -1,10 +1,18 @@
-====================
-Psych Toolbar
-====================
 
-Psych Toolbar is a suite of graphical user interfaces (GUIs) and functions, intended to simplify the management of experimental control parameters for running behavioral neuroscience experiments. Psych Toolbar is written in Matlab and designed to interface with commonly used Matlab extensions for behavioral neuroscience, namely `PsychToolbox <https://psychtoolbox.org/>`_.
+.. card::
+  :class-header: sd-bg-primary
+  :class-body: sd-bg-light
+  :img-bottom: _images/PTB_GUIs/PsychToolbar.png
 
-Psych Toolbar was initially developed for use in the `Neurophysiology Imaging Facility <nif.nimh.nih.gov>`_ and `SCNI (Section on Cognitive Neurophysiology and Imaging) <https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/ln/scni/index.shtml>`_ at the National Institutes of Health. It is provided to users as a more open-ended alternative to the excellent `NIMH Monkey Logic <https://monkeylogic.nimh.nih.gov/>`_ extension for Matlab, which is also worth considering for your research needs.
+  .. image:: _images/Logos/PTB_Logo_w.png
+    :height: 60
+
+  ^^^
+
+  Psych Toolbar is a suite of graphical user interfaces (GUIs) and functions for `Matlab <https://www.mathworks.com/products/matlab.html>`_, intended to simplify the management of experimental control parameters for running behavioral neuroscience experiments. Psych Toolbar is written in the Matlab interpreted language and designed to interface with commonly used Matlab extensions for behavioral neuroscience, namely `PsychToolbox <https://psychtoolbox.org/>`_.
+
+  Psych Toolbar was initially developed for use in the `Neurophysiology Imaging Facility <nif.nimh.nih.gov>`_ and `SCNI (Section on Cognitive Neurophysiology and Imaging) <https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/ln/scni/index.shtml>`_ at the National Institutes of Health. It is provided to users as a more open-ended / customizable alternative to the excellent `NIMH Monkey Logic <https://monkeylogic.nimh.nih.gov/>`_ extension for Matlab, which is also worth considering for your research needs.
+
 
 .. _Psych_Toolbar_Home:
 
@@ -14,17 +22,15 @@ Psych Toolbar was initially developed for use in the `Neurophysiology Imaging Fa
   :width: 100%
   :alt: PTB Display Example
 
-.. figure:: _images/PTB_GUIs/PsychToolbar.png
-  :align: right
-  :figwidth: 100%
-  :width: 100%
-  :alt: Psych Toolbar GUI
 
 .. container:: clearer
 
     .. image :: _images/spacer.png
        :width: 1
 
+===============
+PsychToolbar
+===============
 
 Basic Overview
 ================
@@ -42,43 +48,43 @@ For the advanced user, Psych Toolbar provides a fast and user-friendly means of 
 Panels and Tabs
 ===================
 
-.. |Session| image:: _images/PTB_Icons/W_Calendar.png
+.. |Session| image:: _images/PTB_Icons/Calendar.png
   :width: 40
   :alt: Session
   :target: PTB_SessionPanel.html
 
-.. |Actions| image:: _images/PTB_Icons/W_Play.png
+.. |Actions| image:: _images/PTB_Icons/Play.png
   :width: 40
   :alt: Actions
   :target: PTB_ActionsTab.html
 
-.. |Settings| image:: _images/PTB_Icons/W_Settings.png
+.. |Settings| image:: _images/PTB_Icons/Settings.png
   :width: 40
   :alt: Settings
   :target: PTB_SettingsTab.html
 
-.. |Experiments| image:: _images/PTB_Icons/W_Experiment.png
+.. |Experiments| image:: _images/PTB_Icons/Experiment.png
   :width: 40
   :alt: Experiments
   :target: PTB_ExperimentsTab.html
 
-.. |fMRI| image:: _images/PTB_Icons/W_EPI.png
+.. |fMRI| image:: _images/PTB_Icons/EPI.png
   :width: 40
   :alt: fMRI
   :target: PTB_fMRITab.html
 
-.. |Ephys| image:: _images/PTB_Icons/W_Ephys2.png
+.. |Ephys| image:: _images/PTB_Icons/Ephys2.png
   :width: 40
   :alt: Ephys
   :target: PTB_EphysTab.html
 
-.. |Calib| image:: _images/PTB_Icons/W_Calibrate.png
+.. |Calib| image:: _images/PTB_Icons/Calibrate.png
   :width: 40
   :alt: Calibrations
   :target: PTB_CalibrationsTab.html
 
 .. csv-table::
-  :file: _static/CSVs/Psych_ToolbarTabs.csv
+  :file: _static/CSVs/PsychToolbarTabs.csv
   :header-rows: 1
   :widths: 10 20 60
   :align: left

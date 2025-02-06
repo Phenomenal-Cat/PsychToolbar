@@ -5,7 +5,7 @@
 .. _PTB_fMRITab:
 
 ===================================
-|fMRI| PTB fMRI Tab
+:fa:`magnet` PTB fMRI Tab
 ===================================
 
 .. toctree::
@@ -19,19 +19,19 @@
 
 The :bdg-primary:`fMRI` tab of the Psych Toolbar GUI allows the user to launch apps for configuring parameter specific to functional MRI experiments.  
 
-.. |EPI| image:: _images/PTB_Icons/W_SpeakerOn.png
+.. |EPI| image:: _images/PTB_Icons/SpeakerOn.png
   :height: 40
   :alt: EPI
 
-.. |Block| image:: _images/PTB_Icons/W_Block.png
+.. |Block| image:: _images/PTB_Icons/Block.png
   :height: 40
   :alt: Block
 
-.. |BNC| image:: _images/PTB_Icons/W_BNC.png
+.. |BNC| image:: _images/PTB_Icons/BNC.png
   :height: 40
   :alt: Scanner TTL
 
-.. |Magnet| image:: _images/PTB_Icons/W_EPI.png
+.. |Magnet| image:: _images/PTB_Icons/EPI.png
   :height: 40
   :alt: Scanner test
 

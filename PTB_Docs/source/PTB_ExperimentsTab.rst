@@ -5,7 +5,7 @@
 .. _PTB_ExperimentsTab:
 
 ===================================
-|Experiments| PTB Experiments Tab
+:fa:`flask` PTB Experiments Tab
 ===================================
 
 .. toctree::
@@ -30,27 +30,27 @@ The :bdg-primary:`Experiments` tab of the Psych Toolbar GUI allows the user to l
   If you are programming your own experiment and want to utilize Psych Toolbar controls or features, see the :ref:`guide to adding custom experiments <CustomExperiments>` for further information. 
 
 
-.. |Image| image:: _images/PTB_Icons/W_Slideshow.png
+.. |Image| image:: _images/PTB_Icons/Slideshow.png
   :height: 40
   :alt: Image
   :target: PTB_ImageSettings.html
 
-.. |Movie| image:: _images/PTB_Icons/W_Movie.png
+.. |Movie| image:: _images/PTB_Icons/Movie.png
   :height: 40
   :alt: Movie
   :target: PTB_MovieSettings.html
 
-.. |Visuotopy| image:: _images/PTB_Icons/Checkerboard_w.png
+.. |Visuotopy| image:: _images/PTB_Icons/Checkerboard.png
   :height: 40
   :alt: Visuotopy
   :target: PTB_VisuotopySettings.html
 
-.. |Saccade| image:: _images/PTB_Icons/W_Eye.png
+.. |Saccade| image:: _images/PTB_Icons/Eye.png
   :height: 40
   :alt: EyeTracking
   :target: PTB_SaccadeSettings.html
 
-.. |Audio| image:: _images/PTB_Icons/W_SpeakerOn.png
+.. |Audio| image:: _images/PTB_Icons/SpeakerOn.png
   :height: 40
   :alt: Auditory
   :target: PTB_AudioSettings.html

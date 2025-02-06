@@ -69,7 +69,7 @@ Profile Panel
 
     .. _DS_SelectedXScreen:
 
-    * :badg-primary:`Selected X-Screen`: the ID number of the currently detected X-screens that a PTB window should be opened on. Note that this uses zero-based numbering and cannot exceed the number of detected :ref:`X-screens <DS_NoXScreens>`.
+    * :bdg-primary:`Selected X-Screen`: the ID number of the currently detected X-screens that a PTB window should be opened on. Note that this uses zero-based numbering and cannot exceed the number of detected :ref:`X-screens <DS_NoXScreens>`.
 
     .. _DS_TotalResolution:
 

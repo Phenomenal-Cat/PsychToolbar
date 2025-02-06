@@ -4,9 +4,9 @@
 
 .. _PTB_SessionPanel:
 
-===================================
-|Session| PTB Session Panel
-===================================
+======================================
+:fa:`calendar-days` PTB Session Panel
+======================================
 
 .. |Params| replace:: :bdg-ref-warning:`Params <PTB_ParamsObject>`
 
