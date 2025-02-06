@@ -23,11 +23,11 @@ six
 snowballstemmer
 sphinxcontrib-bibtex
 sphinx_design
+sphinx_panels
 sphinx-copybutton
 sphinx_fontawesome
 sphinx-notfound-page
 sphinx-csv-filter
 sphinx-tippy
-sphinx-wagtail-theme
 sphinx-book-theme
 git+https://github.com/sphinx-contrib/video.git

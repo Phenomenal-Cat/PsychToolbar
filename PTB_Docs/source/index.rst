@@ -6,6 +6,7 @@
 
   .. image:: _images/Logos/PTB_Logo_w.png
     :height: 60
+    :class: dark-light
 
   ^^^
 
