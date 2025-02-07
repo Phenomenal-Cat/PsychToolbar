@@ -1,9 +1,9 @@
 ﻿Icon,Setting GUI,Output Structure,Brief Description
-|Display|,:ref:`Display <NTB_DisplaySettings>` ,:ref:`Params.Display <Params-Display>`,Configure visual display geometry and appearance for both subject and experimenter.
-|Datapixx|,:ref:`Datapixx <NTB_DatapixxSettings>`,:ref:`Params.DPx <Params-DPx>`,Set analog and digital IO channels for the DataPixx interface box.
-|EyeTracking|,:ref:`Eye tracking <NTB_EyeCalSettings>` , :ref:`Params.Eye <Params-Eye>`,Set parameters for eye-tracker calibration in order to convert analog eye signals into screen coordinates.
-|Reward|,:ref:`Reward <NTB_RewardSettings>`,:ref:`Params.Reward <Params-Reward>`,Set parameters for liquid reward delivery schedule.
-|Keyboard|,:ref:`Keyboard <NTB_KeyboardSettings>` ,:ref:`Params.Keys <Params-Keys>` ,Set experimenter keyboard shortcuts that are active while the experiment is running.
-|Save|,:ref:`Save data <NTB_SaveDataSettings>`, :ref:`Params.Save <Params-Save>`,Set parameters for saving data from Matlab during experiments.
-|GitHub|,:ref:`GitHub <NTB_GitSettings>`  , :ref:`Params.Git <Params-Git>`    ,Set parameters for pulling and pushing NTB code updates from GitHub.
-|NI_Logo| ,:ref:`National Instruments <NTB_NISettings>`,:ref:`Params.NI <Params-NI>`,Set parameters for communication with National Instruments (NI) data acquisition systems.
+|Display|,:ref:`Display <PTB_DisplaySettings>` ,:ref:`Params.Display <Params-Display>`,Configure visual display geometry and appearance for both subject and experimenter.
+|Datapixx|,:ref:`Datapixx <PTB_DatapixxSettings>`,:ref:`Params.DPx <Params-DPx>`,Set analog and digital IO channels for the DataPixx interface box.
+|EyeTracking|,:ref:`Eye tracking <PTB_EyeCalSettings>` , :ref:`Params.Eye <Params-Eye>`,Set parameters for eye-tracker calibration in order to convert analog eye signals into screen coordinates.
+|Reward|,:ref:`Reward <PTB_RewardSettings>`,:ref:`Params.Reward <Params-Reward>`,Set parameters for liquid reward delivery schedule.
+|Keyboard|,:ref:`Keyboard <PTB_KeyboardSettings>` ,:ref:`Params.Keys <Params-Keys>` ,Set experimenter keyboard shortcuts that are active while the experiment is running.
+|Save|,:ref:`Save data <PTB_SaveDataSettings>`, :ref:`Params.Save <Params-Save>`,Set parameters for saving data from Matlab during experiments.
+|GitHub|,:ref:`GitHub <PTB_GitSettings>`  , :ref:`Params.Git <Params-Git>`    ,Set parameters for pulling and pushing PTB code updates from GitHub.
+|NI_Logo| ,:ref:`National Instruments <PTB_NISettings>`,:ref:`Params.NI <Params-NI>`,Set parameters for communication with National Instruments (NI) data acquisition systems.

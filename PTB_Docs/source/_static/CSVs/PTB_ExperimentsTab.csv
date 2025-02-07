@@ -1,6 +1,6 @@
 ﻿Icon,Setting GUI,Output Structure,Brief Description
-|Image|,:ref:`Image <NTB_ImageSettings>`,:ref:`Params.Image <Params-Image>`,"Set parameters for image presentation experiments, including the paths of the images to be presented."
-|Movie|,:ref:`Movie <NTB_MovieSettings>`  ,:ref:`Params.Movie <Params-Movie>`,"Set parameters for movie presentation experiments, including the paths of the movies to be presented."
-|Visuotopy|,:ref:`Visuotopy <NTB_VisuotopySettings>`  ,:ref:`Params.Visuotopy <Params-Visuotopy>`,Set parameters for visuotopic or retinorotpic mapping (fMRI) experiments using either classic or population receptive field stimuli.
-|Saccade|,:ref:`Saccade map <NTB_SaccadeSettings>` ,:ref:`Params.Saccade <Params-Saccade>`,Set parameters for saccade mapping experiments using visually or memory-guided saccades.
-|Audio|,:ref:`Auditory <NTB_AudioSettings>`,:ref:`Params.Audio <Params-Audio>`,Set parameters for auditory stimulus presentation experiments.
+|Image|,:ref:`Image <PTB_ImageSettings>`,:ref:`Params.Image <Params-Image>`,"Set parameters for image presentation experiments, including the paths of the images to be presented."
+|Movie|,:ref:`Movie <PTB_MovieSettings>`  ,:ref:`Params.Movie <Params-Movie>`,"Set parameters for movie presentation experiments, including the paths of the movies to be presented."
+|Visuotopy|,:ref:`Visuotopy <PTB_VisuotopySettings>`  ,:ref:`Params.Visuotopy <Params-Visuotopy>`,Set parameters for visuotopic or retinorotpic mapping (fMRI) experiments using either classic or population receptive field stimuli.
+|Saccade|,:ref:`Saccade map <PTB_SaccadeSettings>` ,:ref:`Params.Saccade <Params-Saccade>`,Set parameters for saccade mapping experiments using visually or memory-guided saccades.
+|Audio|,:ref:`Auditory <PTB_AudioSettings>`,:ref:`Params.Audio <Params-Audio>`,Set parameters for auditory stimulus presentation experiments.

@@ -1,6 +1,6 @@
 ﻿Icon,Setting GUI,Output structure,Brief Description
-|TDT|,:ref:`TDT Settings <NTB_TDTSettings>`,:ref:`Params.TDT <Params-TDT>`,Set Tucker Davis Technologies ephys hardware communciation settings.
-|OE|,:ref:`OE Settings <NTB_OESettings>`,:ref:`Params.OE <Params-OE>`,Set OpenEphys hardware communciation settings.
-|OptiTrack|,:ref:`Optitrack Settings <NTB_OptitrackSettings>`,:ref:`Params.Optitrack <Params-Optitrack>`,
-|PD|,:ref:`Photodiode Settings <NTB_PhotodiodeSettings>`,NA,Check display photodiode response.
-|Stim|,:ref:`Stim Settings <NTB_StimSettings>`,:ref:`Params.Stim <Params-Stim>`,Set neural stimulation (electrical or optical) settings.
+|TDT|,:ref:`TDT Settings <PTB_TDTSettings>`,:ref:`Params.TDT <Params-TDT>`,Set Tucker Davis Technologies ephys hardware communciation settings.
+|OE|,:ref:`OE Settings <PTB_OESettings>`,:ref:`Params.OE <Params-OE>`,Set OpenEphys hardware communciation settings.
+|OptiTrack|,:ref:`Optitrack Settings <PTB_OptitrackSettings>`,:ref:`Params.Optitrack <Params-Optitrack>`,
+|PD|,:ref:`Photodiode Settings <PTB_PhotodiodeSettings>`,NA,Check display photodiode response.
+|Stim|,:ref:`Stim Settings <PTB_StimSettings>`,:ref:`Params.Stim <Params-Stim>`,Set neural stimulation (electrical or optical) settings.

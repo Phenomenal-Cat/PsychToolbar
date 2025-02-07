@@ -1,7 +1,7 @@
-.. _InterfaceBox:
+.. _DAQ:
 
 =============================
-DataPixx Interface Box
+Data Acquisition Card (DAQ)
 =============================
 
 In order to more efficiently and effectively route analog and digital

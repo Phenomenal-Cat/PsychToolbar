@@ -1,0 +1,6 @@
+Icon,Action,Brief Description
+|Settings|,**Parameters**,Parameter (.mat) file containing saved settings.
+|User|,**User**,Name of the researcher or lab running the study.
+|Subject|,**Subject**,Name or ID of the subject.
+|Experiment|,**Experiment**,Name of the experiment being run. 
+|Session|,**Session**,Date and time (or other ID) for this session.
