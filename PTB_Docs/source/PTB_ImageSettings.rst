@@ -17,106 +17,100 @@
 
 The :badge:`Image Settings,badge-success` GUI allows the user to quickly set parameters for experiments involving the visual presentation of static images. All variables controlled by the Image settings GUI are saved to the :ref:`Image field <Params-Image>` of the Params object.
 
+.. container:: clearer
+
+    .. image :: _images/spacer.png
+       :width: 1
 
 Tabs
 =================
 
-.. dropdown:: Selection Tab
-  :container: + shadow
-  :title: bg-secondary text-white text-left font-weight-bold
-  :body: bg-dark text-left
+.. tab-set::
 
-  * :badge:`Image directory,badge-primary`: full path of the folder to load image stimuli from.
+  .. tab-item:: Selection
 
-  * :badge:`Background directory,badge-primary`: full path of the folder to load background images from. If selected, background images will be presented behind the stimulus images and hence will only be visible where the stimulus image contains transparent pixels.
+    * :badge:`Image directory,badge-primary`: full path of the folder to load image stimuli from.
 
-  * :badge:`Image format,badge-primary`: File format of the images to load. Images in other formats from the selected image directory will be ignored.
+    * :badge:`Background directory,badge-primary`: full path of the folder to load background images from. If selected, background images will be presented behind the stimulus images and hence will only be visible where the stimulus image contains transparent pixels.
 
-  * :badge:`Subdirectories,badge-primary`: Select how to treat subdirectories found inside the image directory:
+    * :badge:`Image format,badge-primary`: File format of the images to load. Images in other formats from the selected image directory will be ignored.
 
-    - **Ignore**: only load images found in the top level of the image directory.
-    - **Load all**: search the image directory recursively and load all images from any subdirectories.
-    - **Use as conditions**: treat each subdirectory found in the image directory as a separate experimental condition and load the images from each.
+    * :badge:`Subdirectories,badge-primary`: Select how to treat subdirectories found inside the image directory:
 
-  * :badge:`Conditions,badge-primary`: If the **Subdirectories** field above is set to **Use as conditions** then this dropdown menu will be populated with the subdirectory names. Selecting a name in this dropdown menu will make the image preview jump to the first image belonging to that condition.
+      - **Ignore**: only load images found in the top level of the image directory.
+      - **Load all**: search the image directory recursively and load all images from any subdirectories.
+      - **Use as conditions**: treat each subdirectory found in the image directory as a separate experimental condition and load the images from each.
 
-  * :badge:`Backgrounds,badge-primary`: Select how to use background images found in the **Background directory**. If there is a specific background image for each stimulus then background images should be named with a similar convention to the images so that they retain the same order. If there are fewer background images than stimulus images then the background can either be randomized per trial or randomized per block.
+    * :badge:`Conditions,badge-primary`: If the **Subdirectories** field above is set to **Use as conditions** then this dropdown menu will be populated with the subdirectory names. Selecting a name in this dropdown menu will make the image preview jump to the first image belonging to that condition.
 
-  * :badge:`SDS 3D format?,badge-primary`: Select this checkbox if the stimuli are in side-by-side (SBS) stereoscopic 3D format. For stereoscopic presentation, settings must also be updated in :ref:`PTB Display Settings GUI <PTB_DisplaySettings>`.
+    * :badge:`Backgrounds,badge-primary`: Select how to use background images found in the **Background directory**. If there is a specific background image for each stimulus then background images should be named with a similar convention to the images so that they retain the same order. If there are fewer background images than stimulus images then the background can either be randomized per trial or randomized per block.
 
-
-.. dropdown:: Transforms Tab
-  :container: + shadow
-  :title: bg-secondary text-white text-left font-weight-bold
-  :body: bg-dark text-left
-
-  * :badge:`Present fullscreen,badge-primary`:
-
-  * :badge:`Stimulus width (units),badge-primary`: 
-
-  * :badge:`Stimulus width,badge-primary`: 
-
-  * :badge:`Use alpha channel?,badge-primary`:
-
-  * :badge:`Color,badge-primary`:
-
-  * :badge:`Apply mask,badge-primary`:
-
-  * :badge:`Image rotation (°),badge-primary`:
-
-  * :badge:`Image contrast,badge-primary`:
-
-  * :badge:`Normalize luminance,badge-primary`: Luminance normalization of a set of images using the `SHINE Toolbox <http://www.mapageweb.umontreal.ca/gosselif/SHINE/>`_ (`Willenbockel et al., 2010 <https://doi.org/10.3758/BRM.42.3.671>`_). 
+    * :badge:`SDS 3D format?,badge-primary`: Select this checkbox if the stimuli are in side-by-side (SBS) stereoscopic 3D format. For stereoscopic presentation, settings must also be updated in :ref:`PTB Display Settings GUI <PTB_DisplaySettings>`.
 
 
-.. dropdown:: Presentation Tab
-  :container: + shadow
-  :title: bg-secondary text-white text-left font-weight-bold
-  :body: bg-dark text-left
+  .. tab-item:: Transforms
 
-  * :badge:`Stimulus order,badge-primary`:
+    * :badge:`Present fullscreen,badge-primary`:
 
-  * :badge:`Trials per run,badge-primary`:
+    * :badge:`Stimulus width (units),badge-primary`: 
 
-  * :badge:`Stim. per trial,badge-primary`:
+    * :badge:`Stimulus width,badge-primary`: 
 
-  * :badge:`Stim. duration (ms),badge-primary`:
+    * :badge:`Use alpha channel?,badge-primary`:
 
-  * :badge:`Inter-stim interval (ms),badge-primary`:
+    * :badge:`Color,badge-primary`:
 
-  * :badge:`Inter-trial interval (ms),badge-primary`:
+    * :badge:`Apply mask,badge-primary`:
 
-  * :badge:`Temporal jitter (mean ms),badge-primary`:
+    * :badge:`Image rotation (°),badge-primary`:
 
-  * :badge:`Temporal jitter (SD ms),badge-primary`:
+    * :badge:`Image contrast,badge-primary`:
+
+    * :badge:`Normalize luminance,badge-primary`: Luminance normalization of a set of images using the `SHINE Toolbox <http://www.mapageweb.umontreal.ca/gosselif/SHINE/>`_ (`Willenbockel et al., 2010 <https://doi.org/10.3758/BRM.42.3.671>`_). 
 
 
-.. dropdown:: fMRI Tab
-  :container: + shadow
-  :title: bg-secondary text-white text-left font-weight-bold
-  :body: bg-dark text-left
+  .. tab-item:: Presentation
 
-  * :badge:`Add fixation blocks,badge-primary`: 
+    * :badge:`Stimulus order,badge-primary`:
 
-  * :badge:`Blocks per run,badge-primary`: 
+    * :badge:`Trials per run,badge-primary`:
 
-  * :badge:`Stim. Per block,badge-primary`: 
+    * :badge:`Stim. per trial,badge-primary`:
 
-  * :badge:`Stim. Duration (ms),badge-primary`: 
+    * :badge:`Stim. duration (ms),badge-primary`:
 
-  * :badge:`Inter-stim interval (ms),badge-primary`: 
+    * :badge:`Inter-stim interval (ms),badge-primary`:
 
-  * :badge:`Sync stim to TTL?,badge-primary`: 
+    * :badge:`Inter-trial interval (ms),badge-primary`:
+
+    * :badge:`Temporal jitter (mean ms),badge-primary`:
+
+    * :badge:`Temporal jitter (SD ms),badge-primary`:
+
+
+  .. tab-item:: fMRI
+
+    * :badge:`Add fixation blocks,badge-primary`: 
+
+    * :badge:`Blocks per run,badge-primary`: 
+
+    * :badge:`Stim. Per block,badge-primary`: 
+
+    * :badge:`Stim. Duration (ms),badge-primary`: 
+
+    * :badge:`Inter-stim interval (ms),badge-primary`: 
+
+    * :badge:`Sync stim to TTL?,badge-primary`: 
 
 
 Stimulus Panel
 ==================
 
-* :badge:`No. Images,badge-primary`: 
+* :badge:`No. Images,badge-primary`: This field displays the number of image files matching the specified :badge:`Image format,badge-primary` that are located in the specified badge:`Image directory,badge-primary`.
 
-* :badge:`Image res (px),badge-primary`:
+* :badge:`Image res (px),badge-primary`: If all of the images have the same dimensions then these fields display the horizontal (X) and vertical (Y) resolution of the images in pixels. 
 
-* :badge:`Preview image,badge-primary`:
+* :badge:`Preview image,badge-primary`: This dropdown box lists the filenames of all located stimuli. The user can select any image from the dropdown list at it will load in the preview window below.
 
 
 
