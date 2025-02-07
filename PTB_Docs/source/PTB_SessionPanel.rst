@@ -48,7 +48,7 @@ The parameters dropdown menu shows all of the available parameters files that ar
   :alt: Load
 
 .. csv-table:: 
-  :file: _static/CSVs/PTB_ActionsTab.csv
+  :file: _static/CSVs/PTB_SessionTab.csv
   :header-rows: 1
   :widths: 10 30 60
   :align: left
