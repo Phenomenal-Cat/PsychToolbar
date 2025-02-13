@@ -95,7 +95,7 @@ Panels and Tabs
 Installation
 ===================
 
-The Psych Toolbar can be eitehr downloaded or cloned from the `GitHub repository <https://github.com/Phenomenal-Cat/Psych-Toolbar>`_. The computer system should already be configured as outlined in :ref:`SystemInstall`.
+The Psych Toolbar can be either downloaded or cloned from the `GitHub repository <https://github.com/Phenomenal-Cat/Psych-Toolbar>`_. The computer system should already be configured as outlined in :ref:`SystemInstall`.
 
 
 .. image:: _images/Logos/NALabs_w.png
