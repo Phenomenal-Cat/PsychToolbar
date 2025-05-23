@@ -33,26 +33,28 @@ FixColorRandom      = 0;
 FixColor            = [0,1,1]*255;
 
 Screen('Preference','SkipSyncTests', 1);
+Screen('Preference','VisualDebugLevel', 0);
 ListenChar(2);
 
 if ~IsWin
-    BackgroundRGB = [127,127,127]/4;
-    win = Screen('OpenWindow', 1, BackgroundRGB);
-    ScreenDims  = Screen('Rect',1).*[1,1,0.5,1];
-    ImageDir = '/home/lab/Documents/NIF/FixTraining/FixFaces/';
-    AllFiles = dir(ImageDir);
-    AllFiles = {AllFiles(3:end).name};
-    RewardKey = 'space';
+    BackgroundRGB   = [127,127,127]/4;
+    win             = Screen('OpenWindow', 1, BackgroundRGB);
+    ScreenDims      = Screen('Rect',1).*[1,1,0.5,1];
+    ImageDir        = '/home/lab/Documents/NIF/FixTraining/FixFaces/';
+    AllFiles        = dir(ImageDir);
+    AllFiles        = {AllFiles(3:end).name};
+    RewardKey       = 'space';
+
 elseif IsWin
-    BackgroundRGB = [127,127,127]/2;
-    Resolution = [0,0,1920,1080];
-    WindowsRect = [Resolution(3), 0, Resolution(3)*3, Resolution(4)]; 
-    win = Screen('OpenWindow', 0, BackgroundRGB, WindowsRect);
-    ScreenDims  = Resolution;
-    ImageDir = 'C:\Users\nifsupport.MH02183165DT\Documents\Stimuli\PrimFace_01';
-    AllFiles = dir(ImageDir);
-    AllFiles = {AllFiles(4:end).name};
-    RewardKey = 'r';
+    BackgroundRGB   = [127,127,127]/2;
+    Resolution      = [0,0,1920,1080];
+    WindowsRect     = [Resolution(3), 0, Resolution(3)*3, Resolution(4)]; 
+    win             = Screen('OpenWindow', 0, BackgroundRGB, WindowsRect);
+    ScreenDims      = Resolution;
+    ImageDir        = 'C:\Users\nifsupport.MH02183165DT\Documents\Stimuli\PrimFace_01';
+    AllFiles        = dir(ImageDir);
+    AllFiles        = {AllFiles(4:end).name};
+    RewardKey       = 'r';
 end
 
 Screen('BlendFunction', win, GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
