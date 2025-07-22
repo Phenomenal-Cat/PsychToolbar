@@ -20,7 +20,7 @@ if nargin == 2
         return;
     end
 elseif nargin == 0
-
+    
 end
 
 DefaultParams = 'PTB_defaults.mat';
@@ -40,6 +40,8 @@ if isempty(P.AllParamsPaths)
     msg = sprintf('The default params file for this computer (''%s'') was not found on the matlab path!', P.ParamsFile);
     if exist('app', 'var')
         ans = uiconfirm(app.PsychToolbarUIFigure, sprintf('%s\n%s', msg, q), 'Create new params?','Cancel','OK');
+    else
+        ans = questdlg(sprintf('%s\n%s', msg, q),'Copy default params?','Cancel','OK','OK');
     end
     if strcmp(ans, 'OK')
         [success, msg, id] = copyfile(fullfile(P.ParamsDir, DefaultParams), fullfile(P.ParamsDir, P.ParamsFile));
@@ -60,8 +62,8 @@ if ~exist(fullfile(P.ParamsDir, P.ParamsFile), 'file')
     if exist('app', 'var')
         ans = uiconfirm(app.PsychToolbarUIFigure, sprintf('%s\n%s', msg, q), 'Create new params?','Cancel','OK');
     else
-        fprintf(msg);
-        ans = 'Cancel';
+        fprintf([msg,'\n']);
+        ans = questdlg(sprintf('%s\n%s', msg, q),'Copy default params?','Cancel','OK','OK');
     end
     if strcmp(ans, 'Cancel')
         return;

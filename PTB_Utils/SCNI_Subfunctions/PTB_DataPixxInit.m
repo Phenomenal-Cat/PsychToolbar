@@ -7,10 +7,10 @@ function Params = PTB_DataPixxInit(Params)
 
 %====================== Error handling
 if nargin == 0 || isempty('Params') || ~isprop(Params,'DPx')
-    Params = PTB_DatapixxSettings([],0);       	% Load DataPixx parameters for this system
+    Params = PTB_DatapixxSettings([], []);       	% Load DataPixx parameters for this system
 end
 if ~isfield(Params.DPx,'Installed')
-    Params = PTB_DatapixxSettings(Params, false);
+    Params = PTB_DatapixxSettings([], Params);
 end
 if Params.DPx.Installed == 0 || Params.DPx.Connected == 0
    error('Matlab does not have access to DataPixx functions!');
