@@ -1,6 +1,6 @@
-function [Params, Success, Fig] = SCNI_InitGUI(GUItag, Fieldname, ParamsFile, OpenGUI)
+function [Params, Success, Fig] = PTB_InitGUI(GUItag, Fieldname, ParamsFile, OpenGUI)
 
-%=========================== SCNI_InitGUI.m ===============================
+%=========================== PTB_InitGUI.m ===============================
 % This function loads the requested parameter file if available, and
 % performs checks on GUI windows and filenames.
 %
@@ -29,36 +29,32 @@ end
 %============ Check paths
 Fullmfilename   = mfilename('fullpath');                                    % Get m-filename
 [Path,~]       	= fileparts(Fullmfilename);                                 % Get path of m-file
-SCNI_ToolbarDir = fileparts(Path);                                          % Get path of SCNI Toolbar
-addpath(genpath(SCNI_ToolbarDir));                                          % Add SCNI Toolbar directories to Matlab path
-Params.Dir      = fullfile(Path, '../SCNI_Parameters');                     % Get the directory containing parameter files
+PTB_ToolbarDir = fileparts(Path);                                          % Get path of PTB Toolbar
+addpath(genpath(PTB_ToolbarDir));                                          % Add PTB Toolbar directories to Matlab path
+Params.Dir      = fullfile(Path, '../PTB_Parameters');                     % Get the directory containing parameter files
 
 if ~exist('ParamsFile','var') || isempty(ParamsFile)                        % If a ParamsFile input was not provided, or is empty...
-    [~, CompName] = system('hostname');                                     % Get the local computer's hostname
-	CompName(regexp(CompName, '\s')) = [];                                  % Remove white space
-    Params.File = fullfile(Params.Dir, sprintf('%s.mat', CompName));        % Construct expected parameters filename
-    if ~exist(Params.File,'file')
-        ParamsFileMatches = wildcardsearch(Params.Dir, sprintf('%s*.mat', CompName));
-        if numel(ParamsFileMatches) > 1
-            [file, path]    = uigetfile([Params.Dir,'*.mat'], 'Select a Params file...'); 
-            Params.File     = fullfile(path, file);
-        end
-    end
-    ParamsFile  = Params.File;
-    Params      = load(ParamsFile);    
-    
+    % [~, CompName] = system('hostname');                                     % Get the local computer's hostname
+	% CompName(regexp(CompName, '\s')) = [];                                  % Remove white space
+    % Params.File = fullfile(Params.Dir, sprintf('%s.mat', CompName));        % Construct expected parameters filename
+    % if ~exist(Params.File,'file')
+    %     ParamsFileMatches = wildcardsearch(Params.Dir, sprintf('%s*.mat', CompName));
+    %     if numel(ParamsFileMatches) > 1
+    %         [file, path]    = uigetfile([Params.Dir,'*.mat'], 'Select a Params file...'); 
+    %         Params.File     = fullfile(path, file);
+    %     end
+    % end
+    % ParamsFile  = Params.File;
+    % Params      = load(ParamsFile);    
+    Params = PTB_LoadParams();                                          % Load
 elseif exist('ParamsFile','var') & ~isempty(ParamsFile)                     % If 'ParamsFile' input was provided...
     if ischar(ParamsFile) && exist(ParamsFile,'file')                     	% If it is a file string... 
-        Params = load(ParamsFile);                                          % Load it
-    elseif isstruct(ParamsFile)                                             % If it's a structure...
+        Params = PTB_LoadParams();                                          % Load it
+    elseif isobject(ParamsFile)                                             % If it's an object...
         Params  = ParamsFile;                                               % Copy it
-%         if isfield(Params, 'File') && exist(Params.File,'file')            	% If parameters file exists...
-%             Params      = load(Params.File);                              	% Load the parameters and assign to structure 'Params'
-%             Params.File = ParamsFile;
-%         end
     end
     Success     = 1;
-    if OpenGUI == 0                                               	% If OpenGUI flag was zero...
+    if OpenGUI == 0                                               	        % If OpenGUI flag was zero...
         return;                                                             
     end
 end

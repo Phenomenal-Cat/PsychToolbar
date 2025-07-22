@@ -1,4 +1,4 @@
-%=========================== SCNI_DatapixxSettings.m ===========================
+%=========================== PTB_DatapixxSettings.m ===========================
 % This function provides a graphical user interface for setting parameters 
 % related to the digital and analog I/O channels of DataPixx2. Parameters 
 % can be saved and loaded, and the updated parameters are returned in the 
@@ -13,12 +13,12 @@
 %
 %==========================================================================
 
-function ParamsOut = SCNI_DatapixxSettings(ParamsFile, OpenGUI)
+function ParamsOut = PTB_DatapixxSettings(ParamsFile, OpenGUI)
 
 persistent Params Fig;
 
 %============ Initialize GUI
-GUItag      = 'SCNI_DatapixxSettings';      % String to use as GUI window tag
+GUItag      = 'PTB_DatapixxSettings';      % String to use as GUI window tag
 Fieldname   = 'DPx';                        % Params structure fieldname for DataPixx info
 if ~exist('OpenGUI','var')
     OpenGUI = 1;
@@ -33,14 +33,14 @@ elseif exist('ParamsFile','var')
         ParamsFile  = Params.File;
     end
 end
-[Params, Success, Fig]   = SCNI_InitGUI(GUItag, Fieldname, Params, OpenGUI);
+[Params, Success, Fig]   = PTB_InitGUI(GUItag, Fieldname, Params, OpenGUI);
 
 %=========== Load default parameters
 if Success < 1                              % If the parameters could not be loaded...
     Params.DPx.TDTonDOUT        = 1;                                                            % Is DataPixx digital out DB25 connected to TDT digital in DB25?
     Params.DPx.UseVideo         = 0;                                                            % Is the video signal being sent through the DataPixx2 box?
     Params.DPx.UseAudio         = 0;                                                            % Is the audio signal being sent from the DataPixx2 box?
-    Params.DPx.UseInterface     = 1;                                                            % Are the analog eye signals routed via an SCNI interface box?
+    Params.DPx.UseInterface     = 1;                                                            % Are the analog eye signals routed via an PTB interface box?
     Params.DPx.AnalogInRate     = 1000;                                                         % ADC sample rate (Hz)
     Params.DPx.AnalogInCh       = 0:15;
     Params.DPx.AnalogInNames    = {'Left eye X','Left eye Y','Left eye pupil','Right eye X','Right eye Y','Right eye pupil', 'Head azimuth', 'Head elevation', 'Lever 1', 'Lever 2', 'Photodiode','Scanner TTL', 'None','Add new'};
@@ -79,8 +79,8 @@ Fig.PannelSize      = [170, 650]*Fig.DisplayScale;
 Fig.PannelElWidths  = [20, 120]*Fig.DisplayScale;
 Fig.MaxADCrate      = 200*10^3;                                         % Maximum sample rate of DataPixx2 ADC channels
 Fig.DataPixxURL   	= 'http://www.vpixx.com/manuals/psychtoolbox/html/intro.html';
-set(Fig.Handle,     'Name','SCNI: Datapixx settings',...              	% Open a figure window with specified title
-                    'Tag','SCNI_DatapixxSettings',...                 	% Set figure tag
+set(Fig.Handle,     'Name','PTB: Datapixx settings',...              	% Open a figure window with specified title
+                    'Tag','PTB_DatapixxSettings',...                 	% Set figure tag
                     'Renderer','OpenGL',...                             % Use OpenGL renderer
                     'OuterPosition', Fig.Rect,...                       % position figure window
                     'NumberTitle','off',...                             % Remove figure number from title
@@ -361,7 +361,7 @@ ParamsOut = Params;
                 ParamsDir = fileparts(mfilename);
                 [Filename, Pathname, Indx] = uigetfile('*.mat','Load parameters file', ParamsDir);
                 Params.File = fullfile(Pathname, Filename);
-                SCNI_DatapixxSettings(Params.File);
+                PTB_DatapixxSettings(Params.File);
 
             case 2      %================ SAVE PARAMETERS TO FILE
                 if exist(Params.File,'file')

@@ -60,6 +60,7 @@ if ~exist(fullfile(P.ParamsDir, P.ParamsFile), 'file')
     if exist('app', 'var')
         ans = uiconfirm(app.PsychToolbarUIFigure, sprintf('%s\n%s', msg, q), 'Create new params?','Cancel','OK');
     else
+        fprintf(msg);
         ans = 'Cancel';
     end
     if strcmp(ans, 'Cancel')
@@ -70,10 +71,11 @@ if ~exist(fullfile(P.ParamsDir, P.ParamsFile), 'file')
 end
 
 %==== Load parameters
-prm   = load(fullfile(P.ParamsDir, P.ParamsFile));      % Load parameters struct
-prm.P = P;                              % Append local params info
-if class(prm) == 'struct'               % If params is a structure...
-    Params  = PTB_Params(prm);          % Create instance of PTB_Params object class from struct data
+prm         = load(fullfile(P.ParamsDir, P.ParamsFile));        % Load parameters struct
+prm.File    = P.ParamsFile;
+prm.P       = P;                                                % Append local params info
+if class(prm) == 'struct'                                       % If params is a structure...
+    Params  = PTB_Params(prm);                                  % Create instance of PTB_Params object class from struct data
 else
     Params = prm;
 end
